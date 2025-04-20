@@ -1,0 +1,68 @@
+---
+title: Yann LeCun Says He DONE With LLMS
+date: 2025-04-17 12:40:04
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this video in detail
+
+[![Metas AI Boss Says He DONE With LLMS...](https://i.ytimg.com/vi_webp/p1QXZHV4jkM/maxresdefault.webp)](https://www.youtube.com/watch?v=p1QXZHV4jkM)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, here is a detailed summary of the YouTube video "Metas AI Boss Says He DONE With LLMS..." hosted by TheAIGRID, focusing on Yann LeCun's statements at Nvidia GTC 2025:
+
+**Introduction & Core Statement:**
+
+*   The video centers around a statement made by Yann LeCun (Meta's Chief AI Scientist, considered a "godfather of AI") at Nvidia GTC 2025: "I'm not so interested in LLMs anymore."
+*   The host highlights the significance of this statement coming from someone with LeCun's expertise, especially given the current hype surrounding Large Language Models (LLMs).
+
+**LeCun's Reasoning for Moving Beyond LLMs:**
+
+1.  **LLMs are Maturing, Not the Frontier:** LeCun views current LLM development as more incremental, focusing on scaling data, compute, and using synthetic data – tasks now handled by "industry product people." He believes the truly exciting research questions lie elsewhere.
+2.  **Limitations of Token Prediction:**
+    *   LLMs fundamentally work by predicting the next discrete token from a finite dictionary (e.g., ~100,000 tokens). This works for text but is ill-suited for understanding the high-dimensional, continuous nature of the real world (like video).
+    *   Trying to predict video at the pixel level fails because much of the world is unpredictable in detail (e.g., the exact appearance of people in a room). Models waste resources trying to predict these unpredictable details.
+    *   Techniques based on reconstructing images/videos from corrupted versions haven't performed as well as alternative methods.
+3.  **Simplistic Reasoning:** While efforts exist to make LLMs reason, LeCun believes this approach is "simplistic." He argues true human reasoning and planning occur in an abstract mental space, independent of language (e.g., mentally rotating a cube, a cat planning a jump). Reasoning shouldn't be confined to manipulating discrete tokens.
+
+**LeCun's Four Key Areas of Future Focus:**
+
+LeCun is more interested in research focusing on:
+1.  **Understanding the Physical World:** How machines can build internal models of reality (World Models).
+2.  **Persistent Memory:** Giving AI systems memory comparable to humans.
+3.  **Reasoning:** Developing more fundamental reasoning capabilities beyond token manipulation.
+4.  **Planning:** Enabling AI to plan sequences of actions to achieve goals based on its world model and reasoning.
+
+**World Models & The JEPA Architecture:**
+
+*   **World Models:** LeCun emphasizes the need for AI to have internal world models, similar to humans, which allow prediction and understanding of physical interactions (e.g., knowing pushing a bottle at the top vs. bottom yields different results).
+*   **Abstract Representation:** The key is not to predict raw data (like pixels) but to learn *abstract representations* of the world and make predictions within that abstract space.
+*   **JEPA (Joint Embedding Predictive Architectures):** This is LeCun's proposed architecture.
+    *   **Non-Generative:** Unlike models trying to generate every pixel, JEPA focuses on learning meaningful representations.
+    *   **Predicts in Abstract Space:** It learns by predicting missing or masked parts of input (like video) *within its learned abstract representation*, not at the pixel level.
+    *   **Efficiency:** By discarding irrelevant information, it's more efficient.
+    *   **V-JEPA (Video JEPA):** A version trained on video. An upcoming Version 2 shows promise.
+    *   **Example:** V-JEPA can reportedly assess the physical plausibility of a video. By tracking prediction error in its abstract space while viewing a video, it detects anomalies (like objects unnaturally disappearing or defying physics) because they deviate from the patterns learned from normal videos.
+
+**System 1 vs. System 2 Thinking:**
+
+*   LeCun relates his ideas to the psychological concepts of System 1 (fast, intuitive, reactive thinking – like experienced driving) and System 2 (slow, deliberate, planning-based thinking – like learning to drive, involving a world model).
+*   He suggests current AI (including LLMs) is good at System 1-like tasks but fundamentally lacks robust System 2 capabilities.
+*   He believes a different architecture (like JEPA) is needed to achieve true System 2 reasoning and planning, which is essential for more advanced AI. Eventually, tasks learned via System 2 can become compiled into faster System 1 policies.
+
+**Path to AGI & Data Needs:**
+
+*   LeCun argues strongly that **AGI cannot be achieved solely through text data.**
+*   He makes a quantitative comparison: The amount of text data LLMs are trained on (~10^14 bytes, taking humans ~400,000 years to read) is comparable to the amount of *visual* data a 4-year-old child processes (~10^14 bytes).
+*   This implies that learning from rich, multi-modal sensory input, especially related to the physical world, is crucial and far more data-dense than text alone.
+
+**Host's Commentary & Conclusion:**
+
+*   The host finds LeCun's points compelling, noting that LLMs' limitations in physical world understanding have been echoed in other research (mentioning a Chinese paper on Sora-like models).
+*   He agrees with the likely future direction towards hybrid or "omnimodel" systems that integrate different capabilities, as Google is already exploring.
+*   The conclusion is that while LLMs are powerful, LeCun presents a strong case that they are not the endpoint and that architectures like JEPA, focused on world models and abstract representation learning, represent a more promising path towards AGI and understanding the physical world.
+

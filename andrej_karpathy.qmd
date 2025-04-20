@@ -1,0 +1,64 @@
+---
+title: 25-03-14 Andrej Karpathy uses LLMs
+date: 2025-03-14 14:36:37
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** How does Andrej's use LLM's?
+
+[![How I use LLMs](https://i.ytimg.com/vi_webp/EWvNQjAaOHw/maxresdefault.webp)](https://www.youtube.com/watch?v=EWvNQjAaOHw)
+
+---
+
+**:01JNZZ2YCRJES6A7SHKZH7E4RK::claude-3-5-sonnet-latest:** Based on the video, here are the key ways Andrej Karpathy uses LLMs:
+
+1. Knowledge-Based Queries
+- Uses LLMs for general knowledge questions, but only when the information is likely to be well-represented in the training data
+- Verifies important information from primary sources
+- Avoids asking about very recent events due to knowledge cutoff dates
+
+2. Document Analysis & Reading
+- Uploads documents, papers, and book chapters to analyze with LLMs
+- Uses LLMs as reading companions to improve comprehension and retention
+- Particularly helpful for technical papers or historical texts outside his expertise
+- Always starts with requesting a summary before diving deeper
+
+3. Code Development
+- Uses specialized coding environments like Cursor (with Claude 3.7) rather than general chat interfaces
+- Employs "vibe coding" where he gives high-level commands to the AI and lets it handle implementation details
+- Uses LLMs for debugging and understanding code issues
+
+4. Language Learning
+- Created custom GPTs for language learning (especially Korean)
+- Uses LLMs for detailed translations and vocabulary extraction
+- Analyzes screenshots of subtitles from foreign content
+
+5. Data Analysis
+- Uses ChatGPT's Advanced Data Analysis for creating visualizations and analyzing data
+- Carefully verifies the code and results as he considers the LLM a "junior analyst"
+
+6. Voice Interface
+- Uses voice input for about 50% of his queries on desktop (using tools like Super Whisper)
+- Increases to about 80% voice usage on mobile devices
+- Uses voice when the query is simple and doesn't require precise technical terms
+
+7. Research and Deep Dives
+- Uses the deep research feature for comprehensive analysis of topics
+- Often consults multiple LLMs (his "LLM Council") for important questions
+- Values features like memory and custom instructions to personalize interactions
+
+8. Professional Workflow
+- Pays for premium tiers of multiple LLM services to access the most capable models
+- Regularly starts new chats to keep context windows clean and focused
+- Carefully chooses which model to use based on the specific task requirements
+
+9. Tool Integration
+- Leverages LLMs with various tools (Python interpreter, search capability, etc.)
+- Uses different LLMs for their unique strengths (e.g., Perplexity for search, Claude for artifacts)
+- Combines multiple modalities (text, voice, images) as needed
+
+The overall pattern shows that Andrej uses LLMs as sophisticated tools integrated into his daily workflow, while maintaining awareness of their limitations and verifying important information through other sources.
+

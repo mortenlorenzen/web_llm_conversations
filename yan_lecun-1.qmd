@@ -1,0 +1,72 @@
+---
+title: Yan LeCun on AI's impossible Math Problem
+date: 2025-03-10 12:11:53
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** From a youTube transcript I want to retrieve the best condensed explanations.
+
+[![Father of AI: AI Needs PHYSICS to EVOLVE | prof. Yann LeCun](https://i.ytimg.com/vi_webp/RUnFgu8kH-4/maxresdefault.webp)](https://www.youtube.com/watch?v=RUnFgu8kH-4)
+
+---
+
+**:01JNZZ2YCRJES6A7SHKZH7E4RK::claude-3-5-sonnet-latest:** From this interview with Yann LeCun, here are the key explanations on several important topics:
+
+1. On Current AI Limitations:
+"Currently AI systems are in many ways very stupid. We are fooled into thinking they are smart because they can manipulate language very well. They can't understand the physical world, they don't have any persistent memory, they can't really reason and they can't plan."
+
+2. On Why Language Models Work But Physical World Understanding Doesn't:
+"Language is simple because it's discrete - it's a sequence of discrete symbols. There's only a finite number of possible words in a dictionary. But you cannot train a system to predict what's going to happen in a video... the physical world is much more difficult to understand than language."
+
+3. On Three Paradigms of Machine Learning:
+- Supervised Learning: Show system examples with correct answers
+- Reinforcement Learning: Only tell system if answer was good/bad
+- Self-Supervised Learning: Train system to capture input structure (like predicting missing words)
+
+4. On Information Processing Differences Between AI and Humans:
+"A typical large language model is trained with about 20 trillion tokens... compare this with the amount of information that gets to our brain through the visual system in the first four years of life and it's about the same amount. What it tells you is that we're never going to get to human level AI by just training on text."
+
+5. On Future AI Architecture (JEPA):
+"Instead of making prediction in the space of inputs, you train the system to learn an abstract representation of the input and then train it to make predictions in that representation space... because you cannot predict all the details of what's going to be in the field of view, it's just impossible to predict and so if you're training a system to make those predictions it spends a huge amount of resources trying to predict things it cannot predict."
+
+These explanations highlight LeCun's view that current AI systems, while impressive with language, still lack fundamental capabilities for understanding and operating in the physical world, and that new approaches are needed to advance AI further.
+
+---
+
+**:You:** What is happening in the near future and what is his takes on AI assistants?
+
+---
+
+**:01JNZZ2YCRJES6A7SHKZH7E4RK::claude-3-5-sonnet-latest:** According to LeCun's interview, here are his key points about the near future and AI assistants:
+
+On Near Future AI Assistants:
+"All the companies that are involved in AI are seeing a future pretty near future where billions of people will want to use AI assistants on a daily basis." He envisions this happening through:
+
+1. Wearable Technology:
+- Smart glasses (like the Meta glasses he demonstrates)
+- Smartphones
+- Smart devices
+- People will "use AI assistants all the time in their daily lives"
+
+2. Infrastructure Requirements:
+- Will need massive computing infrastructure due to billions of users using AI multiple times daily
+- Major investments are being made:
+  - Meta: $60-65 billion in infrastructure (mostly for AI)
+  - Microsoft: $80 billion announced
+  - Most of this investment is for "inference" (running AI assistants) rather than training models
+
+3. Important Distinction on Costs:
+- Training models may become cheaper
+- But the main cost and investment will be in running these models for daily use
+- "Most of the infrastructure and most of the investment goes into actually running the models, not training them"
+
+4. Reality Check on Recent Developments:
+- He dismisses the market's excitement about cheaper training (like with Deeps)
+- While training might become more efficient, we'll just train bigger models
+- The real cost challenge remains in deployment and running these systems at scale
+
+LeCun's take suggests we're heading toward ubiquitous AI assistants in daily life, but the challenge isn't in creating them - it's in deploying them at scale for billions of users.
+

@@ -1,0 +1,124 @@
+---
+title: AI use cases and tools
+date: 2025-04-18 14:18:58
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** summarize this video with focus on tools and use cases
+
+[![Custom AI Agents Are Killing the Course Business](https://i.ytimg.com/vi_webp/flldxYOwpBU/maxresdefault.webp)](https://www.youtube.com/watch?v=flldxYOwpBU)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, here's a summary of the video focusing on the tools mentioned and their use cases:
+
+**Main Argument:** Custom AI agents, specifically **Custom GPTs (built on OpenAI's ChatGPT platform)**, are becoming powerful tools for education businesses. They offer more value than traditional static content (like checklists or courses) by focusing on the *application* and *personalization* of knowledge, potentially replacing older lead generation methods and even becoming paid products.
+
+**Primary Tool & Use Case Demonstrated: "Zoom Ready" Custom GPT**
+
+*   **Tool:** A Custom GPT created by the speaker within the ChatGPT interface.
+*   **Use Case:** To help users prepare professionally and efficiently for Zoom calls.
+    *   **Problem Solved:** Automates the process of organizing thoughts, defining goals, and preparing materials for various types of Zoom calls (discovery, internal, etc.), which the speaker found repetitive and time-consuming.
+    *   **Functionality:**
+        *   Takes user input about the call (attendee, context, user's service, desired outcome, call length).
+        *   Leverages a pre-loaded "knowledge base" (gathered using deep research tools).
+        *   Generates a structured preparation guide including: call snapshot, goal, agenda, opening lines, personalized talking points, discovery questions, potential objections, technical/material reminders, and a follow-up email template.
+        *   **Bonus:** Can generate relevant visuals (demonstrated creating a "before and after" graphic using ChatGPT's built-in image generation).
+
+**Tools Used in the Creation Process:**
+
+1.  **ChatGPT:**
+    *   **Use Case:** Generating ideas for potential Custom GPTs relevant to the speaker's audience.
+    *   **Use Case:** Evaluating those ideas based on user pain points (trouble, time waste, cost).
+    *   **Use Case:** Scoping the Custom GPT (determining what features are essential vs. too complex).
+    *   **Use Case:** **Crucially, generating the actual prompts and instructions** needed to configure the Custom GPT within OpenAI's builder interface (speaker emphasizes no coding was required, just copy-pasting ChatGPT's output, including JSON configuration).
+    *   **Use Case:** Performing deep research to build the knowledge base.
+
+2.  **Deep Research Tools:** Used to gather comprehensive background information ("knowledge base") to make the Custom GPT more knowledgeable and effective beyond the standard ChatGPT training data.
+    *   **Tools Mentioned:**
+        *   Perplexity.ai
+        *   Claude
+        *   Gemini 2.5 (specifically its deep research tool)
+        *   ChatGPT (as a research tool)
+    *   **Use Case:** Compiling extensive information on the topic (e.g., everything about preparing for Zoom calls – technical, personal, strategic aspects) which is then uploaded to the Custom GPT.
+
+3.  **XMind:**
+    *   **Tool:** Mind mapping software.
+    *   **Use Case:** Used by the speaker to organize his thoughts and structure the presentation *for this video* (meta-tool for his process).
+
+**Tools Mentioned as Alternatives or Comparisons:**
+
+1.  **Firebase Studio (Google):**
+    *   **Tool:** Platform for building deployable web applications.
+    *   **Use Case (Mentioned):** An alternative for creating more complex, standalone applications (MicroSaaS) that might require user logins, payment processing, etc., potentially when a Custom GPT's scope is too limited.
+
+2.  **Canva:**
+    *   **Tool:** Graphic design platform.
+    *   **Use Case (Mentioned):** Representative of tools used to create traditional lead magnets (infographics, checklists), which the speaker argues are becoming less valuable compared to interactive Custom GPTs.
+
+**Broader Use Cases for Custom GPTs (Suggested):**
+
+*   **Lead Magnets:** Offer free access to a useful Custom GPT to attract users to a community (like the speaker's TrainingSites.io) or mailing list.
+*   **Paid Products:** Sell access to more advanced or niche Custom GPTs as a revenue stream.
+*   **Educational Tools:** Embed within courses or communities to help users *apply* concepts and get personalized assistance for specific tasks.
+*   **Task Automation:** Streamline complex, multi-step workflows for users within a specific domain.
+
+---
+
+**:You:** please rewrite with focus on Use Cases before tools. I want to get inspiration to use more AI in my daily work
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, let's focus on the *practical applications* and *problems solved* by AI tools as presented in the video, to inspire how you might use AI in your daily work:
+
+**Core Idea:** AI, particularly easy-to-create Custom GPTs, can move beyond simple information retrieval and become active assistants that help you *apply* knowledge and automate multi-step tasks, saving time and improving quality.
+
+**Use Cases Demonstrated & Discussed:**
+
+1.  **Automating Complex Routine Preparations:**
+    *   **Problem:** Spending repetitive time gathering thoughts, structuring agendas, and tailoring messaging for frequent similar events (like different types of Zoom calls).
+    *   **AI Solution:** A custom AI agent ("Zoom Ready" Custom GPT) takes basic details about an upcoming call (who, why, duration) and instantly generates a full preparation package: structured agenda, personalized talking points, potential questions, reminders, and even a follow-up email draft.
+    *   **Tool Used:** Custom GPT built on ChatGPT.
+    *   **Inspiration for You:** Think about *your* recurring tasks that involve preparation, research, and structuring information (e.g., preparing for client meetings, drafting project proposals, planning content, onboarding new team members). Could an AI assistant streamline this?
+
+2.  **Generating and Strategically Evaluating Ideas:**
+    *   **Problem:** Needing fresh ideas for content, products, or solutions, and then figuring out which ones are most viable or impactful.
+    *   **AI Solution:** Using AI to brainstorm a large volume of ideas (e.g., 100 Custom GPT ideas for a specific audience) and then prompting it further to evaluate those ideas based on criteria like solving major pain points, saving time/money, or feasibility.
+    *   **Tool Used:** ChatGPT.
+    *   **Inspiration for You:** Use AI as a brainstorming partner for marketing campaigns, new service offerings, blog post topics, problem-solving approaches, etc. Then, use it again to help you prioritize based on criteria *you* define.
+
+3.  **Scoping and Defining Projects/Tools:**
+    *   **Problem:** Deciding the right scope for a new tool or project – what's essential vs. overly complex? Is a simple approach enough, or is a more robust solution needed?
+    *   **AI Solution:** Asking AI to outline the potential features of a custom tool (like the Zoom GPT), then asking it to compare the pros and cons of building it as a simple AI agent versus a more complex application (like a MicroSaaS using Firebase Studio).
+    *   **Tool Used:** ChatGPT (comparing Custom GPT vs. Firebase Studio).
+    *   **Inspiration for You:** Before starting a project, use AI to explore different implementation options, outline potential features, and get a preliminary analysis of complexity or suitability for different approaches.
+
+4.  **Building Simple, Custom AI Assistants (Without Code):**
+    *   **Problem:** Wanting a specialized AI tool for a specific workflow but lacking coding skills or resources to build a full app.
+    *   **AI Solution:** Using AI (ChatGPT itself) to generate the necessary instructions and configuration prompts needed to create a *new* Custom GPT tailored to a specific task. The user just copies and pastes the AI-generated text into the Custom GPT builder.
+    *   **Tool Used:** ChatGPT (to generate prompts *for* the Custom GPT builder).
+    *   **Inspiration for You:** Identify a niche, repetitive workflow in your job. You could potentially create your *own* simple Custom GPT assistant for it by having ChatGPT guide you through the setup process.
+
+5.  **Conducting Deep and Structured Research:**
+    *   **Problem:** Needing comprehensive background information on a topic beyond a quick search, compiling information from various angles.
+    *   **AI Solution:** Using specialized AI research functions to gather in-depth information on a topic (like "preparing for Zoom calls") from multiple perspectives (technical, personal, strategic). This knowledge then "fuels" the custom AI agent.
+    *   **Tools Used:** Perplexity.ai, Claude, Gemini 2.5, ChatGPT (as research tools).
+    *   **Inspiration for You:** When you need to deeply understand a topic for a report, presentation, or strategy, leverage AI research tools to get comprehensive, structured information faster than traditional searching.
+
+6.  **Instantly Creating Relevant Visual Content:**
+    *   **Problem:** Needing a quick visual aid (like a diagram or illustration) to complement text or a presentation, without graphic design skills or time.
+    *   **AI Solution:** Within the workflow of the custom AI agent (the Zoom prep tool), asking it to generate a visual (like a "before and after" graphic related to the call's topic) directly within the chat interface.
+    *   **Tool Used:** ChatGPT's built-in image generation (DALL-E).
+    *   **Inspiration for You:** If you need quick illustrations for presentations, documents, or conceptual explanations, try asking an image-generating AI to create them based on your descriptions.
+
+7.  **Shifting from Static Content to Interactive Applications (Business Use Case):**
+    *   **Problem:** Traditional lead magnets (checklists, PDFs) are becoming less effective as AI can generate similar content easily. How to provide unique value?
+    *   **AI Solution:** Offering interactive Custom GPTs that help users *apply* information and get personalized results, rather than just consuming static content. This can be used for lead generation (free access) or as paid products.
+    *   **Tool Used:** Custom GPTs.
+    *   **Inspiration for You:** Think about the knowledge you share. Could you turn a passive guide or course module into an interactive AI tool that helps people implement the advice in *their* specific situation?
+
+In essence, the video showcases AI not just as an information source, but as a dynamic partner for brainstorming, planning, automating personalized workflows, conducting deep research, and even building simple, useful tools without needing to code. Consider the repetitive, information-heavy, or preparation-based tasks in your daily work – there's likely an AI application that could help streamline them.
+

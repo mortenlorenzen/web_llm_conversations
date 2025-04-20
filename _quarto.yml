@@ -1,0 +1,77 @@
+project:
+  type: website
+  output-dir: docs  # docs directory of master branch
+
+website:
+  title: "LLM dialogues"
+  cookie-consent: false
+  
+  search: false
+  
+  navbar:
+    pinned: true
+    background: "primary" 
+    foreground: "#ffffff"
+    
+    search: false
+    
+    right:
+      - href: index.qmd
+        text: Home
+      - text: AI
+        menu:
+        - text: Yan LeCun on AI's impossible Math Problem
+          href: yan_lecun-1.qmd
+        - text: Yann LeCun Says He DONE With LLMS
+          href: yan_lecun-2.qmd 
+        - text: Andrej Karpathy uses LLMs
+          href: andrej_karpathy.qmd
+        - text: Andrej Karpathy's Deep Dive into LLMs
+          href: andrej_karpathy_deep_dive_llms.qmd
+        - text: AI use cases and tools
+          href: ai_use_cases-1.qmd
+        - text: 10 Key Breakthrough Technologies of 2025
+          href: breakthrough_technologies_2025.qmd
+        - text: AI Automation (2025) in 5 Industries
+          href: ai_automation_in_5_industries_2025.qmd
+        - text: empty
+          href: empty.qmd
+        - text: empty
+          href: empty.qmd
+        - text: empty
+          href: empty.qmd
+      - text: Economics
+        menu:
+        - text: China trade conflict and stock market by Frank Sieren
+          href: china_by_frank_sieren.qmd
+        - text: Andreas Beck Tarif Crash bei Lochner
+          href: andreas_beck_tarif_crash.qmd
+        - text: Andreas Beck Anleihen und Zinsen
+          href: andreas_beck_anleihen_und_zinsen.qmd
+        - text: empty
+          href: empty.qmd
+        - text: empty
+          href: empty.qmd
+      - text: Misc
+        menu:
+        - text: Diet
+          href: diet.qmd
+        - text: empty
+          href: empty.qmd
+        
+  page-footer: 
+    center: "© 2025. This Website is made with [Quarto](https://quarto.org/)."
+    background: light
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme_custom.scss
+#    css: styles.css        # empty
+    fontsize: 1.1em
+    toc: true
+    
+# embed-resources: true
+
