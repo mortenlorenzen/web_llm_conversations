@@ -10,8 +10,6 @@ website:
   
   navbar:
     pinned: true
-    background: "primary" 
-    foreground: "#ffffff"
     
     search: false
     
@@ -64,14 +62,11 @@ website:
     background: light
 
 
-format:
-  html:
-    theme:
-      - cosmo
-      - theme_custom.scss
-#    css: styles.css        # empty
-    fontsize: 1.1em
-    toc: true
-    
-# embed-resources: true
 
+format:
+  html: default
+
+    
+brand:
+  light: _brand.yml
+  dark: _brand-dark.yml
