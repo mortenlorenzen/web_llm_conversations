@@ -32,8 +32,8 @@ website:
           href: breakthrough_technologies_2025.qmd
         - text: AI Automation (2025) in 5 Industries
           href: ai_automation_in_5_industries_2025.qmd
-        - text: empty
-          href: empty.qmd
+        - text: n8n Automatiseringseksempler
+          href: n8n_automatiseringseksempler.qmd
         - text: empty
           href: empty.qmd
         - text: empty

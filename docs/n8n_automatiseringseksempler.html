@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.24">
+<meta name="generator" content="quarto-1.7.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-04-30">
 
-<title>empty-copy-9 – LLM dialogues</title>
+<title>n8n Automatiseringseksempler – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +32,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ccf19e8c143dd51991281a9ab4054da.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15b37da6f09a522b530f7448f7e0b153.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-aa82d01280ab81991fd415b2d78b9216.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0356b5d994c49c1ba38d3ef361526dc4.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-aa82d01280ab81991fd415b2d78b9216.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -75,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    window.setColorSchemeToggle = (alternate) => {
+    const setColorSchemeToggle = (alternate) => {
       const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
@@ -108,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      window.setColorSchemeToggle(alternate)
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -148,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
     const isFileUrl = () => {
       return window.location.protocol === 'file:';
     }
-    window.hasAlternateSentinel = () => {
+    const hasAlternateSentinel = () => {
       let styleSentinel = getColorSchemeSentinel();
       if (styleSentinel !== null) {
         return styleSentinel === "alternate";
@@ -176,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -199,19 +201,21 @@ ul.task-list li input[type="checkbox"] {
         changeGiscusTheme();
       }
     };
-    const darkModeDefault = false;
-    document.querySelector('link.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
       // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
+      let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
     };
     // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
+    if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
@@ -273,8 +277,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">AI Automation (2025) in 5 Industries</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./empty.html">
- <span class="dropdown-text">empty</span></a>
+    <a class="dropdown-item" href="./n8n_automatiseringseksempler.html">
+ <span class="dropdown-text">n8n Automatiseringseksempler</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./empty.html">
@@ -342,12 +346,124 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">n8n Automatiseringseksempler</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 30, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>Baseret på kilderne og vores samtalehistorik er her 50 eksempler på automatiseringer, som kan implementeres med n8n, kategoriseret for overblik:</p>
+<p><strong>E-handel og Salg</strong></p>
+<ul>
+<li><strong>Markedsføring af nye produkter på sociale medier</strong> straks efter oprettelse i butikken.</li>
+<li><strong>Opdatering af kunde- og ordredetaljer</strong> i et CRM som Zoho CRM.</li>
+<li><strong>Oprettelse af fakturaer for nye ordrer</strong>.</li>
+<li><strong>Tilbyde kuponer eller rabatter</strong> til kunder baseret på deres ordrehistorik eller værdi.</li>
+<li><strong>Anmode kunder om produktanmeldelser</strong> automatisk efter de har modtaget deres ordre.</li>
+<li><strong>Afvikling af salgsinventar og -rapporter</strong> ugentligt og lagring af data i Google Sheets.</li>
+<li><strong>Import af produktdatafeeds</strong> fra distributører til webshoppen, herunder indstilling af priser og fjernelse af udsolgte varer.</li>
+<li><strong>Opdatering af kundebestillinger</strong> med aktuel forsendelsesstatus baseret på data fra eksterne tjenester.</li>
+</ul>
+<p><strong>Markedsføring og Kommunikation</strong></p>
+<ul>
+<li><strong>Automatiseret oprettelse af indhold</strong> til sociale medier på tværs af platforme ved hjælp af AI.</li>
+<li><strong>Publicering af indhold på flere sociale medieplatforme</strong> (f.eks. Instagram, Facebook, Twitter, LinkedIn) fra en enkelt kilde.</li>
+<li><strong>Sporing af engagement</strong> på sociale medier, herunder kommentarer, omtaler og beskeder.</li>
+<li><strong>Klassificering af omtaler</strong> på sociale medier, f.eks. ved brug af AI til sentimentanalyse.</li>
+<li><strong>Generering af automatiserede rapporter</strong> om præstation på sociale medier.</li>
+<li><strong>Tilpasning af opslag til forskellige sociale medieplatforme</strong> ved at justere tekstlængde, formatering og billedstørrelse.</li>
+<li><strong>Genopslag af artikler</strong> fra et RSS-feed til en online fællesskab eller sociale medier.</li>
+<li><strong>Automatiseret tilmeldingsproces til nyhedsbreve</strong> via formular eller webhook.</li>
+<li><strong>Afsendelse af bekræftelses-e-mails</strong> til nye abonnenter.</li>
+<li><strong>Verificering af e-mailadresser</strong> efter nyhedsbrevstilmelding.</li>
+<li><strong>Udsendelse af nyhedsbreve</strong> på et fastlagt, planlagt tidspunkt (f.eks. ugentligt).</li>
+<li><strong>Generering af dynamisk indhold</strong> til e-mails baseret på data fra API’er eller andre kilder.</li>
+<li><strong>Automatiseret håndtering af indgående e-mails</strong>, herunder behandling, opsummering og generering af svar.</li>
+<li><strong>Opsummering af indgående e-mails</strong> ved hjælp af AI.</li>
+<li><strong>Klassificering af indgående e-mails</strong> i relevante kategorier med AI.</li>
+<li><strong>Generering af udkast til svar</strong> på e-mails ved hjælp af AI.</li>
+<li><strong>Dynamisk routing i kundesupport</strong> baseret på e-mailindhold eller andre faktorer.</li>
+<li><strong>Notifikationer om vejrudsigt</strong> via meddelelser.</li>
+<li><strong>Notifikationer om togplaner</strong> fra nærliggende stationer.</li>
+<li><strong>Notifikationer ved workflow-fejl</strong> sendt til et team via Slack eller e-mail.</li>
+<li><strong>Notifikationer ved begivenheder</strong> fra eksterne tjenester, f.eks. en Netlify deploy fejl.</li>
+</ul>
+<p><strong>Data og AI</strong></p>
+<ul>
+<li><strong>Skrabe og opsummere websider</strong> ved hjælp af AI.</li>
+<li><strong>Integration af Vector Database</strong> for Retrieval-Augmented Generation (RAG) i AI-applikationer.</li>
+<li><strong>Vectorisering og lagring af dokumenter</strong> fra kilder som Google Drive i en vector database.</li>
+<li><strong>Orkestrering af flere AI-agenter</strong> til at udføre komplekse opgaver.</li>
+<li><strong>AI-baserede anbefalingssystemer</strong> baseret på data i en vector database.</li>
+<li><strong>AI-baseret dataanalyse</strong> til at opdage mønstre og relationer.</li>
+<li><strong>AI-baseret anomali-detektion</strong> i f.eks. billeddata eller andre datasæt.</li>
+<li><strong>AI-baseret klassifikation</strong>, herunder billedklassifikation ved hjælp af K-Nearest Neighbors (KNN).</li>
+<li><strong>Deduplikering</strong> af data ved hjælp af vektorsøgning for at finde semantisk ensartede elementer.</li>
+<li><strong>Udtrække nøgleinformation</strong> fra dokumenter som fakturaer ved hjælp af struktureret parsing.</li>
+<li><strong>Generere sammendrag af dokumenter</strong> ved hjælp af AI.</li>
+<li><strong>Klassificere dokumenter</strong> automatisk ved brug af AI Tekst Classifier.</li>
+<li><strong>Generere AI-indhold</strong> (f.eks. eventbeskrivelser) og oprette records direkte i Airtable.</li>
+<li><strong>Transskribere stemmeoptagelser</strong> til tekst (f.eks. ved brug af Whisper).</li>
+<li><strong>Generere titler, labels og opsummere</strong> transskriberede stemmeoptagelser (f.eks. med GPT-4o).</li>
+<li><strong>Integrere menneskelig intelligens</strong> i AI-processer, f.eks. via et godkendelsestrin.</li>
+<li><strong>Skrabe en webside</strong> med flere sider for at indsamle data.</li>
+</ul>
+<p><strong>Dokumenthåndtering og Godkendelser</strong></p>
+<ul>
+<li><strong>Generering af PDF-dokumenter</strong> (fakturaer, rapporter) fra strukturerede data.</li>
+<li><strong>Automatiseret dokumenthåndtering</strong> ved at kategorisere og gemme filer i cloud storage (f.eks. Google Drive, AWS S3).</li>
+<li><strong>Automatisering af fler-trins godkendelses-workflows</strong> for f.eks. kontrakter eller udgifter.</li>
+<li><strong>Oprettelse af filadgangslinks</strong> efter dokumenter er gemt i cloud.</li>
+</ul>
+<p><strong>Datahåndtering og Synkronisering</strong></p>
+<ul>
+<li><strong>Synkronisering af kundedata</strong> på tværs af flere platforme (CRM, supportsystem, database).</li>
+<li><strong>Håndtering af duplikerede data</strong> i databaser ved at tjekke før indsættelse.</li>
+<li><strong>Sammenføjning af datasæt</strong> fra forskellige kilder.</li>
+<li><strong>Indsamling af data</strong> i databaser, Google Sheets eller Notion og formatere dem til rapportering.</li>
+</ul>
+<p><strong>Interne Operationer og IT</strong></p>
+<ul>
+<li><strong>Generelle planlagte opgaver</strong>, der kører automatisk.</li>
+<li><strong>Automatisering af CI/CD pipeline</strong>.</li>
+<li><strong>Håndtering af pull requests og issues</strong> i open source-projekter.</li>
+<li><strong>Automatisk oprettelse af grafik</strong> til nye softwareudgivelser.</li>
+<li><strong>Automatisering af tests</strong> som en del af deploy-processen.</li>
+<li><strong>Automatisk deploy</strong> når tests passerer.</li>
+<li><strong>Start en workflow, hvis en deploy fejler</strong>.</li>
+<li><strong>Gennemgang af commits efter en release</strong>, bygge en changelog og sende den ud.</li>
+<li><strong>Implementering af ITSM workflows</strong> hurtigt.</li>
+<li><strong>Effektivisering af daglige IT-opgaver</strong> og workflows.</li>
+</ul>
+<p><strong>Personlige og Sjove Automatiseringer</strong></p>
+<ul>
+<li><strong>Automatisering af måltider</strong>, f.eks. bestilling eller planlægning.</li>
+<li><strong>Notifikationer om opdateringer</strong> til menuen på et lokalt spillested/bar.</li>
+<li><strong>Scripting af den perfekte kop kaffe</strong> baseret på tidspunkt og personlige præferencer.</li>
+<li><strong>Automatisk oprettelse af godnathistorier</strong> med AI, f.eks. til at guide børn gennem en rutine.</li>
+</ul>
 
 
 
@@ -366,7 +482,7 @@ ul.task-list li input[type="checkbox"] {
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

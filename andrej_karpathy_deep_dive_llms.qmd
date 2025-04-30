@@ -146,6 +146,7 @@ date: 2025-04-20 08:58:36
 **VI. Conclusion - What is ChatGPT?**
 
 When you type into ChatGPT:
+
 1.  Your query is tokenized and added to the conversation context using a specific format.
 2.  This token sequence feeds into a massive, pre-trained Transformer network with fixed parameters.
 3.  The network generates the next token by sampling from output probabilities. This repeats.
