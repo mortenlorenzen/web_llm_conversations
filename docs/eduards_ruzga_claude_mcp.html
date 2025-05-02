@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-02">
 
-<title>empty-copy-11 – LLM dialogues</title>
+<title>Eduards Ruzga- Claude with MCPs Replaced Cursor &amp; Windsurf – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -284,6 +285,22 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Matthew Berman Mark Zuckerberg Satya Nadella</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./eduards_ruzga_claude_mcp.html">
+ <span class="dropdown-text">Eduards Ruzga Claude with MCPs Replaced Cursor &amp; Windsurf</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./empty.html">
+ <span class="dropdown-text">empty</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./empty.html">
+ <span class="dropdown-text">empty</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./empty.html">
+ <span class="dropdown-text">empty</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./empty.html">
  <span class="dropdown-text">empty</span></a>
   </li>  
@@ -345,12 +362,115 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Eduards Ruzga- Claude with MCPs Replaced Cursor &amp; Windsurf</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 2, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p><strong>:Model Instructions:</strong></p>
+<hr>
+<p><strong>:You:</strong> please summarize this video in detail</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.youtube.com/watch?v=ly3bed99Dy8"><img src="https://i.ytimg.com/vi/ly3bed99Dy8/maxresdefault.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Claude with MCPs Replaced Cursor &amp; Windsurf — How Did That Happen?</figcaption>
+</figure>
+</div>
+<hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of the YouTube video “Claude with MCPs Replaced Cursor &amp; Windsurf — How Did That Happen?” by Eduards Ruzga:</p>
+<p><strong>Core Argument &amp; Introduction:</strong></p>
+<ul>
+<li>The speaker, Eduards Ruzga, explains that he has unexpectedly stopped using paid tools like Windsurf (code-aware IDE/chat) and Cursor (AI-first code editor), despite having started paying for Windsurf in December.</li>
+<li>The primary reason for this shift is his adoption and development of a system combining Anthropic’s Claude AI with <strong>MCPs (Master Control Programs/Protocols)</strong>.</li>
+<li>He highlights that giving Claude access to tools via MCPs drastically increases its utility. His own usage of Claude has increased 5x in the last three months compared to previous periods, demonstrating this enhanced value.</li>
+<li>He has developed his own <strong>“mCP server”</strong> which allows Claude to interact with the user’s local machine. This server enables:
+<ul>
+<li>Running <strong>long-running processes</strong> (e.g., video encoding) without blocking the chat, managing them via process IDs.</li>
+<li>Accessing the <strong>file system</strong> for tasks like large codebase exploration, reading files/READMEs, generating documentation, and creating diagrams.</li>
+<li><strong>Editing code files</strong>, including diff editing, multi-file editing, and even multi-repository operations (he gives an example of migrating 30 files/3.5k lines for a side project with only one manual fix needed).</li>
+</ul></li>
+</ul>
+<p><strong>MCP Server Installation:</strong></p>
+<ul>
+<li>Eduards has published his mCP server to npm and made it easily installable via <strong>Smi (Sidecar Manager Interface)</strong>.</li>
+<li>He demonstrates the simple, one-line installation process in the terminal, requiring only Node.js and the Claude Desktop App to be pre-installed.</li>
+<li>After restarting the Claude app, the server automatically connects and adds around 19 tools (list directories, edit files, execute commands, kill processes, etc.) to Claude’s capabilities within the chat interface.</li>
+</ul>
+<p><strong>Demonstration 1: Codebase Exploration &amp; Diagramming:</strong></p>
+<ul>
+<li>He showcases using Claude + MCPs to explore the mCP server’s own codebase.</li>
+<li>He instructs Claude to explore a given directory path, read relevant files (README, package.json, source files), understand the structure and functionality, and generate <strong>Mermaid.js diagrams</strong> directly within the chat window.</li>
+<li>Claude successfully lists files, reads key code files, and produces several diagrams (component, sequence, architecture) explaining how the mCP server works, including handling terminal commands and long-running processes.</li>
+<li>He praises this as a way to quickly understand unfamiliar codebases and highlights the advantage of having visual artifacts directly in the chat, something not typically done with Windsurf/Cursor.</li>
+</ul>
+<p><strong>Comparison with Windsurf:</strong></p>
+<ul>
+<li>He attempts the same codebase exploration and diagramming task using Windsurf (with Claude 3 Sonnet model).</li>
+<li>Windsurf <em>can</em> perform the task but requires generating an external <strong>HTML file</strong> for the diagrams, lacking the inline visual benefit.</li>
+<li>He points out several <strong>friction points</strong> with Windsurf for this use case: needing to open the project folder first, waiting for indexing/loading, occasional errors (like a “Cascade” error during his first attempt), sometimes reading only partial files (though it seemed okay in this specific instance), and generally feeling less direct and more cumbersome than simply giving Claude a path.</li>
+</ul>
+<p><strong>Demonstration 2: Long-Running Processes (Video Encoding):</strong></p>
+<ul>
+<li>He shows a pre-recorded chat demonstrating Claude using the mCP server to <strong>compress a large video file (2.5GB)</strong> using FFmpeg.</li>
+<li>Claude executes commands to analyze the file, then starts the FFmpeg compression process.</li>
+<li>Crucially, the mCP server runs FFmpeg in the background, returns a <strong>process ID</strong> to Claude, and allows Claude to periodically query the process for new output/status updates without blocking the chat.</li>
+<li>He demonstrates asking Claude for progress updates, where Claude reads the latest FFmpeg output, calculates remaining time, and reports on bitrate reduction.</li>
+<li>Finally, Claude confirms the process completion and reports the significantly reduced file size (237MB).</li>
+<li>This showcases a capability (managing long-running, complex local tasks) that typical AI code assistants like Windsurf/Cursor are not designed for.</li>
+</ul>
+<p><strong>Demonstration 3: Coding &amp; Development (Live Project):</strong></p>
+<ul>
+<li>He performs a live coding session to demonstrate creating a simple web application from scratch using Claude + MCPs.</li>
+<li>The goal: a webpage with a full-screen webcam feed that uses <strong>MediaPipe</strong> for hand gesture detection to allow drawing and erasing on the screen.</li>
+<li>Claude:
+<ul>
+<li>Creates a new project folder.</li>
+<li>Writes the initial HTML, CSS, and JavaScript files, including necessary library imports.</li>
+<li>Opens the resulting <code>index.html</code> in the browser.</li>
+<li>Iteratively refines the application based on his requests: adding a circle cursor for drawing, implementing erasing with an open palm gesture, adjusting cursor/eraser size based on hand distance, removing unwanted features (two-finger mode switching, thumbs-up clearing).</li>
+<li>Demonstrates both <strong>full file rewrites</strong> and more precise <strong>block editing</strong> (showing the diff-like instructions it uses).</li>
+<li>Successfully implements size scaling for both drawing and erasing based on palm size/distance.</li>
+<li>Finally, initializes a Git repository, creates a <code>.gitignore</code> file, adds files, commits, adds a remote GitHub URL, and pushes the code to the repository.</li>
+<li>He then manually sets up GitHub Pages to deploy the web app live.</li>
+</ul></li>
+</ul>
+<p><strong>Conclusions &amp; Future Plans:</strong></p>
+<ul>
+<li>Eduards concludes that Claude combined with his mCP server offers a more <strong>open and flexible</strong> environment compared to the more “boxed-in” experience of Windsurf/Cursor, especially for tasks beyond pure code editing within a project context (like system-level tasks, long processes, arbitrary file manipulation).</li>
+<li>The reduced friction and broader capabilities led him to use Windsurf/Cursor less and less, prompting him to <strong>cancel his Windsurf subscription</strong>.</li>
+<li>He acknowledges that <strong>Cursor might still be better</strong> for users who heavily rely on real-time, inline code auto-completion suggestions, a workflow he doesn’t personally favor.</li>
+<li><strong>Future plans:</strong>
+<ul>
+<li>Integrating a code search tool (mentions “Code Reflex”, possibly typo for CodeGrep or similar) into his mCP server for better code navigation.</li>
+<li>Creating more short videos focused on MCPs.</li>
+<li>Investigating the new “Claude Code” offering to see what it offers beyond Claude+MCPs, potentially adding matching tools to his server.</li>
+<li>Exploring the burgeoning landscape of new LLMs (Groq, Gemini Flash, local models like Phi-3, Gemma 2, DeepSeek) <strong>specifically for their tool-using (MCP) capabilities</strong>. He finds current platforms lacking and is working on a side project to connect <em>any</em> LLM (API or local) to <em>any</em> MCP for testing, with a particular interest in local models + MCPs for fully offline, private AI workflows.</li>
+</ul></li>
+<li>He ends with a call to action (subscribe, like, comment, share, Super Thanks).</li>
+</ul>
 
 
 
