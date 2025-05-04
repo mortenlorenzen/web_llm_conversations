@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI
         menu:
+        - text: Claude & MCP - Top 10 MCP Use Cases
+          href: claude_mcp.qmd
         - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf
           href: eduards_ruzga_claude_mcp.qmd
         - text: Matthew Berman Mark Zuckerberg Satya Nadella
@@ -38,8 +40,6 @@ website:
           href: andrej_karpathy_deep_dive_llms.qmd
         - text: 10 Key Breakthrough Technologies of 2025
           href: breakthrough_technologies_2025.qmd
-        - text: empty
-          href: empty.qmd
         - text: empty
           href: empty.qmd
         - text: empty
