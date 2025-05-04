@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI
         menu:
+        - text: MSTY Studio
+          href: msty.qmd
         - text: Claude & MCP - Top 10 MCP Use Cases
           href: claude_mcp.qmd
         - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf

@@ -1,0 +1,166 @@
+---
+title: Msty Studio Toolsets
+date: 2025-05-04 18:36:41
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this video in detail
+
+[![Msty Studio - Toolsets](https://i.ytimg.com/vi/--9wpql3ovI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgRSg9MA8=&rs=AOn4CLBevF3l9YfLtFKpn_ri8qr2ZOOlFQ)](https://www.youtube.com/watch?v=--9wpql3ovI)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, here is a detailed summary of the Msty Studio Toolsets video:
+
+**Introduction & Core Concept:**
+
+*   The video introduces a powerful feature in Msty Studio called "Toolbox" (also referred to as tools or toolsets).
+*   This feature allows Large Language Models (LLMs) within Msty Studio to interact with external "tools" installed on the user's machine.
+*   **Crucially, this feature relies entirely on the "Sidecar" component**, which must be running and connected. The Sidecar powers the execution of these tools. (Users are urged to watch the previous video about Sidecar).
+*   These tools enable communication with various external systems: data sources, file systems, GitHub repositories, web search, databases (like MySQL, SQLite), Google Drive, etc. They can provide context (like file lists or data) to the LLM and perform actions (like writing files, creating directories, executing commands).
+*   The technology underpinning this is the **Model Context Protocol (MCP)**, developed by Anthropic (Claude's creator). Msty Studio provides an interface to leverage this protocol.
+
+**Msty Studio's Approach & Advantages:**
+
+*   While other applications might use MCP, Msty Studio offers a unique, browser-based approach.
+*   Users don't need a separate desktop application (like Claude's official one) to manage or use these tools.
+*   Configuration and management are designed to be straightforward.
+*   The Sidecar can run anywhere (locally or on a remote server), allowing users to connect from the browser-based Msty Studio and access powerful tools without needing them installed directly on their local client machine.
+*   **Vision for the Future:** The presenter envisions scenarios where users can create toolsets and assign them to specific users or teams (e.g., giving controlled tool access to family members like children or parents) without requiring them to manage installations, promoting accessibility.
+
+**Limitations:**
+
+*   Tools currently **do not work well with local LLMs**. This is presented as a limitation of the underlying models/protocols regarding streaming during tool use, not Msty Studio itself. Online models (like Claude models demonstrated) work much better.
+
+**Setup and Configuration:**
+
+1.  **Connect Sidecar:** Ensure the Sidecar is running. Copy its local endpoint URL and token into the Msty Studio connection settings and *save* the connection info. A successful connection is indicated by a bolt icon.
+2.  **Access Toolbox:** Navigate to the "Toolbox" section in Msty Studio.
+3.  **Adding Tools:**
+    *   **Import Default Tools:** Msty Studio provides an option to import a set of pre-defined common tools to get started (e.g., Search, File System, Git, GitHub, Mac OS commands).
+    *   **Disclaimer:** Msty does *not* provide, maintain, or support these tools. Users add and run them at their own risk. Msty cannot help with setting up specific tool dependencies or arguments beyond the platform integration.
+    *   **Manual Addition:** Users can add their own tools by finding MCP server configurations (often available on GitHub in official or community repositories like "awesome-mcp-servers"). This involves providing a Tool ID, optionally an icon, and the tool's JSON configuration (specifying command, arguments, placeholders, environment variables).
+    *   **Dependencies:** Most tools require dependencies like Node.js, Python (often with package managers like `npx` or `uv`), or Docker. The Toolbox interface shows required dependencies and indicates if they are detected via the Sidecar connection (showing red if missing or disconnected).
+4.  **Tool Parameters:**
+    *   Individual tools can have *default parameters* set (e.g., a default API key for Brave search, default host/port/user for MySQL).
+5.  **Creating Toolsets:**
+    *   This is a key concept. Users create named "Toolsets," which are *collections* of one or more tools configured for a specific purpose. This is similar to "Knowledge Stacks" in the Msty App.
+    *   Within a specific Toolset, users can *override* the default parameters of a tool or provide specific ones needed only for that toolset (e.g., setting a specific `allowed_directory` for the File System tool, or providing production database credentials for a MySQL tool in one toolset and development credentials in another).
+    *   Toolsets can be reordered to set preference if multiple toolsets containing similar tools are selected.
+
+**Demonstration:**
+
+*   The presenter connects the Sidecar.
+*   Imports the default tools.
+*   Shows the configuration details for tools like MySQL, demonstrating how to add default parameters (host, port, user).
+*   Creates multiple Toolsets:
+    *   One combining MySQL and Google Search.
+    *   One for "Prod MySQL" with specific overridden parameters (host, password, database name).
+*   Demonstrates creating a custom tool ("my own SQL") by copying JSON configuration from an online source and defining placeholders for arguments and environment variables.
+*   **Main Demo (Mac OS & File System):**
+    *   Creates toolsets: `Mac OS info` (using a Mac OS tool) and `Mac OS FS tool` (combining Mac OS and File System tools).
+    *   Selects the `Mac OS info` toolset and uses an online Claude model to ask about the Mac's CPU and disk information. The LLM successfully uses the tool via Sidecar to retrieve this system info.
+    *   Configures the `Mac OS FS tool` toolset, specifically setting the `allowed_directories` parameter for the File System tool to point to a local documentation folder.
+    *   Selects the `Mac OS FS tool` toolset.
+    *   Asks the LLM what files/folders it can see in the configured directory. It correctly lists them.
+    *   Asks the LLM to create a new directory ("demo") within the allowed path. The directory is successfully created on the file system.
+    *   Asks the LLM to write the CPU information (obtained via the Mac OS tool) into a file `cpu.txt` within the `demo` directory (handled by the File System tool). This demonstrates combining multiple tools within a conversation flow.
+
+**Summary & Conclusion:**
+
+*   Toolbox is a feature for integrating external tools using Sidecar and MCP.
+*   Users can manage tools, set default parameters, and create specific "Toolsets" by combining tools and overriding parameters for specific tasks.
+*   Requires Sidecar and works best with online models.
+*   Msty Studio provides the platform but not the tools themselves.
+*   Msty Studio remains browser-based with local data storage.
+*   The presenter mentions a forthcoming "Live Context" feature to be shown in the next video.
+
+---
+
+
+---
+
+
+---
+
+
+
+title: Msty Studio Sidecar
+date: 2025-05-04 18:39:27
+
+**:Model Instructions:** 
+
+  
+**:You:** please summarize this video in detail
+
+[![Msty Studio - Sidecar](https://i.ytimg.com/vi/sF01g62PTDs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgYShhMA8=&rs=AOn4CLCGvpltPzFKIDtF8YBI7eu6cQjUpw)](https://www.youtube.com/watch?v=sF01g62PTDs)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, here is a detailed summary of the Msty Studio Sidecar video:
+
+**Introduction & Purpose of Sidecar**
+
+*   The video introduces "Sidecar," described as an optional but very important feature for Msty Studio.
+*   **Msty Studio Context:** Msty Studio is a web application that runs in a browser on various devices. While flexible, being a web app means it operates within a browser sandbox, limiting its ability to access local machine resources, run commands, or directly fetch certain external data (like YouTube transcripts) due to security restrictions (e.g., CORS - Cross-Origin Resource Sharing).
+*   **Sidecar's Role:** Sidecar acts as a "helper app" or a small, dedicated backend for Msty Studio. It's a separate application installed and run on a user's desktop machine (Windows, Linux, Mac) or potentially a remote server.
+*   **Why Needed:** It bridges the gap between the limited web environment of Msty Studio and the capabilities of a local machine, enabling features that Msty Studio alone cannot perform.
+*   **Optionality:** Msty Studio functions without Sidecar, but specific advanced features are only activated when Sidecar is running and connected.
+
+**How Sidecar Works & Setup**
+
+*   **Installation:** Users download and install the Sidecar application on a chosen machine.
+*   **Interface:** Currently shown as a menubar application (not a full chat interface). It provides options to manage the Sidecar service.
+*   **Connection Details:**
+    *   **Local Endpoint:** Provides a local network address (URL) for Msty Studio to connect to.
+    *   **Token:** A security token is required for Msty Studio to authenticate with Sidecar. This token can be copied from the Sidecar menu.
+    *   **Regenerate Token:** Tokens are regenerated each time Sidecar starts for security.
+    *   **Quit:** Option to stop the Sidecar service.
+*   **Connecting from Msty Studio:**
+    *   Users go to the connection settings in Msty Studio.
+    *   They input the Sidecar's endpoint URL and the current authentication token.
+    *   There's an option to save the connection info (though the token needs updating if Sidecar restarts).
+
+**Security Features**
+
+*   **Authentication:** Connection requires a valid, current token.
+*   **Token Regeneration:** Tokens change on restart, preventing unauthorized use of old tokens.
+*   **Domain Restriction (CORS Hardcoding):** Sidecar will be hardcoded to *only* accept connections from the official Msty Studio domain (e.g., `mystudio.com`). Random websites cannot connect to it.
+*   **HTTPS:** Connections are expected to use HTTPS for security.
+*   **User Control:** The user must explicitly run the Sidecar application.
+
+**Tunneling Feature**
+
+*   **Problem:** To connect to Sidecar from a different device (like a phone or iPad) not on the same local network, the `localhost` or local IP address isn't sufficient.
+*   **Solution:** Sidecar includes an optional "Tunneling" feature.
+*   **Mechanism:** When enabled, it uses Cloudflare's tunneling service to create a secure (HTTPS), public URL that forwards traffic to the local Sidecar instance.
+*   **Benefit:** Makes it easy for users (even non-technical ones) to access Sidecar's features from any device, anywhere, without complex network configuration.
+*   **Security Note:** This involves routing traffic through Cloudflare; users who prefer not to can keep tunneling disabled. Connection still requires the token and is restricted by domain.
+
+**Demonstrated Functionality: YouTube Transcripts**
+
+*   **Challenge:** Web applications like Msty Studio typically cannot directly fetch YouTube transcripts due to browser security and CORS policies enforced by YouTube.
+*   **Sidecar Solution:** Msty Studio delegates the task to Sidecar. Sidecar, running as a local application, is not bound by the browser's sandbox and can fetch the webpage and extract the transcript data.
+*   **Demo:** The presenter adds a YouTube video URL as an attachment in Msty Studio. Sidecar (connected) fetches the transcript in the background. The presenter then successfully chats with the video's content ("Summarize this for me"), proving the transcript was retrieved and used as context.
+
+**Future Potential & Vision**
+
+*   **Local AI Integration:** A major future plan is to embed local AI services like Ollama directly within Sidecar. This would allow users to run local AI models accessible via Msty Studio without needing separate complex setups. Msty Studio might even manage models through Sidecar.
+*   **Service-Based:** Sidecar might evolve from a UI application to a background service, suitable for running on servers without a graphical interface.
+*   **More Powerful Features:** The presenter emphasizes that Sidecar enables many powerful features, and more capabilities will be added and demonstrated over time (e.g., potentially improved real-time data fetching, though web search scraping is noted as fragile).
+*   **Stability:** Sidecar itself is envisioned as a relatively stable component that won't require frequent updates, unlike a desktop application.
+
+**Msty Studio vs. Msty App Clarification & Licensing**
+
+*   The presenter explicitly clarifies that **Msty Studio (the web app)** is a completely **different application** from the existing **Msty App (the desktop application)**. While some features overlap, they serve different purposes (web/mobile/team access for Studio vs. desktop power for App).
+*   **Licensing Bonus:** As a gesture, users with an Orum license for the Msty App desktop application will be granted access to Msty Studio as well (limited to one activation to prevent misuse).
+
+In essence, Sidecar is a crucial companion app for Msty Studio, overcoming web application limitations to unlock advanced features like local resource access, external data fetching (YouTube transcripts), and future capabilities like integrated local AI, all while maintaining security through tokens and domain restrictions.
+
+
+
+
+
