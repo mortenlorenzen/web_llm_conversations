@@ -18,6 +18,16 @@ website:
         text: Home
       - text: AI
         menu:
+        - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf
+          href: eduards_ruzga_claude_mcp.qmd
+        - text: Matthew Berman Mark Zuckerberg Satya Nadella
+          href: matthew_berman_zuckerberg_nadella.qmd
+        - text: AI use cases and tools
+          href: ai_use_cases-1.qmd
+        - text: AI Automation (2025) in 5 Industries
+          href: ai_automation_in_5_industries_2025.qmd
+        - text: n8n Automatiseringseksempler
+          href: n8n_automatiseringseksempler.qmd
         - text: Yan LeCun on AI's impossible Math Problem
           href: yan_lecun-1.qmd
         - text: Yann LeCun Says He DONE With LLMS
@@ -26,18 +36,8 @@ website:
           href: andrej_karpathy.qmd
         - text: Andrej Karpathy's Deep Dive into LLMs
           href: andrej_karpathy_deep_dive_llms.qmd
-        - text: AI use cases and tools
-          href: ai_use_cases-1.qmd
         - text: 10 Key Breakthrough Technologies of 2025
           href: breakthrough_technologies_2025.qmd
-        - text: AI Automation (2025) in 5 Industries
-          href: ai_automation_in_5_industries_2025.qmd
-        - text: n8n Automatiseringseksempler
-          href: n8n_automatiseringseksempler.qmd
-        - text: Matthew Berman Mark Zuckerberg Satya Nadella
-          href: matthew_berman_zuckerberg_nadella.qmd
-        - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf
-          href: eduards_ruzga_claude_mcp.qmd
         - text: empty
           href: empty.qmd
         - text: empty
