@@ -471,6 +471,54 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>He ends with a call to action (subscribe, like, comment, share, Super Thanks).</li>
 </ul>
+<hr>
+<hr>
+<hr>
+<p>title: Income Stream Surfers: “Desktop Commander” MCP date: 2025-05-04 11:31:27</p>
+<p><strong>:Model Instructions:</strong></p>
+<p><strong>:You:</strong> please summarize this video in detail</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.youtube.com/watch?v=hSQ5cjr-WjM"><img src="https://i.ytimg.com/vi_webp/hSQ5cjr-WjM/maxresdefault.webp" class="img-fluid figure-img"></a></p>
+<figcaption>Anthropic Cooked AGAIN: RIP CURSOR/CLINE? (CLAUDE DESKTOP UPDATES)</figcaption>
+</figure>
+</div>
+<hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of the YouTube video “Anthropic Cooked AGAIN: RIP CURSOR/CLINE? (CLAUDE DESKTOP UPDATES)” by Income Stream Surfers:</p>
+<p><strong>Introduction &amp; Core Announcement:</strong></p>
+<ul>
+<li>The video starts by highlighting a recent update from Anthropic for their Claude AI: the introduction of native support for MCPs (Model Capabilities Platforms, though the speaker initially misnames it) directly within the Claude web/desktop application.</li>
+<li>This allows users to add and use tools (MCPs) like file system access or process execution directly in the Claude interface, without needing separate applications like Klein or relying solely on API integrations.</li>
+<li>The speaker specifically focuses on testing the “Desktop Commander” MCP.</li>
+<li>He also mentions the Claude “Max” plan ($90/month), noting its significantly higher rate limits compared to the Pro plan (5x more usage, approx. 225 messages every 5 hours). He posits that despite the high fixed cost, it could potentially be <em>cheaper</em> for heavy users (like developers building multiple projects) compared to paying per token via the API, which can run into hundreds or thousands of dollars.</li>
+</ul>
+<p><strong>Installation &amp; Setup:</strong></p>
+<ul>
+<li>The speaker demonstrates the ease of installing the Desktop Commander MCP. He simply pastes the <code>npx install</code> command provided on the Desktop Commander website directly into the Claude chat window (using the already installed file install MCP to execute it).</li>
+<li>After a quick restart of the Claude app, the Desktop Commander MCP appears in the available tools list.</li>
+<li>He runs into an initial “access denied” error when trying to point the MCP to a specific local project directory. He quickly finds the configuration setting (File &gt; Settings &gt; Developer &gt; Edit Config) and adds the desired path to the allowed directories, resolving the issue.</li>
+</ul>
+<p><strong>Testing &amp; Performance:</strong></p>
+<ul>
+<li>The speaker uses one of his standard, complex prompts (available on his School community/channel) to instruct Claude (using the Desktop Commander/native file system MCP) to build a website project within the specified local directory.</li>
+<li>He expresses strong positive feelings about the integrated workflow within the official Claude app, contrasting it with API interactions or using external tools like Klein or Cursor, which he feels can be “disjointed.” He believes the conversation flow and context passing feel more natural and connected in the official front-end.</li>
+<li>He speculates that front-end versions of models (like Claude’s or ChatGPT’s) might be inherently more capable or less prone to placeholder code compared to their API counterparts, possibly due to different internal context handling or optimization priorities (API often prioritizes token efficiency).</li>
+<li>A key observation is that Claude, within this setup, successfully generates SVG icons/files, something he notes Klein struggled significantly with.</li>
+<li>The code generation proceeds smoothly without hitting rate limits during the single project build. He acknowledges needing to press “continue” occasionally when the output gets cut off.</li>
+</ul>
+<p><strong>Analysis &amp; Impressions:</strong></p>
+<ul>
+<li><strong>Model Quality:</strong> The speaker is highly impressed with the quality of the generated code and <em>especially</em> the design of the resulting website. He calls the design “phenomenal,” “delicious,” and the “best design I’ve ever seen” from an AI coder. He suspects the Claude 3.5 Sonnet model available in the paid front-end might be a less “toned down” or more capable version than the one typically accessed via the API, possibly because the subscribers (likely heavy developers) demand higher quality. He uses OpenRouter usage stats for Sonnet to argue that developer usage dominates API consumption, suggesting Anthropic might optimize the API version for cost, while keeping the front-end version more powerful for subscribers.</li>
+<li><strong>Desktop Commander vs.&nbsp;Native File System:</strong> He clarifies later that he’s not 100% certain if the Desktop Commander tool was strictly <em>required</em> or if Claude’s native file system capabilities would have sufficed for writing the files. However, he feels it doesn’t significantly impact his core positive assessment of the overall <em>system</em> (native MCPs, rate limits, model quality in the app). He notes Desktop Commander’s unique ability to <em>run</em> processes (like <code>npm run dev</code>) and view output is cool, but wasn’t the main focus here.</li>
+<li><strong>Cost-Effectiveness:</strong> He revisits the $90/month cost. Based on the observed rate limits (~225 messages/5 hours) and the complexity of the project generated, he estimates he could build roughly 5 such websites in 5 hours (1 per hour). Comparing this to an estimated $15 API cost per website, the Max plan ($90/month) appears significantly cheaper for anyone building even 6+ similar projects per month.</li>
+<li><strong>Errors:</strong> While overwhelmingly positive, he notes the generated project isn’t perfect. He encounters an error when trying to run <code>npm rundev</code> and identifies a couple of other minor issues (text color, syntax errors in an Italian language file). However, he considers these easily fixable and minor compared to the overall quality.</li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<ul>
+<li>The speaker concludes that this update, combining native MCP support in the Claude app with the Max plan’s high rate limits and the perceived high quality of the model in this environment, makes Claude potentially the “best AI coder on the market.”</li>
+<li>He finds the results “phenomenal” and “the most impressive AI code” he’s seen, suggesting it surpasses alternatives like Klein and Cursor.</li>
+<li>He plans to experiment more with this setup and expects to create more content about the Claude desktop app. He believes this development is a significant step forward for AI-assisted coding.</li>
+</ul>
 
 
 
