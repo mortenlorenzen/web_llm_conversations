@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI
         menu:
+        - text: Become a One Person Business with AI
+          href: one_person_business_with_ai.qmd
         - text: MSTY Studio
           href: msty.qmd
         - text: Claude & MCP - Top 10 MCP Use Cases
@@ -42,8 +44,6 @@ website:
           href: andrej_karpathy_deep_dive_llms.qmd
         - text: 10 Key Breakthrough Technologies of 2025
           href: breakthrough_technologies_2025.qmd
-        - text: empty
-          href: empty.qmd
         - text: empty
           href: empty.qmd
         - text: empty
