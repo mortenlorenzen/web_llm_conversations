@@ -569,14 +569,45 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of the YouTube video “Msty Studio - Local AI with Sidecar”:</p>
-<p><strong>Core Problem &amp; Msty Studio’s Goal:</strong> The video addresses concerns from users that Msty Studio (a web-based application for interacting with large language models) might make using <em>local</em> AI models difficult, especially for newcomers. The presenter aims to demonstrate that Msty Studio, particularly with its companion app “Sidecar,” actually <em>simplifies</em> the process of setting up and using local AI.</p>
-<p><strong>Msty Studio Basics (Web App):</strong> * Msty Studio itself is a web application, meaning users don’t need to install anything to use it <em>if</em> they are connecting to online AI providers like OpenAI, OpenRouter, etc. This makes it easy for teams, classrooms, or individuals to try LLMs without installation hurdles.</p>
-<p><strong>Introducing Sidecar (for Local AI):</strong> * For users who <em>do</em> want to run AI models locally on their own hardware, Msty provides a separate downloadable application called “Sidecar.” * Sidecar is presented as the recommended starting point for anyone new to local AI who wants to use it with Msty Studio. It guides users through the setup process.</p>
-<p><strong>Sidecar First-Run Demonstration:</strong> 1. <strong>Initial Launch:</strong> When a new user runs Sidecar for the first time, it presents setup options for local AI. 2. <strong>Setup Options:</strong> * It detects if the user already has models from the standalone Msty App or Ollama installed and offers to use those. * Crucially, it offers to “Set up local AI.” The presenter chooses this option. 3. <strong>Automated Setup:</strong> Sidecar then automatically handles the download and configuration of the necessary components to run local AI. It sets this up as an isolated instance, even if the user has other local AI setups (like the Msty App), ensuring it runs on its own port without conflict. 4. <strong>Connecting to Msty Studio:</strong> Once the setup is complete, Sidecar provides options: * Copy the local AI endpoint URL (for manual configuration). * A button labeled “Start using in Msty Studio,” which is highlighted as the convenient option for new users. 5. <strong>Seamless Integration:</strong> Clicking the button automatically opens Msty Studio in the web browser and connects it to the local AI endpoint managed by Sidecar. The presenter demonstrates this by immediately starting a chat with the default local model.</p>
+<p><strong>Core Problem &amp; Msty Studio’s Goal:</strong></p>
+<p>The video addresses concerns from users that Msty Studio (a web-based application for interacting with large language models) might make using <em>local</em> AI models difficult, especially for newcomers. The presenter aims to demonstrate that Msty Studio, particularly with its companion app “Sidecar,” actually <em>simplifies</em> the process of setting up and using local AI.</p>
+<p><strong>Msty Studio Basics (Web App):</strong></p>
+<ul>
+<li>Msty Studio itself is a web application, meaning users don’t need to install anything to use it <em>if</em> they are connecting to online AI providers like OpenAI, OpenRouter, etc. This makes it easy for teams, classrooms, or individuals to try LLMs without installation hurdles.</li>
+</ul>
+<p><strong>Introducing Sidecar (for Local AI):</strong></p>
+<ul>
+<li>For users who <em>do</em> want to run AI models locally on their own hardware, Msty provides a separate downloadable application called “Sidecar.”</li>
+<li>Sidecar is presented as the recommended starting point for anyone new to local AI who wants to use it with Msty Studio. It guides users through the setup process.</li>
+</ul>
+<p><strong>Sidecar First-Run Demonstration:</strong></p>
+<ol type="1">
+<li><strong>Initial Launch:</strong> When a new user runs Sidecar for the first time, it presents setup options for local AI.</li>
+<li><strong>Setup Options:</strong>
+<ul>
+<li>It detects if the user already has models from the standalone Msty App or Ollama installed and offers to use those.</li>
+<li>Crucially, it offers to “Set up local AI.” The presenter chooses this option.</li>
+</ul></li>
+<li><strong>Automated Setup:</strong> Sidecar then automatically handles the download and configuration of the necessary components to run local AI. It sets this up as an isolated instance, even if the user has other local AI setups (like the Msty App), ensuring it runs on its own port without conflict.</li>
+<li><strong>Connecting to Msty Studio:</strong> Once the setup is complete, Sidecar provides options:
+<ul>
+<li>Copy the local AI endpoint URL (for manual configuration).</li>
+<li>A button labeled “Start using in Msty Studio,” which is highlighted as the convenient option for new users.</li>
+</ul></li>
+<li><strong>Seamless Integration:</strong> Clicking the button automatically opens Msty Studio in the web browser and connects it to the local AI endpoint managed by Sidecar. The presenter demonstrates this by immediately starting a chat with the default local model.</li>
+</ol>
 <p><strong>Beyond Setup: Model Management via Msty Studio:</strong> * The video emphasizes that Sidecar’s utility extends beyond the initial setup. Msty Studio’s “Model Hub” feature leverages the connection established by Sidecar (or any compatible endpoint) for managing models. * <strong>Connecting to Providers:</strong> In the Model Hub, users first select the AI provider they want to manage. In the demo, this is the local AI instance set up by Sidecar. The presenter notes you could also add and manage <em>remote</em> AI endpoints (e.g., a powerful server elsewhere) through this interface. * <strong>Managing Models:</strong> Once connected to a provider (like the local Sidecar one), users can: * <strong>Install Featured Models:</strong> Browse and install curated models (e.g., Gemma 3, TinyLlama). * <strong>View Installed Models:</strong> See a list of all models currently available on that endpoint. * <strong>Install Ollama Models:</strong> Search and install models directly from the Ollama library (demonstrated with Llama 3.2). * <strong>Install Hugging Face Models:</strong> Mentioned as a capability (search and install). * <strong>Install Custom Ollama Models:</strong> Paste the name/tag of any model from Ollama Hub (demonstrated with <code>codellama:7b-instruct-fp16</code>) to download and install it. * <strong>Monitor Downloads:</strong> A progress indicator shows active downloads, which can be paused and resumed.</p>
-<p><strong>Clarification on Sidecar Necessity:</strong> * While Sidecar provides the easiest <em>setup</em> experience, the presenter clarifies that you <em>don’t</em> strictly need Sidecar running just to <em>manage models</em> in the Model Hub. Any Ollama-compatible endpoint (including one run by the standalone Msty App or Ollama itself) can be added and managed through Msty Studio’s Model Hub.</p>
-<p><strong>Upcoming Feature: Local AI Settings Management:</strong> * A future feature teased is the ability to manage the <em>settings</em> of the local AI server directly from Msty Studio (e.g., restart the server, configure CORS headers, add authentication). * <strong>Crucially, this upcoming settings management feature <em>will</em> require Sidecar</strong> to be installed and running, as the web app itself cannot directly modify local server configurations without it.</p>
-<p><strong>Conclusion:</strong> The video concludes by reiterating that Sidecar makes getting started with local AI in Msty Studio very easy, aligning with their priority of user-friendliness, especially for newcomers. It provides a guided setup and enables powerful model management features directly within the Msty Studio web interface, with further local server controls planned that will leverage Sidecar.</p>
+<p><strong>Clarification on Sidecar Necessity:</strong></p>
+<ul>
+<li>While Sidecar provides the easiest <em>setup</em> experience, the presenter clarifies that you <em>don’t</em> strictly need Sidecar running just to <em>manage models</em> in the Model Hub. Any Ollama-compatible endpoint (including one run by the standalone Msty App or Ollama itself) can be added and managed through Msty Studio’s Model Hub.</li>
+</ul>
+<p><strong>Upcoming Feature: Local AI Settings Management:</strong></p>
+<ul>
+<li>A future feature teased is the ability to manage the <em>settings</em> of the local AI server directly from Msty Studio (e.g., restart the server, configure CORS headers, add authentication).</li>
+<li><strong>Crucially, this upcoming settings management feature <em>will</em> require Sidecar</strong> to be installed and running, as the web app itself cannot directly modify local server configurations without it.</li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<p>The video concludes by reiterating that Sidecar makes getting started with local AI in Msty Studio very easy, aligning with their priority of user-friendliness, especially for newcomers. It provides a guided setup and enables powerful model management features directly within the Msty Studio web interface, with further local server controls planned that will leverage Sidecar.</p>
 <hr>
 <hr>
 <hr>
