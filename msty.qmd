@@ -209,6 +209,7 @@ The video addresses concerns from users that Msty Studio (a web-based applicatio
 5.  **Seamless Integration:** Clicking the button automatically opens Msty Studio in the web browser and connects it to the local AI endpoint managed by Sidecar. The presenter demonstrates this by immediately starting a chat with the default local model.
 
 **Beyond Setup: Model Management via Msty Studio:**
+
 *   The video emphasizes that Sidecar's utility extends beyond the initial setup. Msty Studio's "Model Hub" feature leverages the connection established by Sidecar (or any compatible endpoint) for managing models.
 *   **Connecting to Providers:** In the Model Hub, users first select the AI provider they want to manage. In the demo, this is the local AI instance set up by Sidecar. The presenter notes you could also add and manage *remote* AI endpoints (e.g., a powerful server elsewhere) through this interface.
 *   **Managing Models:** Once connected to a provider (like the local Sidecar one), users can:

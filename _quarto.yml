@@ -36,6 +36,8 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: How to Become The Go-To Expert in the AI Content Storm
+          href: ai_content_storm.qmd
         - text: Become a One Person Business with AI
           href: one_person_business_with_ai.qmd
         - text: MSTY Studio
