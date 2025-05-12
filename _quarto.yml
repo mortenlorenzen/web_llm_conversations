@@ -36,6 +36,8 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: Voice to Claude Code SPEAK to SHIP Agentic Coding AI Assistant
+          href: voice_to_claude_code.qmd
         - text: How to Become The Go-To Expert in the AI Content Storm
           href: ai_content_storm.qmd
         - text: Become a One Person Business with AI
