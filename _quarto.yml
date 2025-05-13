@@ -18,6 +18,10 @@ website:
         text: Home
       - text: AI Technology
         menu:
+        - text: Sam Altman on future of work
+          href: sam_altman_future_of_work.qmd    
+        - text: Sam Altman on OpenAI's vision
+          href: sam_altman_openai_vision.qmd
         - text: Yan LeCun on AI's impossible Math Problem
           href: yan_lecun-1.qmd
         - text: Yann LeCun Says He DONE With LLMS

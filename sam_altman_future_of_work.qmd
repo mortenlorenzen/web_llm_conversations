@@ -1,0 +1,67 @@
+---
+title: Sam Altman on future of work
+date: 2025-05-13 05:24:16
+---
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this video in detail
+
+[![Sam Altman "The Future of Work" and the next 12 months...](https://i.ytimg.com/vi/M0tq_xL04n0/maxresdefault.jpg)](https://www.youtube.com/watch?v=M0tq_xL04n0)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** This video from Wes Roth summarizes key insights shared by Sam Altman at the Sequoia Capital AI Ascent event. Here's a detailed breakdown:
+
+**1. Generational Differences in AI Usage:**
+
+*   **Wes Roth's Observation:** Younger people, lacking preconceived notions, often use new technologies more naturally and effectively.
+*   **Sam Altman's Insight:**
+    *   **Younger people (college-age):** Use AI (specifically ChatGPT) like an "operating system." They have complex setups, connect it to files, use intricate memorized or pasted prompts. Critically, they consult it for major life decisions, leveraging its memory and context about their lives and relationships. The "memory thing" has been a significant change.
+    *   **People in their 20s and 30s:** Use it more like a "life advisor."
+    *   **Older people:** Tend to use ChatGPT as a "Google replacement."
+    *   Altman emphasizes this is an oversimplification but highlights the trend.
+
+**2. AI in Coding:**
+
+*   **Internal Use at OpenAI:**
+    *   Altman confirms AI writes "a lot" of OpenAI's code, specifically "meaningful code" – the parts that actually matter. He dismisses lines of code as a poor metric.
+*   **Future of Coding & OpenAI's Product:**
+    *   Coding is "more central to the future of OpenAI" than just another vertical application.
+    *   **Vision:** AI models should return entire programs or custom-rendered code, not just text or images.
+    *   **Actuation:** Coding will be central to how AI models "make things happen in the world," "actuate the world," and call APIs.
+    *   While exposed through APIs, ChatGPT itself should be excellent at writing code.
+
+**3. Value Creation in the Next 12 Months and Beyond:**
+
+*   **Fundamental Drivers of Value:**
+    1.  Building more infrastructure.
+    2.  Developing smarter models.
+    3.  Creating the "scaffolding" to integrate AI into society.
+*   **Predictions (off-the-cuff):**
+    *   **2025: "Year of agents doing work."** Coding is expected to be a dominant category here, along with a few others.
+    *   **Next Year (implies 2026): "AI discovering new stuff."** Expect AI to make large scientific discoveries or significantly assist humans in doing so. Altman believes most sustainable economic growth comes from advancing scientific knowledge and implementing it.
+    *   **2027: AI moves from the "intellectual realm to the physical world."** Robots will transition from being a curiosity to a "serious economic creator of value."
+
+**4. Startups vs. Big Companies in AI Innovation:**
+
+*   **Altman's Observation:** Startups are "beating the crap out of" larger companies in AI innovation, which he sees as typical for major tech revolutions.
+*   **Why Big Companies Lag:**
+    *   People and organizations get "incredibly stuck in their ways."
+    *   Bureaucracy and slow decision-making (e.g., an "information security council that meets once a year" to approve applications is too slow when tech changes quarterly).
+    *   Altman calls this "creative destruction" and why startups win.
+*   **Prediction for Big Companies:** A couple more years of "fighting" and pretending AI won't reshape everything, followed by a "capitulation and a last-minute scramble," by which time it's often "too late," and startups will have "blown past" them.
+*   **Analogy to Individuals:** The generational divide in AI tool adoption (e.g., a 20-year-old vs. a 35-year-old using ChatGPT) is "unbelievable." He likens it to the smartphone adoption, where kids adapted quickly while some older people took years for basic tasks. Companies are seen as exhibiting a similar symptom.
+
+**5. Dealing with Adversity as a Founder:**
+
+*   **Emotional Toll vs. Challenge Severity:** Challenges get harder and stakes get higher, but the *emotional toll* tends to get easier over time. Founders build resilience with each adverse event.
+*   **The Acute Crisis vs. The Fallout:**
+    *   **Acute Crisis:** When a big problem hits (e.g., company failing), there's often a lot of support, adrenaline, and founders "function."
+    *   **The Fallout (e.g., Day 60):** Altman believes the *harder* part is managing one's psychology *after* the immediate crisis, during the "fallout" when trying to "pick up the pieces" and rebuild.
+    *   He notes there's less discussion and fewer resources on navigating this post-crisis phase compared to managing the crisis itself. This rebuilding phase is an area where founders can practice and improve.
+
+In essence, Sam Altman paints a picture of rapid AI evolution, where younger generations are native users, coding becomes a fundamental output of AI, and agile startups are poised to lead. He also offers a nuanced perspective on the long-term psychological aspects of founder adversity.
+
