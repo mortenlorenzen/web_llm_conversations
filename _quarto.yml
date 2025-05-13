@@ -28,6 +28,8 @@ website:
           href: andrej_karpathy_deep_dive_llms.qmd
         - text: Matthew Berman Mark Zuckerberg Satya Nadella
           href: matthew_berman_zuckerberg_nadella.qmd
+        - text: Arseny Shatokhin Developers need to do "agentic coding"
+          href: agentic_coding.qmd
         - text: 10 Key Breakthrough Technologies of 2025
           href: breakthrough_technologies_2025.qmd
         - text: empty
