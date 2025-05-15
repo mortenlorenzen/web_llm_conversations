@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-17">
+<meta name="dcterms.date" content="2025-05-12">
 
-<title>Yann LeCun Says He DONE With LLMS – LLM dialogues</title>
+<title>Cole Medin- The 7 Node Blueprint for AI Agents in n8n – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -415,7 +415,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Yann LeCun Says He DONE With LLMS</h1>
+<h1 class="title">Cole Medin- The 7 Node Blueprint for AI Agents in n8n</h1>
 </div>
 
 
@@ -426,7 +426,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 17, 2025</p>
+      <p class="date">May 12, 2025</p>
     </div>
   </div>
   
@@ -443,61 +443,68 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>:You:</strong> please summarize this video in detail</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.youtube.com/watch?v=p1QXZHV4jkM"><img src="https://i.ytimg.com/vi_webp/p1QXZHV4jkM/maxresdefault.webp" class="img-fluid figure-img"></a></p>
-<figcaption>Metas AI Boss Says He DONE With LLMS…</figcaption>
+<p><a href="https://www.youtube.com/watch?v=TV8SyEuSMIA"><img src="https://i.ytimg.com/vi/TV8SyEuSMIA/maxresdefault.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Give Me 28 Minutes and I’ll Completely Change the Way You Build AI Agents</figcaption>
 </figure>
 </div>
 <hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of the YouTube video “Metas AI Boss Says He DONE With LLMS…” hosted by TheAIGRID, focusing on Yann LeCun’s statements at Nvidia GTC 2025:</p>
-<p><strong>Introduction &amp; Core Statement:</strong></p>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of the YouTube video “Give Me 28 Minutes and I’ll Completely Change the Way You Build AI Agents” by Cole Medin:</p>
+<p><strong>Core Problem &amp; Proposed Solution:</strong></p>
+<p>The video addresses the challenge of building complex, robust AI agents, which goes beyond simply connecting an LLM to a few tools. The speaker, Cole Medin, notes that while basic agents are easy with no-code tools or assistants, tackling complex problems requires a structured approach. He introduces his mental model, the <strong>“Seven Node Blueprint for AI Agents,”</strong> designed to break down any complex agent-building task into manageable components.</p>
+<p><strong>Fundamental Principle: Agents as Graphs</strong></p>
+<p>Before detailing the nodes, Medin emphasizes a core concept: <strong>AI agents are fundamentally graphs.</strong></p>
 <ul>
-<li>The video centers around a statement made by Yann LeCun (Meta’s Chief AI Scientist, considered a “godfather of AI”) at Nvidia GTC 2025: “I’m not so interested in LLMs anymore.”</li>
-<li>The host highlights the significance of this statement coming from someone with LeCun’s expertise, especially given the current hype surrounding Large Language Models (LLMs).</li>
+<li>Unlike traditional linear workflows, agents involve cycles: LLM reasoning -&gt; Tool usage -&gt; Feedback -&gt; LLM reasoning, etc.</li>
+<li>This cyclical, graph-like structure enables non-deterministic behavior, where the agent’s path isn’t fixed.</li>
+<li>Thinking of agents as graphs allows developers to break them down into distinct components (nodes or “Lego bricks”) that can be built individually and combined.</li>
 </ul>
-<p><strong>LeCun’s Reasoning for Moving Beyond LLMs:</strong></p>
+<p><strong>The Seven Node Blueprint:</strong></p>
+<p>The framework categorizes all components of an AI agent into one of seven types of “nodes”:</p>
 <ol type="1">
-<li><strong>LLMs are Maturing, Not the Frontier:</strong> LeCun views current LLM development as more incremental, focusing on scaling data, compute, and using synthetic data – tasks now handled by “industry product people.” He believes the truly exciting research questions lie elsewhere.</li>
-<li><strong>Limitations of Token Prediction:</strong>
+<li><strong>LLM Node:</strong> The “brain” of the agent. This is the Large Language Model itself (e.g., GPT-4, Claude 3.7) responsible for reasoning, decision-making, and deciding when to use tools.</li>
+<li><strong>Tool Node:</strong> Performs actions on behalf of the LLM. Examples include web searches, code execution, database queries, API calls, etc. The LLM invokes these nodes.</li>
+<li><strong>Control Node:</strong> Adds deterministic logic and structure to the agent’s workflow. Unlike LLM nodes, these use predefined rules, code, or standard workflow logic (e.g., filters, conditional routing, if/else statements). They ensure specific actions happen predictably based on certain conditions or outputs.</li>
+<li><strong>Memory Node:</strong> Handles the agent’s memory. This includes:
 <ul>
-<li>LLMs fundamentally work by predicting the next discrete token from a finite dictionary (e.g., ~100,000 tokens). This works for text but is ill-suited for understanding the high-dimensional, continuous nature of the real world (like video).</li>
-<li>Trying to predict video at the pixel level fails because much of the world is unpredictable in detail (e.g., the exact appearance of people in a room). Models waste resources trying to predict these unpredictable details.</li>
-<li>Techniques based on reconstructing images/videos from corrupted versions haven’t performed as well as alternative methods.</li>
+<li><strong>Short-term memory:</strong> Conversation history within a single session.</li>
+<li><strong>Long-term memory:</strong> Persistent knowledge, often stored in vector databases or other knowledge bases, retrieved and updated across sessions. (Example shown uses a Google Doc for simplicity, mentions Mem O library).</li>
 </ul></li>
-<li><strong>Simplistic Reasoning:</strong> While efforts exist to make LLMs reason, LeCun believes this approach is “simplistic.” He argues true human reasoning and planning occur in an abstract mental space, independent of language (e.g., mentally rotating a cube, a cat planning a jump). Reasoning shouldn’t be confined to manipulating discrete tokens.</li>
+<li><strong>Guardrail Node:</strong> Ensures reliability and safety. These nodes validate inputs or outputs:
+<ul>
+<li><strong>Input Guardrails:</strong> Check user input before it reaches the main agent (e.g., is the budget request reasonable?).</li>
+<li><strong>Output Guardrails:</strong> Check the agent’s output before presenting it (e.g., does the generated itinerary match the requested duration? Does the output format meet requirements?). Can use LLMs or deterministic checks.</li>
+</ul></li>
+<li><strong>Fallback Node:</strong> Handles errors gracefully. Instead of crashing, these nodes define what happens when something goes wrong (e.g., retry the failed step, provide a default error message to the user, log the error, alert an administrator).</li>
+<li><strong>User Input Node:</strong> Allows for human interaction mid-process (“human-in-the-loop”). This node pauses the agent’s execution to wait for user feedback, confirmation, or additional input before proceeding (e.g., confirming a hotel booking before executing it).</li>
 </ol>
-<p><strong>LeCun’s Four Key Areas of Future Focus:</strong></p>
-<p>LeCun is more interested in research focusing on: 1. <strong>Understanding the Physical World:</strong> How machines can build internal models of reality (World Models). 2. <strong>Persistent Memory:</strong> Giving AI systems memory comparable to humans. 3. <strong>Reasoning:</strong> Developing more fundamental reasoning capabilities beyond token manipulation. 4. <strong>Planning:</strong> Enabling AI to plan sequences of actions to achieve goals based on its world model and reasoning.</p>
-<p><strong>World Models &amp; The JEPA Architecture:</strong></p>
+<p><strong>Examples Using N8N:</strong></p>
+<p>Medin uses the visual workflow tool N8N to demonstrate each concept:</p>
 <ul>
-<li><strong>World Models:</strong> LeCun emphasizes the need for AI to have internal world models, similar to humans, which allow prediction and understanding of physical interactions (e.g., knowing pushing a bottle at the top vs.&nbsp;bottom yields different results).</li>
-<li><strong>Abstract Representation:</strong> The key is not to predict raw data (like pixels) but to learn <em>abstract representations</em> of the world and make predictions within that abstract space.</li>
-<li><strong>JEPA (Joint Embedding Predictive Architectures):</strong> This is LeCun’s proposed architecture.
+<li><strong>Basic Agent (LLM, Tool, Short-term Memory):</strong> Shows a simple agent creating dishes and adding them to Airtable, illustrating the LLM-Tool cycle.</li>
+<li><strong>Long-term Memory:</strong> Adds steps to retrieve relevant info (user dislikes spicy mango) from a Google Doc before the LLM generates a dish, and a step to extract and save new memories after.</li>
+<li><strong>User Input &amp; Control Nodes:</strong> An agent proposes sending a Slack message. A User Input node sends an approval request to the user via Slack DM. A Control Node then routes the flow based on the user’s response (approve/decline), sending the message or a different notification accordingly.</li>
+<li><strong>Guardrail Node (Output):</strong> An agent generates a dish. An output guardrail (a “critic” LLM) checks if the output includes required elements (name, description, origin). If not, it provides feedback and triggers a retry (using another agent node).</li>
+<li><strong>Fallback Node:</strong> Modifies the User Input/Control example. If the user <em>declines</em> the Slack message, the Control Node routes to an error step, which triggers a dedicated error workflow (Fallback Node) that sends an alert (e.g., Slack message to an admin).</li>
+</ul>
+<p><strong>(Sponsor Break):</strong> Mentions Bright Data and their MCP server as a way to give agents unblockable, real-time web access for tasks like scraping LinkedIn bios or finding flight information, demonstrating its integration with an agent framework (Pydantic AI).</p>
+<p><strong>Comprehensive Example Combining All Nodes:</strong></p>
+<p>Medin presents a more complex N8N workflow demonstrating how all seven nodes work together to create a robust dish-generating agent:</p>
+<ol type="1">
+<li><strong>Memory Node:</strong> Fetches long-term memory (user preferences).</li>
+<li><strong>LLM Node + Tool Node + Memory Node (Short-term):</strong> Primary agent generates a dish, using a tool to check an Airtable menu (avoid duplicates) and considering conversation history.</li>
+<li><strong>Guardrail Node:</strong> An “output parser” ensures the output format (dish name, description) is correct, using a secondary LLM for auto-fixing if needed.</li>
+<li><strong>User Input Node:</strong> Sends the proposed dish to Slack for human approval.</li>
+<li><strong>Control Node:</strong> Routes based on approval.
 <ul>
-<li><strong>Non-Generative:</strong> Unlike models trying to generate every pixel, JEPA focuses on learning meaningful representations.</li>
-<li><strong>Predicts in Abstract Space:</strong> It learns by predicting missing or masked parts of input (like video) <em>within its learned abstract representation</em>, not at the pixel level.</li>
-<li><strong>Efficiency:</strong> By discarding irrelevant information, it’s more efficient.</li>
-<li><strong>V-JEPA (Video JEPA):</strong> A version trained on video. An upcoming Version 2 shows promise.</li>
-<li><strong>Example:</strong> V-JEPA can reportedly assess the physical plausibility of a video. By tracking prediction error in its abstract space while viewing a video, it detects anomalies (like objects unnaturally disappearing or defying physics) because they deviate from the patterns learned from normal videos.</li>
+<li>If Approved: Sends confirmation (Control Node), adds dish to Airtable (Control Node).</li>
+<li>If Declined: Triggers error workflow (Fallback Node).</li>
 </ul></li>
-</ul>
-<p><strong>System 1 vs.&nbsp;System 2 Thinking:</strong></p>
-<ul>
-<li>LeCun relates his ideas to the psychological concepts of System 1 (fast, intuitive, reactive thinking – like experienced driving) and System 2 (slow, deliberate, planning-based thinking – like learning to drive, involving a world model).</li>
-<li>He suggests current AI (including LLMs) is good at System 1-like tasks but fundamentally lacks robust System 2 capabilities.</li>
-<li>He believes a different architecture (like JEPA) is needed to achieve true System 2 reasoning and planning, which is essential for more advanced AI. Eventually, tasks learned via System 2 can become compiled into faster System 1 policies.</li>
-</ul>
-<p><strong>Path to AGI &amp; Data Needs:</strong></p>
-<ul>
-<li>LeCun argues strongly that <strong>AGI cannot be achieved solely through text data.</strong></li>
-<li>He makes a quantitative comparison: The amount of text data LLMs are trained on (~10^14 bytes, taking humans ~400,000 years to read) is comparable to the amount of <em>visual</em> data a 4-year-old child processes (~10^14 bytes).</li>
-<li>This implies that learning from rich, multi-modal sensory input, especially related to the physical world, is crucial and far more data-dense than text alone.</li>
-</ul>
-<p><strong>Host’s Commentary &amp; Conclusion:</strong></p>
-<ul>
-<li>The host finds LeCun’s points compelling, noting that LLMs’ limitations in physical world understanding have been echoed in other research (mentioning a Chinese paper on Sora-like models).</li>
-<li>He agrees with the likely future direction towards hybrid or “omnimodel” systems that integrate different capabilities, as Google is already exploring.</li>
-<li>The conclusion is that while LLMs are powerful, LeCun presents a strong case that they are not the endpoint and that architectures like JEPA, focused on world models and abstract representation learning, represent a more promising path towards AGI and understanding the physical world.</li>
-</ul>
+<li><strong>Memory Node:</strong> Another LLM extracts key memories from the interaction (e.g., user requested no existing menu items).</li>
+<li><strong>Memory Node:</strong> Saves extracted memories to long-term storage (Google Doc).</li>
+<li><strong>LLM Node:</strong> Summarizes and presents the final output.</li>
+</ol>
+<p><strong>Conclusion &amp; Takeaway:</strong></p>
+<p>The Seven Node Blueprint provides a structured way to think about and build complex AI agents by breaking the problem into manageable parts. By considering each node type (Do I need memory? What guardrails? How should errors be handled?), developers can systematically design more robust and reliable agents. The graph-based nature of agents is key to this modular approach. Medin plans future content on specific nodes and frameworks like Pydantic AI and LangGraph that embrace this graph abstraction.</p>
 
 
 

@@ -42,6 +42,10 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: Eduards Ruzga Claude + Bright Data MCP
+          href: claude_brightdata_mcp.qmd
+        - text: The 7 Node Blueprint for AI Agents in n8n
+          href: 7_nodes_n8n.qmd
         - text: Voice to Claude Code SPEAK to SHIP Agentic Coding AI Assistant
           href: voice_to_claude_code.qmd
         - text: How to Become The Go-To Expert in the AI Content Storm
