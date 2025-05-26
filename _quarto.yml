@@ -42,6 +42,10 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company
+          href: devin_kearns_9_things_ai_company.qmd
+        - text: DDevin Kearns- Agentic Operating Systems' are the FUTURE of AI & Business
+          href: devin_kearns_agentic_os.qmd
         - text: Eduards Ruzga Claude + Bright Data MCP
           href: claude_brightdata_mcp.qmd
         - text: The 7 Node Blueprint for AI Agents in n8n
