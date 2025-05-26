@@ -44,11 +44,13 @@ website:
         menu:
         - text: Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company
           href: devin_kearns_9_things_ai_company.qmd
-        - text: DDevin Kearns- Agentic Operating Systems' are the FUTURE of AI & Business
+        - text: Devin Kearns- Agentic Operating Systems' are the FUTURE of AI & Business
           href: devin_kearns_agentic_os.qmd
         - text: Eduards Ruzga Claude + Bright Data MCP
           href: claude_brightdata_mcp.qmd
-        - text: The 7 Node Blueprint for AI Agents in n8n
+        - text: Cole Medin- How I'd Learn AI Agents FAST
+          href: cole_medin_learn_ai_agents_fast.qmd
+        - text: Cole Medin- The 7 Node Blueprint for AI Agents in n8n
           href: 7_nodes_n8n.qmd
         - text: Voice to Claude Code SPEAK to SHIP Agentic Coding AI Assistant
           href: voice_to_claude_code.qmd
