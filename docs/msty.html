@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-04">
+<meta name="dcterms.date" content="2025-05-26">
 
-<title>Msty Studio Toolsets – LLM dialogues</title>
+<title>Msty Studio’s Turnstiles – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -427,7 +427,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Msty Studio Toolsets</h1>
+<h1 class="title">Msty Studio’s Turnstiles</h1>
 </div>
 
 
@@ -438,7 +438,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 4, 2025</p>
+      <p class="date">May 26, 2025</p>
     </div>
   </div>
   
@@ -451,7 +451,80 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>:Model Instructions:</strong></p>
+<p><strong>:You:</strong> please summarize this video in detail</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.youtube.com/watch?v=oXzpGF_9kyA"><img src="https://i.ytimg.com/vi/oXzpGF_9kyA/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&amp;rs=AOn4CLC83SiTiD1tdtCl5B6WtDPZQE8rKw" class="img-fluid figure-img"></a></p>
+<figcaption>Msty Studio - Turnstiles</figcaption>
+</figure>
+</div>
 <hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the YouTube video about Msty Studio’s “Turnstiles” feature:</p>
+<p>The speaker introduces “Turnstiles” as arguably the most advanced and powerful feature in Msty Studio to date. While it looks simple initially and the basic queuing might be seen in other apps, its power comes from the ability to “compose add-ons” within the sequence steps.</p>
+<p>Here’s a breakdown of the feature and its capabilities as demonstrated:</p>
+<ol type="1">
+<li><strong>Basic Message Queuing:</strong>
+<ul>
+<li>At its core, Turnstiles allows you to queue multiple messages to be sent sequentially.</li>
+<li>You can add messages to the queue by clicking the “Turnstile” icon next to the message input field or by holding <code>Alt</code> and clicking the icon.</li>
+<li>Multiple messages can also be entered into the main input field separated by a special character like <code>/tsm/</code> (though the speaker demonstrates adding them individually first, then shows the multi-message input method later).</li>
+</ul></li>
+<li><strong>Managing the Queue:</strong>
+<ul>
+<li>Once messages are added to the queue, they appear in a list.</li>
+<li>You can <strong>reorder</strong> messages by dragging them in the list.</li>
+<li>You can <strong>skip</strong> specific messages in the queue by toggling them off.</li>
+<li>You can <strong>clear</strong> the entire queue.</li>
+<li>Running the queue sends the enabled messages in the specified order.</li>
+</ul></li>
+<li><strong>Advanced Queue Actions (Special Characters):</strong>
+<ul>
+<li>Beyond simple messages, specific actions can be embedded using special characters <em>within</em> the message input when adding to the queue.</li>
+<li><code>/tsm/</code>: Standard message (implied for basic messages, used as a separator for adding multiple messages at once).</li>
+<li><code>/tsr/N/</code>: <strong>Regenerate</strong>. This action regenerates the <em>previous</em> message/response <code>N</code> times. The speaker demonstrates regenerating a “Tell me something interesting” prompt multiple times, noting it’s similar to hitting the manual regenerate button.</li>
+<li><code>/tsc/N/</code>: <strong>Continue</strong>. This action continues the <em>last generated response</em> <code>N</code> times. This is useful for dealing with responses that might exceed token limits. The speaker demonstrates continuing a response about the universe, showing how it keeps adding text to the previous output until it reaches the desired number of continuations or the response is complete. When adding messages/actions to the queue this way, the state (like configured Max Tokens, model, etc.) is snapshotted for that specific queue item.</li>
+</ul></li>
+<li><strong>Saving and Loading Turnstiles:</strong>
+<ul>
+<li>Created Turnstile sequences (the list of messages and actions in the queue) can be saved for later reuse.</li>
+<li>Saved Turnstiles can be loaded into the queue in new conversations.</li>
+</ul></li>
+<li><strong>Editing Saved Turnstiles (Adding Power via Add-ons):</strong>
+<ul>
+<li>This is where the “composition” aspect comes in and makes the feature very powerful.</li>
+<li>Saved Turnstiles can be edited in a dedicated UI accessible from the menu.</li>
+<li>For <em>each individual step</em> (message or action) within a saved Turnstile, you can configure various settings and add-ons:
+<ul>
+<li>Change the <strong>Model</strong> used for that specific step.</li>
+<li>Enable/disable <strong>Attachments</strong> (documents, YouTube).</li>
+<li>Enable <strong>Real-time Data</strong> (web search).</li>
+<li>Add <strong>Tool Sets</strong>.</li>
+<li>Add <strong>Live Context</strong>.</li>
+<li>Change other <strong>Configuration</strong> parameters (temperature, etc.).</li>
+<li><strong>Add Personas</strong>: This is highlighted as particularly powerful. You can attach a specific Persona (which itself can have its own prompt, model, tools, etc.) to a step. This allows creating complex multi-agent workflows where different steps are handled by different “agents” or personas.</li>
+</ul></li>
+<li>The speaker demonstrates adding a “Poet” Persona to a step prompting about interesting animals, showing how the Persona’s prompt and style are applied when that step runs.</li>
+<li>You can add multiple Personas or a mix of Personas and other add-ons to different steps in the same sequence.</li>
+</ul></li>
+<li><strong>Looping the Entire Turnstile:</strong>
+<ul>
+<li>Another advanced feature is the ability to run the <em>entire</em> loaded Turnstile sequence multiple times in a loop.</li>
+<li>This is controlled by a number input next to a hash symbol (<code>#</code>) near the queue list. By default, it runs once. You can set it to run any number of times.</li>
+<li>The speaker demonstrates running a simple sequence 5 times and the more complex “Interesting Animals” sequence (with the Poet Persona) 3 times.</li>
+<li>A caution is given: running complex sequences with add-ons (tools, real-time data, multiple personas) in a loop can be very expensive in terms of tokens/cost, emphasizing the power (like a chainsaw) but also the need for caution.</li>
+</ul></li>
+<li><strong>Export and Import:</strong>
+<ul>
+<li>Saved Turnstiles can be exported and imported, allowing users to share complex sequences. Attachments associated with steps are also handled during export/import.</li>
+</ul></li>
+</ol>
+<p>In summary, Msty Studio’s Turnstiles feature starts as a simple message queue but quickly becomes a powerful workflow automation tool. By allowing users to embed advanced actions (regenerate, continue), save and edit sequences with per-step add-ons (models, tools, context, attachments, <em>Personas</em>), and loop the entire process, it enables the creation of sophisticated, multi-step, potentially multi-agent interactions and research workflows. The speaker stresses its advanced nature and the need for users to understand its potential implications (especially cost) when using complex configurations and looping.</p>
+<hr>
+<hr>
+<hr>
+<p>title: Msty Studio Toolsets date: 2025-05-04 18:36:41</p>
+<hr>
+<p><strong>:Model Instructions:</strong></p>
 <p><strong>:You:</strong> please summarize this video in detail</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
