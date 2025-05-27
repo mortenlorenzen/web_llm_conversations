@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-27">
 
-<title>empty-copy-5 – LLM dialogues</title>
+<title>How I AI- A 3-step AI coding workflow for solo founders | Ryan Carson – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -300,6 +301,10 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ai-agents--business-opportunities">    
         <li>
+    <a class="dropdown-item" href="./3_step_ai_coding_workflow.html">
+ <span class="dropdown-text">How I AI- A 3-step AI coding workflow for solo founders</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./devin_kearns_9_things_ai_company.html">
  <span class="dropdown-text">Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company</span></a>
   </li>  
@@ -421,14 +426,354 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How I AI- A 3-step AI coding workflow for solo founders | Ryan Carson</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 27, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
+<p><strong>:Model Instructions:</strong></p>
+<p><strong>:You:</strong> please summarize this transcript in detail</p>
+<p><a href="./Users/mortenlorenzen/Desktop/transcript.txt">transcript.txt</a></p>
+<p>https://www.youtube.com/watch?v=fD4ktSkNCw4</p>
+<hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the podcast transcript titled “How I AI” featuring Claire (host) and Ryan Carson (guest).</p>
+<p>The episode focuses on how Ryan Carson, a five-time founder with 20 years of experience, uses AI tools like Cursor to bring structure and efficiency to product building, moving beyond simple “vibe coding.”</p>
+<p><strong>Introduction and Guest Background (0:00 - 1:24)</strong></p>
+<ul>
+<li>Claire introduces the podcast “How I AI,” which aims to help listeners build better with new AI tools.</li>
+<li>She introduces Ryan Carson, highlighting his extensive founder background and the episode’s focus on using structured techniques (PRDs, task lists, advanced prompting) within Cursor to ensure building “the right things” and not just vibe coding.</li>
+<li>Claire briefly promotes her own AI co-pilot tool, ChatPRD, for writing product docs, automating coordination, and strategic coaching (1:24 - 2:24).</li>
+</ul>
+<p><strong>Ryan’s Recent AI Experiences (2:24 - 3:27)</strong></p>
+<ul>
+<li>Claire asks Ryan about his recent AI projects.</li>
+<li>He mentions constantly using ChatGPT with his kids, delighting in their use of AI, and helping his 14-year-old build a primitive side-scroller game where the child is the creative director.</li>
+<li>His third main project is building his current startup, which involves significant coding and frequent “vibe coding” for quick tasks. He uses AI “all day, every day.”</li>
+</ul>
+<p><strong>Core Workflow: Structured Building with Cursor (3:27 - 21:38)</strong></p>
+<ul>
+<li><p>Ryan explains his structured approach within Cursor (a VS Code fork, free at cursor.com). The core reason is realizing that successful AI interaction requires providing <em>good context</em>.</p></li>
+<li><p>He states the biggest mistake people make is rushing through the context, lacking the patience to tell the AI exactly what it needs to know. Slowing down with structured steps actually speeds everything up.</p></li>
+<li><p>He demonstrates this using a sample project (a simple yacht club CRM).</p>
+<ul>
+<li><strong>Step 1: Create a Product Requirement Document (PRD) (4:18 - 11:03)</strong>
+<ul>
+<li>Ryan uses a custom “cursor rule” file (<code>create_prd.md</code>) which contains instructions for the AI on <em>how</em> to write a PRD.</li>
+<li>A key instruction highlighted is requesting the PRD be “suitable for a junior developer to understand and implement.” Ryan explains this forces the AI (which acts like a genius but can miss simple steps) to be clear and structured.</li>
+<li>He uses Cursor’s agent mode (<code>@create_prd.md</code>) and provides a simple request: “add a report that shows me all the boat names of members and how many emails they’ve been sent.”</li>
+<li>The AI responds by asking clarifying questions (problem solved, users, accessibility), guided by the prompt’s structure (e.g., using dot notation like 2.1, 2.2 for clarity). Ryan answers some and tells the AI to make its best judgment for others.</li>
+<li>He mentions his preferred AI model is Gemini 1.5 Pro (max mode) over Claude 3.5 Sonnet, though he uses both. He finds Gemini good and worth the cost (~$300-400/month).</li>
+<li>The AI generates the PRD as a markdown file in a designated <code>tasks</code> folder. The PRD includes standard sections like functional requirements, non-goals, and design considerations.</li>
+<li>Ryan reiterates the goal: making the task <em>crystal clear</em> to the LLM.</li>
+</ul></li>
+<li><strong>Step 2: Generate a Task List from the PRD (11:03 - 15:33)</strong>
+<ul>
+<li>Ryan uses a second “cursor rule” file (<code>generate_tasks.md</code>) which instructs the AI on <em>how</em> to create a detailed, step-by-step task list <em>from the PRD</em>.</li>
+<li>He uses Cursor’s agent mode, tagging both the <code>generate_tasks.md</code> rule and the previously created PRD file (<code>@tasks/prd_report_boat_emails.md</code>).</li>
+<li>The <code>generate_tasks.md</code> rule specifies the desired markdown format (with checkboxes) and outlines a process (ask questions, then generate, ask for confirmation before proceeding).</li>
+<li>Claire asks how he got good at prompting; Ryan says through trial and error, getting specific, using the AI to help write prompts, and editing. He stresses getting hands-on experience and sticking with a model you know well.</li>
+<li>The AI shows its “thinking tokens” and generates a detailed task list in markdown, including subtasks and even sub-subtasks.</li>
+<li>Following the process defined in the rule, the AI pauses and asks for confirmation (“Ready to generate the subtasks? Respond with ‘go’ to proceed.”). Ryan praises this explicit user interaction point, seeing it as “agentic thinking” within a linear chat flow. He wishes this structured workflow were a built-in Cursor feature.</li>
+</ul></li>
+<li><strong>Step 3: Work Through the Task List Systematically (15:33 - 21:38)</strong>
+<ul>
+<li>Ryan uses a third “cursor rule” file (<code>task_list.md</code>) which contains instructions for <em>iterating</em> through the task list markdown file.</li>
+<li>The rule specifies: manage the markdown list, track progress, work on <em>one subtask at a time</em>, immediately mark completed tasks, and <em>stop after each subtask</em> to wait for user confirmation (“go”).</li>
+<li>Demo: Ryan tags the <code>task_list.md</code> rule and the generated task list markdown file (<code>@tasks/report_task_list.md</code>) and says “Let’s start.”</li>
+<li>The AI identifies the first subtask (e.g., “define Prisma schema”), performs the coding/action required, marks the subtask complete in the markdown file (with a delightful sound effect), and then pauses, asking if it should proceed to the next subtask.</li>
+<li>Ryan confirms (e.g., by typing “yes” or “y”). This human-in-the-loop check after <em>each subtask</em> is crucial for reliability, even when building large features (he’s built 10,000+ lines of code reliably this way). It helps catch small errors (like linter issues).</li>
+<li>Ryan discusses <strong>Change Management (18:58 - 19:40)</strong>: He typically commits code to Git after finishing a parent task <em>if</em> the application is in a stable state, otherwise waits until all tasks in the list (potentially half a day’s work) are completed before committing.</li>
+<li>Ryan and Claire emphasize the value of this structured task list process, even just generating it, for product managers and engineers. It solves the common bottleneck of breaking down a PRD into actionable, code-level steps. He prefers the simplicity of a markdown file over complex tools like Asana for this specific workflow. He encourages starting small and simple.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Tool Integrations (MCPs) within Cursor (21:51 - 26:47)</strong></p>
+<ul>
+<li>Ryan discusses using MCPs (Multi-Container Providers or Tool Integrations) within Cursor, which give the AI the ability to interact with other applications.</li>
+<li>He started using them for <strong>Postgres (25:34)</strong>, his most used MCP, to easily ask the AI simple database queries (“is this value in this row?”) without writing SQL.</li>
+<li>He demonstrates the <strong>BrowserBase (22:24)</strong> MCP, which provides a headless browser in the cloud.
+<ul>
+<li>Demo: He tells Cursor to “navigate to chat PRD and take a screen grab.” Cursor controls the BrowserBase instance, navigates the website, and provides a screenshot.</li>
+<li>Demo 2: He tells Cursor to “navigate to pricing,” and the BrowserBase instance visually navigates to the pricing page.</li>
+<li>Ryan sees the main use case for BrowserBase as automating <strong>front-end testing (24:25)</strong>, making it easier to debug compared to manual screen grabs and descriptions.</li>
+</ul></li>
+<li>Other MCP examples mentioned include Stagehand, Prisma, and SQLite.</li>
+<li>Claire notes that AI dev tools and MCPs reduce “toil” by consolidating workflows (project management, browser, database querying) into a single interface controlled by natural language.</li>
+</ul>
+<p><strong>Advanced Context Control with Repo Prompt (26:47 - 31:24)</strong></p>
+<ul>
+<li>Ryan introduces <strong>Repo Prompt (27:11)</strong>, a Mac tool he uses for precise control over the context provided to the LLM.</li>
+<li><em>Why not just use Cursor?</em> While Cursor manages context automatically, it can feel like a “magic black box”; you don’t always know exactly what files are included. Repo Prompt allows <em>manual, precise selection</em> of context.</li>
+<li>Demo: He opens his yacht project in Repo Prompt. Selecting the whole repo shows a very high token count (395k), which is too large. He then manually selects specific, relevant folders/files (app, components, lib, Prisma schema, scripts), reducing the token count significantly (to 12k).</li>
+<li>He shows how to compose a prompt within Repo Prompt (e.g., “How can I improve the maintainability of this code?”). He can also include “stored prompts” (like an “architect version” with pre-written power moves).</li>
+<li>Repo Prompt formats the selected files and the prompt into a structured text block, often using XML tags (e.g., <code>&lt;file_contents&gt;</code> with path and content clearly marked).</li>
+<li>He then copies this block and pastes it into an LLM interface (like Claude 3, or could be Cursor).</li>
+<li>The value is telling the AI <em>exactly</em> the required context, which leads to “amazing answers” for heavy lifting or complex tasks, especially with models that can “think hard” when given precise context. It reduces the “black box” feel. He acknowledges that future tools might improve context management, but Repo Prompt is valuable <em>now</em>.</li>
+</ul>
+<p><strong>Other Notes and Lightning Round (31:24 - 34:41)</strong></p>
+<ul>
+<li><strong>Music:</strong> The most important part of Ryan’s “stack” is listening to EDM (like Tiesto) while coding late at night (31:24 - 32:15).</li>
+<li><strong>AI’s Impact on Founding:</strong> AI is a “complete rewrite” for founding. As a solo founder, he feels capable of doing all roles (PM, dev, etc.) for his new startup, even if not as deeply as dedicated experts. It’s “bonkers” that this is possible now (32:15 - 33:07).</li>
+<li><strong>Handling Uncooperative AI:</strong> When the AI doesn’t listen, Ryan says he’s “too nice,” telling it things like “Please think harder about this, I know you can do this” or “think again about it.” He humorously hypothesizes this is a parenting technique (33:07 - 33:57).</li>
+<li><strong>Finding Ryan:</strong> He is on X (<span class="citation" data-cites="ryancarson">@ryancarson</span>) and his website is rycarson.com (33:57 - 34:14).</li>
+</ul>
+<p>The episode concludes with Claire thanking Ryan and promoting the podcast channels.</p>
+<hr>
+<hr>
+<hr>
+<p>https://github.com/snarktank/ai-dev-tasks</p>
+<section id="files-in-this-repository" class="level2">
+<h2 class="anchored" data-anchor-id="files-in-this-repository">🗂️ Files in this Repository</h2>
+<ul>
+<li><strong><code>create-prd.mdc</code></strong>: Guides the AI in generating a Product Requirement Document for your feature.</li>
+<li><strong><code>generate-tasks-from-prd.mdc</code></strong>: Takes a PRD markdown file as input and helps the AI break it down into a detailed, step-by-step implementation task list.</li>
+<li><strong><code>task-list.mdc</code></strong>: Instructs the AI on how to process the generated task list, tackling one task at a time and waiting for your approval before proceeding. (This file also contains logic for the AI to mark tasks as complete).</li>
+</ul>
+</section>
+<section id="create-prd.mdc" class="level1">
+<h1>1. create-prd.mdc</h1>
+<hr>
+<ul>
+<li>description:</li>
+<li>globs:</li>
+<li>alwaysApply: false</li>
+</ul>
+<hr>
+</section>
+<section id="rule-generating-a-product-requirements-document-prd" class="level1">
+<h1>Rule: Generating a Product Requirements Document (PRD)</h1>
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<p>To guide an AI assistant in creating a detailed Product Requirements Document (PRD) in Markdown format, based on an initial user prompt. The PRD should be clear, actionable, and suitable for a junior developer to understand and implement the feature.</p>
+</section>
+<section id="process" class="level2">
+<h2 class="anchored" data-anchor-id="process">Process</h2>
+<ol type="1">
+<li><strong>Receive Initial Prompt:</strong> The user provides a brief description or request for a new feature or functionality.</li>
+<li><strong>Ask Clarifying Questions:</strong> Before writing the PRD, the AI <em>must</em> ask clarifying questions to gather sufficient detail. The goal is to understand the “what” and “why” of the feature, not necessarily the “how” (which the developer will figure out).</li>
+<li><strong>Generate PRD:</strong> Based on the initial prompt and the user’s answers to the clarifying questions, generate a PRD using the structure outlined below.</li>
+<li><strong>Save PRD:</strong> Save the generated document as <code>prd-[feature-name].md</code> inside the <code>/tasks</code> directory.</li>
+</ol>
+</section>
+<section id="clarifying-questions-examples" class="level2">
+<h2 class="anchored" data-anchor-id="clarifying-questions-examples">Clarifying Questions (Examples)</h2>
+<p>The AI should adapt its questions based on the prompt, but here are some common areas to explore:</p>
+<ul>
+<li><strong>Problem/Goal:</strong> “What problem does this feature solve for the user?” or “What is the main goal we want to achieve with this feature?”</li>
+<li><strong>Target User:</strong> “Who is the primary user of this feature?”</li>
+<li><strong>Core Functionality:</strong> “Can you describe the key actions a user should be able to perform with this feature?”</li>
+<li><strong>User Stories:</strong> “Could you provide a few user stories? (e.g., As a [type of user], I want to [perform an action] so that [benefit].)”</li>
+<li><strong>Acceptance Criteria:</strong> “How will we know when this feature is successfully implemented? What are the key success criteria?”</li>
+<li><strong>Scope/Boundaries:</strong> “Are there any specific things this feature <em>should not</em> do (non-goals)?”</li>
+<li><strong>Data Requirements:</strong> “What kind of data does this feature need to display or manipulate?”</li>
+<li><strong>Design/UI:</strong> “Are there any existing design mockups or UI guidelines to follow?” or “Can you describe the desired look and feel?”</li>
+<li><strong>Edge Cases:</strong> “Are there any potential edge cases or error conditions we should consider?”</li>
+</ul>
+</section>
+<section id="prd-structure" class="level2">
+<h2 class="anchored" data-anchor-id="prd-structure">PRD Structure</h2>
+<p>The generated PRD should include the following sections:</p>
+<ol type="1">
+<li><strong>Introduction/Overview:</strong> Briefly describe the feature and the problem it solves. State the goal.</li>
+<li><strong>Goals:</strong> List the specific, measurable objectives for this feature.</li>
+<li><strong>User Stories:</strong> Detail the user narratives describing feature usage and benefits.</li>
+<li><strong>Functional Requirements:</strong> List the specific functionalities the feature must have. Use clear, concise language (e.g., “The system must allow users to upload a profile picture.”). Number these requirements.</li>
+<li><strong>Non-Goals (Out of Scope):</strong> Clearly state what this feature will <em>not</em> include to manage scope.</li>
+<li><strong>Design Considerations (Optional):</strong> Link to mockups, describe UI/UX requirements, or mention relevant components/styles if applicable.</li>
+<li><strong>Technical Considerations (Optional):</strong> Mention any known technical constraints, dependencies, or suggestions (e.g., “Should integrate with the existing Auth module”).</li>
+<li><strong>Success Metrics:</strong> How will the success of this feature be measured? (e.g., “Increase user engagement by 10%”, “Reduce support tickets related to X”).</li>
+<li><strong>Open Questions:</strong> List any remaining questions or areas needing further clarification.</li>
+</ol>
+</section>
+<section id="target-audience" class="level2">
+<h2 class="anchored" data-anchor-id="target-audience">Target Audience</h2>
+<p>Assume the primary reader of the PRD is a <strong>junior developer</strong>. Therefore, requirements should be explicit, unambiguous, and avoid jargon where possible. Provide enough detail for them to understand the feature’s purpose and core logic.</p>
+</section>
+<section id="output" class="level2">
+<h2 class="anchored" data-anchor-id="output">Output</h2>
+<ul>
+<li><strong>Format:</strong> Markdown (<code>.md</code>)</li>
+<li><strong>Location:</strong> <code>/tasks/</code></li>
+<li><strong>Filename:</strong> <code>prd-[feature-name].md</code></li>
+</ul>
+</section>
+<section id="final-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="final-instructions">Final instructions</h2>
+<ol type="1">
+<li>Do NOT start implmenting the PRD</li>
+<li>Make sure to ask the user clarifying questions</li>
+<li>Take the user’s answers to the clarifying questions and improve the PRD</li>
+</ol>
+</section>
+</section>
+<section id="generate-tasks-from-prd.mdc" class="level1">
+<h1>2. generate-tasks-from-prd.mdc</h1>
+<hr>
+<ul>
+<li>description:</li>
+<li>globs:</li>
+<li>alwaysApply: false</li>
+</ul>
+<hr>
+</section>
+<section id="rule-generating-a-task-list-from-a-prd" class="level1">
+<h1>Rule: Generating a Task List from a PRD</h1>
+<section id="goal-1" class="level2">
+<h2 class="anchored" data-anchor-id="goal-1">Goal</h2>
+<p>To guide an AI assistant in creating a detailed, step-by-step task list in Markdown format based on an existing Product Requirements Document (PRD). The task list should guide a developer through implementation.</p>
+</section>
+<section id="output-1" class="level2">
+<h2 class="anchored" data-anchor-id="output-1">Output</h2>
+<ul>
+<li><strong>Format:</strong> Markdown (<code>.md</code>)</li>
+<li><strong>Location:</strong> <code>/tasks/</code></li>
+<li><strong>Filename:</strong> <code>tasks-[prd-file-name].md</code> (e.g., <code>tasks-prd-user-profile-editing.md</code>)</li>
+</ul>
+</section>
+<section id="process-1" class="level2">
+<h2 class="anchored" data-anchor-id="process-1">Process</h2>
+<ol type="1">
+<li><strong>Receive PRD Reference:</strong> The user points the AI to a specific PRD file</li>
+<li><strong>Analyze PRD:</strong> The AI reads and analyzes the functional requirements, user stories, and other sections of the specified PRD.</li>
+<li><strong>Phase 1: Generate Parent Tasks:</strong> Based on the PRD analysis, create the file and generate the main, high-level tasks required to implement the feature. Use your judgement on how many high-level tasks to use. It’s likely to be about 5. Present these tasks to the user in the specified format (without sub-tasks yet). Inform the user: “I have generated the high-level tasks based on the PRD. Ready to generate the sub-tasks? Respond with ‘Go’ to proceed.”</li>
+<li><strong>Wait for Confirmation:</strong> Pause and wait for the user to respond with “Go”.</li>
+<li><strong>Phase 2: Generate Sub-Tasks:</strong> Once the user confirms, break down each parent task into smaller, actionable sub-tasks necessary to complete the parent task. Ensure sub-tasks logically follow from the parent task and cover the implementation details implied by the PRD.</li>
+<li><strong>Identify Relevant Files:</strong> Based on the tasks and PRD, identify potential files that will need to be created or modified. List these under the <code>Relevant Files</code> section, including corresponding test files if applicable.</li>
+<li><strong>Generate Final Output:</strong> Combine the parent tasks, sub-tasks, relevant files, and notes into the final Markdown structure.</li>
+<li><strong>Save Task List:</strong> Save the generated document in the <code>/tasks/</code> directory with the filename <code>tasks-[prd-file-name].md</code>, where <code>[prd-file-name]</code> matches the base name of the input PRD file (e.g., if the input was <code>prd-user-profile-editing.md</code>, the output is <code>tasks-prd-user-profile-editing.md</code>).</li>
+</ol>
+</section>
+<section id="output-format" class="level2">
+<h2 class="anchored" data-anchor-id="output-format">Output Format</h2>
+<p>The generated task list <em>must</em> follow this structure:</p>
+<p>markdown</p>
+</section>
+<section id="relevant-files" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-files">Relevant Files</h2>
+<ul>
+<li><code>path/to/potential/file1.ts</code> - Brief description of why this file is relevant (e.g., Contains the main component for this feature).</li>
+<li><code>path/to/file1.test.ts</code> - Unit tests for <code>file1.ts</code>.</li>
+<li><code>path/to/another/file.tsx</code> - Brief description (e.g., API route handler for data submission).</li>
+<li><code>path/to/another/file.test.tsx</code> - Unit tests for <code>another/file.tsx</code>.</li>
+<li><code>lib/utils/helpers.ts</code> - Brief description (e.g., Utility functions needed for calculations).</li>
+<li><code>lib/utils/helpers.test.ts</code> - Unit tests for <code>helpers.ts</code>.</li>
+</ul>
+<section id="notes" class="level3">
+<h3 class="anchored" data-anchor-id="notes">Notes</h3>
+<ul>
+<li>Unit tests should typically be placed alongside the code files they are testing (e.g., <code>MyComponent.tsx</code> and <code>MyComponent.test.tsx</code> in the same directory).</li>
+<li>Use <code>npx jest [optional/path/to/test/file]</code> to run tests. Running without a path executes all tests found by the Jest configuration.</li>
+</ul>
+</section>
+</section>
+<section id="tasks" class="level2">
+<h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">1.0 Parent Task Title</label>
+<ul class="task-list">
+<li><label><input type="checkbox">1.1 [Sub-task description 1.1]</label></li>
+<li><label><input type="checkbox">1.2 [Sub-task description 1.2]</label></li>
+</ul></li>
+<li><label><input type="checkbox">2.0 Parent Task Title</label>
+<ul class="task-list">
+<li><label><input type="checkbox">2.1 [Sub-task description 2.1]</label></li>
+</ul></li>
+<li><label><input type="checkbox">3.0 Parent Task Title (may not require sub-tasks if purely structural or configuration) ```</label></li>
+</ul>
+</section>
+<section id="interaction-model" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-model">Interaction Model</h2>
+<p>The process explicitly requires a pause after generating parent tasks to get user confirmation (“Go”) before proceeding to generate the detailed sub-tasks. This ensures the high-level plan aligns with user expectations before diving into details.</p>
+</section>
+<section id="target-audience-1" class="level2">
+<h2 class="anchored" data-anchor-id="target-audience-1">Target Audience</h2>
+<p>Assume the primary reader of the task list is a <strong>junior developer</strong> who will implement the feature.</p>
+</section>
+</section>
+<section id="task-list.mdc" class="level1">
+<h1>3. task-list.mdc</h1>
+<hr>
+<ul>
+<li>description:</li>
+<li>globs:</li>
+<li>alwaysApply: false</li>
+</ul>
+<hr>
+</section>
+<section id="task-list-management" class="level1">
+<h1>Task List Management</h1>
+<p>Guidelines for managing task lists in markdown files to track progress on completing a PRD</p>
+<section id="task-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="task-implementation">Task Implementation</h2>
+<ul>
+<li><strong>One sub-task at a time:</strong> Do <strong>NOT</strong> start the next sub‑task until you ask the user for permission and they say “yes” or “y”</li>
+<li><strong>Completion protocol:</strong>
+<ol type="1">
+<li>When you finish a <strong>sub‑task</strong>, immediately mark it as completed by changing <code>[ ]</code> to <code>[x]</code>.<br>
+</li>
+<li>If <strong>all</strong> subtasks underneath a parent task are now <code>[x]</code>, also mark the <strong>parent task</strong> as completed.<br>
+</li>
+</ol></li>
+<li>Stop after each sub‑task and wait for the user’s go‑ahead.</li>
+</ul>
+</section>
+<section id="task-list-maintenance" class="level2">
+<h2 class="anchored" data-anchor-id="task-list-maintenance">Task List Maintenance</h2>
+<ol type="1">
+<li><strong>Update the task list as you work:</strong>
+<ul>
+<li>Mark tasks and subtasks as completed (<code>[x]</code>) per the protocol above.</li>
+<li>Add new tasks as they emerge.</li>
+</ul></li>
+<li><strong>Maintain the “Relevant Files” section:</strong>
+<ul>
+<li>List every file created or modified.</li>
+<li>Give each file a one‑line description of its purpose.</li>
+</ul></li>
+</ol>
+</section>
+<section id="ai-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="ai-instructions">AI Instructions</h2>
+<p>When working with task lists, the AI must:</p>
+<ol type="1">
+<li>Regularly update the task list file after finishing any significant work.</li>
+<li>Follow the completion protocol:
+<ul>
+<li>Mark each finished <strong>sub‑task</strong> <code>[x]</code>.</li>
+<li>Mark the <strong>parent task</strong> <code>[x]</code> once <strong>all</strong> its subtasks are <code>[x]</code>.</li>
+</ul></li>
+<li>Add newly discovered tasks.</li>
+<li>Keep “Relevant Files” accurate and up to date.</li>
+<li>Before starting work, check which sub‑task is next.</li>
+<li>After implementing a sub‑task, update the file and then pause for user approval.</li>
+</ol>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
