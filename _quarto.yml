@@ -42,6 +42,8 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: Andrew Ng- State of AI Agents
+          href: andrew_ng_state_of_ai_gents.qmd
         - text: How I AI- A 3-step AI coding workflow for solo founders
           href: 3_step_ai_coding_workflow.qmd
         - text: Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company
