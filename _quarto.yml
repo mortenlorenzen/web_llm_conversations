@@ -42,6 +42,8 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: AI Learning Communities- Google Astra Is Disrupting Teaching in 2025
+          href: disrupting_teaching.qmd
         - text: Andrew Ng- State of AI Agents
           href: andrew_ng_state_of_ai_gents.qmd
         - text: How I AI- A 3-step AI coding workflow for solo founders

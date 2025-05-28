@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-26">
+<meta name="dcterms.date" content="2025-05-28">
 
-<title>Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company – LLM dialogues</title>
+<title>AI Learning Communities- Google Astra Is Disrupting Teaching in 2025 – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -439,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company</h1>
+<h1 class="title">AI Learning Communities- Google Astra Is Disrupting Teaching in 2025</h1>
 </div>
 
 
@@ -450,7 +450,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 26, 2025</p>
+      <p class="date">May 28, 2025</p>
     </div>
   </div>
   
@@ -466,87 +466,57 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>:You:</strong> please summarize this video in detail</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.youtube.com/watch?v=iMzEzLZ9gXw"><img src="https://i.ytimg.com/vi_webp/iMzEzLZ9gXw/maxresdefault.webp" class="img-fluid figure-img"></a></p>
-<figcaption>9 Things I Wish I Knew Before Starting an AI Company</figcaption>
+<p><a href="https://www.youtube.com/watch?v=OKdZLAUKRWI"><img src="https://i.ytimg.com/vi/OKdZLAUKRWI/maxresdefault.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Google Astra Is Disrupting Teaching in 2025 (Here’s How)</figcaption>
 </figure>
 </div>
 <hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the YouTube video “9 Things I Wish I Knew Before Starting an AI Company” by Devin Kearns from CUSTOM AI STUDIO.</p>
-<p>The video discusses lessons learned over 8-9 months of building an AI company, focusing on practical insights for others in the space or working with AI companies. The nine key takeaways are:</p>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Here is a detailed summary of the YouTube video “Google Astra Is Disrupting Teaching in 2025 (Here’s How)” by AI Learning Communities:</p>
+<p>The video’s speaker, James Mik of Training Sites.io, discusses recent Google AI announcements, focusing on Project Astra and its potential to disrupt traditional teaching methods, particularly by 2025. While acknowledging other exciting AI developments like Google’s text-to-video tool (V3), he emphasizes Project Astra because of its direct impact on education and training businesses.</p>
+<p>Mik states he is not a traditionally trained teacher but focuses on helping individuals and businesses share their expertise and monetize it by facilitating transformation for their students or customers. He views AI as a tool to leverage for building and growing an education business.</p>
+<p>The core argument presented is that AI is shifting the paradigm from <strong>“just in case” learning</strong> (the traditional course model, where content is provided comprehensively in case a student needs it later) to <strong>“just in time” learning</strong> (providing specific answers or solutions to a problem exactly when the student needs it). AI empowers people to be problem solvers rather than just course takers.</p>
+<p>Mik illustrates this shift with examples of Google Project Astra demos:</p>
 <ol type="1">
-<li><strong>Agentic Prompting is About Decision Frameworks, Not Step-by-Step Instructions:</strong>
+<li><strong>Math/Science Problem Solving:</strong> A student uses a smartphone to point the camera at a math problem. A live Gemini assistant (Project Astra) interacts with the student, understanding the problem, explaining key concepts (like optical isomerism and chiral carbon), and guiding the student on how to apply the concepts to solve that specific problem. This demonstrates a live, interactive, context-aware tutoring experience focused solely on the immediate problem.</li>
+<li><strong>Bike Repair Assistance:</strong> A user needs help fixing a mountain bike. Using the AI assistant via a smartphone camera, the user asks questions. The AI can perform several actions:
 <ul>
-<li><strong>Old Approach:</strong> Writing massive, overly conditional prompts trying to fit the entire decision tree, edge cases, and explicit tool call parameters into a single prompt. This was like giving step-by-step conditional instructions.</li>
-<li><strong>Result:</strong> Constant hallucinations and endless prompt tweaking.</li>
-<li><strong>New Approach:</strong> Hardcode deterministic logic (using <code>if</code>, <code>switch</code>, <code>filter</code> nodes) outside the LLM where possible. Structure and package input data and necessary context (like CRM records, order history) <em>before</em> it hits the LLM. Give the LLM “thinking space” within defined boundaries or “guardrails” (macro objectives, policies, business context). Prompts define <em>how</em> the LLM should make decisions and plan steps, using available tools (which the LLM discovers and uses via appended schemas, not requiring explicit parameter listing in the main prompt).</li>
-<li><strong>Learned:</strong> Overspecifying leads to underperformance. Providing “guardrails” and the “why” beats lengthy “how-to” instructions most of the time. Prompts are hypotheses needing testing at scale, not code that can be verified by reading. Emotion (like “ALL CAPS DO NOT”) can heighten LLM attention. Causality with prompts is slippery and hard to debug compared to code.</li>
-<li><strong>Example:</strong> A customer success bot saw a 20% improvement in output appropriateness by switching from step-by-step instructions (“if this question, answer this way”) to a framework focusing on the objective (decrease refunds) and providing options/guardrails for the LLM to navigate the conversation and avoid refunds where appropriate.</li>
-<li><strong>Roadmap:</strong> Live KPI monitoring and autotriggering A/B prompt tests to continuously improve performance based on metrics (e.g., reducing refund rate from 8% to 7% to 6%). Prompt optimization is challenging due to the slippery nature of causality and LLMs being less effective with negative instructions (“do not do this”).</li>
-</ul></li>
-<li><strong>Model Selection is Crucial for Production Readiness:</strong>
-<ul>
-<li><strong>Old Approach:</strong> Just use the “best” model (initially GPT-4) for simplicity, assuming it works for everything.</li>
-<li><strong>New Approach:</strong> The model choice significantly impacts whether a system is production-ready or just a cool proof-of-concept. Different models (OpenAI, Anthropic Claude, DeepMind, Grok) have different strengths (context window size, tool calling ability, conversational style, reasoning). The prompt needs to be dialed in for the <em>specific</em> model.</li>
-<li><strong>Learned:</strong> The same prompt can produce a ~20% deviation in output quality depending on the model. Bad outputs don’t always mean a bad prompt or a bad model; it could be the specific combination. Effective prompting techniques differ slightly per model. Long context windows (like Gemini) can sometimes replace Vector DB/RAG for simple data retrieval tasks faster and more accurately. Claude 3.7 Sonnet was good for high-level planning/reasoning (used in a planner/executor/verifier architecture); GPT-4o/5 is good for human-sounding conversational communication.</li>
-<li><strong>Roadmap:</strong> Model testing to identify the best model for a scenario <em>before</em> dialing in the prompt. Fine-tuning models for domain-specific jargon/norms (e.g., legal industry) to improve accuracy and reduce the need for excessive scaffolding/guardrails. Standardizing prompting techniques based on both the scenario and the model (requires constant updates as models evolve).</li>
-</ul></li>
-<li><strong>Custom Tooling is Better Than Off-the-Shelf (Usually):</strong>
-<ul>
-<li><strong>Old Approach:</strong> Spending months “tool hopping,” assuming others had already built the necessary solutions. Constantly seeking a “silver bullet” off-the-shelf tool. Imposter syndrome as non-engineers.</li>
-<li><strong>New Approach:</strong> Build custom tools internally for key functions like data processing, labeling, cleaning, API function calling, data retrieval, and prompt engineering. This provides full control, creates more relevant/effective solutions for clients, speeds up iteration cycles, and builds IP. A key focus is building an “agentic database.”</li>
-<li><strong>Learned:</strong> Many AI/ML teams face similar roadblocks. Off-the-shelf agentic tools are like SAS – helpful but don’t 100% solve specific needs and force you to bend your architecture to their limitations. Nobody has it completely figured out yet; everyone is “hacking.”</li>
-<li><strong>Takeaway:</strong> We are the only ones who know exactly what tools we need for our specific architecture and problems, so we must build them ourselves. It’s also more enjoyable.</li>
-<li><strong>Roadmap:</strong> Dynamic tools (flexible, modular API calling based on API research and schemas), prompt evaluation and optimization frameworks, high-volume testing infrastructure (ingesting and processing live/historical data), API research/reference workflow (automating API doc/schema retrieval), and events data processing workflow (mapping user/agent actions over time).</li>
-</ul></li>
-<li><strong>It’s an Even Playing Field - Skip Traditional Automation:</strong>
-<ul>
-<li><strong>Old Approach:</strong> Assumed most businesses were already using traditional automation (Zapier, Make, RPA) and were ready for AI automation as the next step. Thought AI applications were obvious.</li>
-<li><strong>New Approach:</strong> 70%+ of businesses haven’t touched traditional automation platforms. They often come asking for basic automation. Agentic AI is a completely different paradigm – an “Agentic Operating System” (Agentic OS) that dynamically orchestrates automations and workflows as its tool set. LLMs can build/orchestrate automations themselves.</li>
-<li><strong>Learned:</strong> Traditional automation offers 10-30% productivity gains (or maybe 100% operational efficiency if starting from scratch), but it’s 2015 tech. Agentic AI enables AI-first, AI-native systems focused on <em>performance outcomes</em> (KPIs) rather than just system health or task completion. Focusing on traditional automation takes time/resources away from building Agentic systems. Agentic AI is not just an improvement on traditional automation; it’s a paradigm shift.</li>
-<li><strong>Takeaway:</strong> Businesses who missed the automation wave should skip directly to Agentic AI. Focus on building Agentic OSs.</li>
-<li><strong>Roadmap:</strong> Stop doing traditional automations entirely. Focus only on projects centered around building Agentic systems (e.g., building a Sales Team Agent OS, then a Customer Success Agent OS, aiming for a full business Agentic OS).</li>
-</ul></li>
-<li><strong>Plant Your Flag - Define Your System:</strong>
-<ul>
-<li><strong>Old Approach:</strong> Unsure of their place in the market, novelty of ideas, or common knowledge. Lacked confidence (“imposter syndrome”) and followed market demand, building what clients asked for within their general sandbox. Assumed others had things figured out.</li>
-<li><strong>New Approach:</strong> Gained confidence through experience. Defined their core, long-term winning system: build an “Agentic Database” (centralized, contextual, real-time, easily retrievable single source of truth) first, then build the “Agentic Layer” on top, and integrate “Dynamic Tools.” The primary focus is helping clients define and capture their internal knowledge base and business logic (often trapped in people’s heads or messy spreadsheets) into this database foundation. A business is essentially its data and SOPs (processes).</li>
-<li><strong>Learned:</strong> Most people in the space (98% estimated) are copycats, waiting for a playbook. The space is new, everything is a hypothesis (“smoke and mirrors”). Their initial hypothesis about a master contextual database was validated. Their playbook is based on experience and what they see as inevitable trends. Building is key now, not just gathering information.</li>
-<li><strong>Roadmap:</strong> Offer “AI Development Blueprints” involving a mandatory discovery process to understand client tech stack, data flow, and knowledge. This allows them to design the database schema, data pipelines, identify agent tasks, and build the prompt framework – boiling down the business logic into the LLM instructions, based on the foundation of well-structured data.</li>
-</ul></li>
-<li><strong>Community Building Works Best When Aligned with Your Strengths:</strong>
-<ul>
-<li><strong>Old Approach:</strong> Followed the typical creator playbook (YouTube -&gt; Discord community -&gt; Course). Assumed it would run itself. Found creating tutorials and updating courses felt mandatory, uninspired, and quickly outdated. Set wrong expectations.</li>
-<li><strong>New Approach:</strong> Lean into what is enjoyable and provides value: live interactions (webinars, VIP office hours). Found that learning from community members working on their own projects in different industries significantly accelerated their own understanding. Focus on sharing valuable templates (“super agent templates”) with walkthroughs instead of detailed tutorials. Planning for in-person events.</li>
-<li><strong>Learned:</strong> Should have started a focused community sooner. It’s fun, valuable, and accelerates learning. Must be sustainable (align with preferences).</li>
-<li><strong>Takeaway:</strong> Don’t blindly copy the creator playbook. Design a community around your personal strengths and preferences; the right people will find it. It’s not about scale, but quality interaction.</li>
-<li><strong>Roadmap:</strong> Increase frequency of live hangouts/office hours. Establish a cadence for releasing valuable “super agent templates.” Organize fun events (hackathons, “build of the week” showcases). Integrate embedded agents into their own platform. Move off existing community platforms (like Circle) to build their own platform for more control and a better user experience.</li>
-</ul></li>
-<li><strong>UI/UX is a Massive Bottleneck for Wide Adoption:</strong>
-<ul>
-<li><strong>Old Approach:</strong> Assumed agentic systems would blend seamlessly into existing tools (Slack, Email) without needing a separate UI beyond the workflow builder (n8n).</li>
-<li><strong>New Approach:</strong> UI/UX is the <em>most important</em> factor for widespread adoption. Since agents are performance/KPI-based, they need a dedicated “workspace” or destination. This UI should be seamless, accessible, differentiate the agent system, track its activity, allow human collaboration (monitoring, adjusting, pausing), and clearly display performance KPIs. The relationship should be Human + Agent collaboration, not Master and Tool, enabling siloed accountability (the agent system is responsible for the workflow outcome, not the human for the agent’s specific poor output).</li>
-<li><strong>Learned:</strong> Habit change is difficult; users stick to familiar interfaces (like ChatGPT, which succeeded due to its accessible UI). Agentic systems need a similar “UI chip moment” to become frictionless and drive habit change. Trust is an issue; users abandon agents after one failure, unlike forgiving ChatGPT. Current interactions treat agents as tools triggered by humans, hindering true collaboration and widespread use. Personal agents, while easy to build, aren’t widely used because the UI/UX for daily interaction and habit change is missing.</li>
-<li><strong>Takeaway:</strong> Unless the system owns the process end-to-end (via its UI/UX and accountability structure), it won’t drive habit change or scale. The crucial collaborative UI between human and agentic entity is the missing piece bottlenecking adoption.</li>
-<li><strong>Roadmap:</strong> Actively working on developing this human-agent collaborative UI/UX to unlock wider adoption.</li>
-</ul></li>
-<li><strong>The ROI Creates an Unstoppable Flywheel:</strong>
-<ul>
-<li><strong>Old Thought:</strong> LLMs are just great tools that multiply individual productivity.</li>
-<li><strong>New Approach:</strong> Focus exclusively on the direct ROI impact measured by KPIs. Agentic systems are performance-based and designed to redefine business outcomes. A business is a machine (Input -&gt; Function -&gt; Output). Agentic systems dramatically decrease the cost of the “Function” (OPEX) while increasing the quality/scale of the “Output” (performance, KPIs).</li>
-<li><strong>Learned:</strong> Reducing OPEX <em>and</em> increasing performance (e.g., lower refund rates leading to higher Customer Lifetime Value - LTV) creates a powerful, exponential “flywheel.” Higher LTV means a higher allowable Customer Acquisition Cost (CAC), allowing businesses to spend more on marketing and dominate their market share. This creates a massive, self-reinforcing growth loop. This effect is particularly intense right now before Agentic OS becomes the baseline industry standard. CEOs issuing “AI-first” memos understand this potential.</li>
-<li><strong>Takeaway:</strong> We are not building process automation; we are building entire operating systems that will redefine industry standard margins. These margins will expand for early adopters before competitors catch up and prices/margins eventually shrink again.</li>
-<li><strong>Roadmap:</strong> Implement Agentic OS team-by-team (Sales, CS, Ops) with the long-term vision of building a full business Agentic OS that serves as the foundation for starting or operating a business, providing a massive head start compared to traditional methods.</li>
-</ul></li>
-<li><strong>Know Your Role as an AI Consultant (or Expert):</strong>
-<ul>
-<li><strong>Old Approach:</strong> Assumed clients/companies consulting with them wanted their broad perspective on the future of AI and felt entitled to challenge their core approach.</li>
-<li><strong>New Approach:</strong> Consult only through the lens of their defined approach (Agentic OS, holistic systems). Put yourself in the client’s shoes and understand <em>their</em> objective for consulting. Are they using you as a test bed to validate their existing idea? Do they want a broad playbook (“be the expert”)? Or do they know what they want to build but need help <em>how</em> to build it (“be the builder”)? Tailor your role accordingly. For large companies, they often want validation or help with a specific piece, not a fundamental pivot suggestion, even if you think their core project is misguided. Protect time for internal projects; don’t consult on projects you believe are fundamentally the wrong approach unless it aligns with your own path or is part of a structured engagement like their discovery process.</li>
-<li><strong>Learned:</strong> Clients have different needs and expectations for a consultant. Understanding their objective defines your role (helper, expert, builder). Don’t waste time pushing your full vision on those who aren’t ready or asking for it; focus that energy on those who <em>are</em> interested in your core approach or on building your own products.</li>
-<li><strong>Takeaway:</strong> To be an effective AI consultant, understand the client’s objective and mindset to determine your appropriate role in that scenario.</li>
-<li><strong>Roadmap:</strong> Develop a structured discovery process for clients genuinely interested in implementing Agentic OS (this naturally includes consulting). Accept speaking/consulting engagements specifically about their holistic approach (Agentic OS, paradigm shift) rather than general AI automation. Decline consulting on individual alpha/beta projects that don’t align with their core strategy.</li>
+<li>Find and access a user manual for the bike model.</li>
+<li>Scroll through the manual to find relevant sections (e.g., brakes).</li>
+<li>Identify a stripped screw via the camera view.</li>
+<li>Search YouTube for a video tutorial on how to fix a stripped screw and even play a relevant part of the video.</li>
+<li>Access the user’s personal Gmail to find an email from a bike shop confirming the necessary size of a replacement part (e.g., a 3/8 inch hex nut).</li>
 </ul></li>
 </ol>
-<p>In conclusion, the presenter emphasizes the shift from traditional automation and simple AI tools to building comprehensive, performance-driven Agentic Operating Systems layered on robust, centralized data. This requires a change in mindset regarding prompting, model selection, tool building, and business strategy, leading to a powerful, exponential growth flywheel for early adopters, and necessitates a focused approach to consulting and community building.</p>
+<p>These examples highlight Project Astra’s key capabilities:</p>
+<ul>
+<li><strong>Natural Interaction:</strong> Ability to understand and respond in a conversational manner.</li>
+<li><strong>Multimodal Understanding:</strong> Processing information from sight (camera feed) and sound (user’s voice).</li>
+<li><strong>Context Awareness:</strong> Understanding the environment and situation (e.g., working on a bike).</li>
+<li><strong>Proactive Responses:</strong> Potentially identifying issues and offering help before being explicitly asked.</li>
+<li><strong>Taking Actions:</strong> Interfacing with other tools and Google services (Search, YouTube, Gmail, Calendar, Maps, Docs, Drive, Workspace) to perform tasks relevant to the problem.</li>
+<li><strong>Onscreen Interaction:</strong> Highlighting objects or displaying text directly related to the camera view.</li>
+</ul>
+<p>Mik mentions other related Google AI developments that contribute to this disruption:</p>
+<ul>
+<li><strong>Google Vio:</strong> A tool for automatically creating videos (useful for generating visual explanations for just-in-time answers).</li>
+<li><strong>Project Mariner:</strong> A browser agent (though not detailed in this video).</li>
+<li><strong>Google XR Glasses:</strong> Hardware integrating the live AI agent (Project Astra) into eyeglasses with a camera and speaker, enabling real-time, hands-free, context-aware assistance based on what the user is seeing and doing. This creates a “real-time learning loop” where the AI can see if the user’s actions are working and provide immediate feedback or suggestions.</li>
+</ul>
+<p>The speaker argues that this shift necessitates a change in how education businesses operate. The traditional model of selling comprehensive “just in case” courses becomes less valuable when students can get instant, problem-specific help from an AI assistant.</p>
+<p>Mik shares his adapted business model:</p>
+<ul>
+<li>He does <strong>not</strong> charge for traditional courses. He has renamed them “recipes and workflows” and often provides them for free (e.g., on his training.io/join platform). His workflows guide people using AI assistance.</li>
+<li>He charges for <strong>ongoing personal support</strong> – acting as the “human in the loop.” His value is providing experienced guidance, helping people avoid pitfalls, curating the best prompts and frameworks, and offering one-on-one or group coaching/mentoring and live implementation support. This is the “just in time human help” that complements the AI’s capabilities.</li>
+</ul>
+<p>His advice to traditional teachers and those building education businesses is to:</p>
+<ul>
+<li><strong>Embrace AI:</strong> Get deeply familiar with AI tools and how they work.</li>
+<li><strong>Become an “AI Whisperer”:</strong> Focus on guiding others to use AI effectively to solve their problems and achieve outcomes.</li>
+<li><strong>Curate, Don’t Just Create:</strong> Leverage your experience to curate the most effective prompts, frameworks, and workflows for your specific niche, rather than just creating content that AI can now generate.</li>
+<li><strong>Focus on Outcomes/Capabilities:</strong> Help students achieve practical results and build capabilities, rather than just delivering information.</li>
+<li><strong>Monetize Human Expertise:</strong> Charge for your experience, guidance, coaching, and personal support, which offers a level of nuance and personalized interaction that AI currently cannot fully replicate.</li>
+</ul>
+<p>In conclusion, Mik stresses that the disruption is happening quickly. Educators need to assess their current models and adapt by integrating AI, focusing on problem-solving and outcomes, curating valuable processes, and shifting their monetization strategy towards providing high-value human support in a “just in time” context.</p>
 
 
 
