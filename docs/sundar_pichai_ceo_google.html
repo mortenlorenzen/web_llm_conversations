@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-20">
+<meta name="dcterms.date" content="2025-06-05">
 
-<title>Andrej Karpathy’s Deep Dive into LLMs – LLM dialogues</title>
+<title>Sundar Pichai- CEO of Google and Alphabet – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -447,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Andrej Karpathy’s Deep Dive into LLMs</h1>
+<h1 class="title">Sundar Pichai- CEO of Google and Alphabet</h1>
 </div>
 
 
@@ -458,7 +458,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 20, 2025</p>
+      <p class="date">June 5, 2025</p>
     </div>
   </div>
   
@@ -470,189 +470,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>:Model Instructions:</strong></p>
-<hr>
-<p><strong>:You:</strong> please summarize this video in detail</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.youtube.com/watch?v=7xTGNNLPyMI"><img src="https://i.ytimg.com/vi_webp/7xTGNNLPyMI/maxresdefault.webp" class="img-fluid figure-img"></a></p>
-<figcaption>Deep Dive into LLMs like ChatGPT</figcaption>
-</figure>
-</div>
-<hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, here is a detailed summary of Andrej Karpathy’s “Deep Dive into LLMs like ChatGPT” video, covering the core concepts, stages, examples, and implications discussed over its 3.5-hour duration:</p>
-<p><strong>Overall Goal:</strong> To provide a comprehensive, general-audience understanding of how Large Language Models (LLMs) like ChatGPT work, how they are built, their capabilities, limitations, and psychological implications.</p>
-<p><strong>I. Stage 1: Pre-training - Building the Base Model (The Internet Simulator)</strong></p>
-<ol type="1">
-<li><strong>Data Collection &amp; Processing:</strong>
-<ul>
-<li><strong>Goal:</strong> Gather vast amounts of high-quality, diverse text data, primarily from the public internet.</li>
-<li><strong>Source:</strong> Often starts with massive crawls like Common Crawl (billions of pages).</li>
-<li><strong>Processing Pipeline (e.g., FineWeb dataset - 44TB, 15 Trillion Tokens):</strong>
-<ul>
-<li><strong>URL Filtering:</strong> Remove unwanted sites (malware, spam, adult, racist, etc.) using blocklists.</li>
-<li><strong>Text Extraction:</strong> Isolate the main textual content from raw HTML, removing navigation, boilerplate, code, ads.</li>
-<li><strong>Language Filtering:</strong> Identify and select languages (e.g., FineWeb focuses heavily on English). This choice impacts the model’s multilingual capabilities.</li>
-<li><strong>Quality Filtering:</strong> Apply heuristics or models to keep only high-quality text.</li>
-<li><strong>Deduplication:</strong> Remove duplicate or near-duplicate documents.</li>
-<li><strong>PII Removal:</strong> Attempt to identify and remove Personally Identifiable Information (addresses, SSNs).</li>
-</ul></li>
-<li><strong>Result:</strong> A large corpus of cleaned text documents.</li>
-</ul></li>
-<li><strong>Tokenization:</strong>
-<ul>
-<li><strong>Need:</strong> Neural networks operate on sequences of discrete symbols from a finite vocabulary. Raw text (characters or bytes) needs conversion.</li>
-<li><strong>Challenge:</strong> Representing text efficiently. Using raw bytes (256 symbols) creates extremely long sequences. Using words creates a massive, open vocabulary.</li>
-<li><strong>Solution: Byte Pair Encoding (BPE):</strong> An algorithm that starts with bytes (0-255) and iteratively merges the most frequent consecutive pairs into new symbols (tokens).</li>
-<li><strong>Outcome:</strong> A vocabulary of common sub-word units (tokens). GPT-4 uses ~100k tokens. Text becomes a sequence of token IDs.</li>
-<li><strong>Example (<code>tiktokenizer</code>):</strong> “hello world” might be two tokens <code>[hello, _world]</code>. Sensitivity to spaces, capitalization matters. “ubiquitous” might be <code>[ub, iq, uitous]</code>.</li>
-<li><strong>Implication:</strong> The model “sees” tokens, not characters, which affects tasks like spelling or character counting later.</li>
-</ul></li>
-<li><strong>Neural Network Training (The Core Task):</strong>
-<ul>
-<li><strong>Goal:</strong> Train a neural network to predict the next token in a sequence, given the preceding tokens (the context).</li>
-<li><strong>Process:</strong>
-<ul>
-<li>Sample random windows (sequences of tokens) from the pre-training data (up to the model’s max context length, e.g., 1k for GPT-2, 100k+ now).</li>
-<li>For each position in the window, feed the preceding tokens into the neural network.</li>
-<li>The network outputs probabilities for <em>every</em> token in the vocabulary for the <em>next</em> position.</li>
-<li>Compare the predicted probabilities to the actual next token (the label).</li>
-<li>Calculate a “loss” (how wrong the prediction was).</li>
-<li>Adjust the network’s parameters (billions of “knobs” or weights) slightly using calculus (backpropagation and gradient descent) to make the correct token more probable next time.</li>
-</ul></li>
-<li><strong>Architecture: The Transformer:</strong> The standard architecture. It’s a stack of layers involving concepts like attention (allowing tokens to “look” at each other), feed-forward networks, etc. Karpathy emphasizes it’s a large but fixed mathematical expression transforming input tokens and parameters into output probabilities.</li>
-<li><strong>Compute:</strong> This stage is <em>extremely</em> computationally expensive. Requires large clusters of powerful GPUs (like Nvidia H100s) running for weeks or months. This drives the high cost and the “GPU gold rush.” (Analogy: Trillions of operations just predicting next tokens).</li>
-<li><strong>Example: GPT-2 (2019):</strong> 1.5B parameters, 1k context, ~100B tokens training data, cost ~$40k then, maybe ~$100 now due to hardware/software improvements. Karpathy shows a live training example, emphasizing watching the “loss” decrease.</li>
-</ul></li>
-<li><strong>Inference (Generating Text):</strong>
-<ul>
-<li>Once trained, the parameters are fixed.</li>
-<li>Start with a prompt (a sequence of tokens).</li>
-<li>Feed the prompt into the model to get probabilities for the next token.</li>
-<li><strong>Sample</strong> (don’t just pick the <em>most</em> likely) a token based on these probabilities (like flipping a biased coin). This introduces randomness/creativity.</li>
-<li>Append the sampled token to the sequence.</li>
-<li>Repeat: feed the new, longer sequence back in to get the next token, sample, append…</li>
-<li><strong>Result:</strong> A generated continuation of the prompt.</li>
-</ul></li>
-<li><strong>The Base Model:</strong>
-<ul>
-<li>The outcome of pre-training is a “base model.”</li>
-<li>It’s essentially an “internet document simulator” or a “token simulator.” Given a prompt, it autocompletes with statistically likely text similar to its training data.</li>
-<li>It’s <em>not</em> inherently an assistant. Asking “What is 2+2?” might result in it continuing with more questions found online, not answering “4”.</li>
-<li><strong>Knowledge:</strong> Contains vast knowledge implicitly stored in its parameters (a “lossy compression” of the internet). This knowledge is a “vague recollection.”</li>
-<li><strong>Capabilities:</strong> Can be prompted cleverly (e.g., few-shot learning like the English-Korean translation example) or by structuring the prompt like a chat transcript to <em>simulate</em> an assistant. Can show memorization (regurgitation) of common data like Wikipedia pages. Can “hallucinate” plausible continuations for prompts about unknown future events (e.g., 2024 election outcome).</li>
-<li><strong>Example:</strong> Playing with the Llama 3.1 405B <em>base</em> model on Hyperbolic.</li>
-</ul></li>
-</ol>
-<p><strong>II. Stage 2: Post-training - Creating an Assistant</strong></p>
-<ul>
-<li><strong>Goal:</strong> Take the knowledgeable base model and make it a helpful, harmless, honest <em>assistant</em> that follows instructions and engages in conversation. This stage is computationally much cheaper than pre-training.</li>
-</ul>
-<ol type="1">
-<li><strong>Supervised Fine-Tuning (SFT):</strong>
-<ul>
-<li><strong>Analogy:</strong> Learning from worked examples in a textbook.</li>
-<li><strong>Data:</strong> Create a dataset of high-quality conversations (human prompts + ideal assistant responses).
-<ul>
-<li>Initially (InstructGPT): Humans wrote prompts and ideal responses based on detailed instructions (be helpful, harmless, truthful).</li>
-<li>Modern: Often uses LLMs to help generate/draft responses, which humans then edit/curate (synthetic data + human oversight). Examples: OpenAssistant dataset, UltraChat.</li>
-</ul></li>
-<li><strong>Conversation Formatting:</strong> Conversations need to be tokenized, using special tokens to denote turns (e.g., GPT-4o’s <code>&lt;|im_start|&gt; user</code>, <code>&lt;|im_start|&gt; assistant</code>, <code>&lt;|im_end|&gt;</code>).</li>
-<li><strong>Process:</strong> Continue training the base model, but <em>only</em> on this new conversation dataset (using the same next-token prediction objective).</li>
-<li><strong>Result:</strong> The model learns the <em>style</em> and <em>persona</em> of the desired assistant. It learns to answer questions, refuse harmful requests, etc., by imitating the examples.</li>
-<li><strong>What you’re talking to:</strong> Karpathy suggests thinking of the SFT model as a <em>statistical simulation of the average human labeler</em> following the company’s instructions. It’s not a general AI, but an imitator of curated human behavioral examples.</li>
-</ul></li>
-<li><strong>LLM Psychology &amp; Limitations (Emerging from Training &amp; Architecture):</strong>
-<ul>
-<li><strong>Hallucinations:</strong> Making things up.
-<ul>
-<li><strong>Cause:</strong> The model imitates the <em>confident style</em> of answers in its training data, even when it lacks knowledge. It defaults to statistically plausible completions rather than admitting ignorance.</li>
-<li><strong>Mitigation 1 (Data):</strong> Identify questions the base model <em>doesn’t</em> know (by probing it and checking answers against facts) and add examples to the SFT data where the correct response is “I don’t know.” This teaches the model to associate internal uncertainty signals with verbal refusal.</li>
-<li><strong>Mitigation 2 (Tool Use):</strong> Teach the model to use tools like web search or a code interpreter.
-<ul>
-<li><strong>Mechanism:</strong> Introduce special tokens for tool calls (e.g., <code>&lt;|search_start|&gt; query &lt;|search_end|&gt;</code>). Train on examples showing <em>when</em> and <em>how</em> to use tools. When the model emits the end token, the system pauses, runs the tool (e.g., performs a web search), pastes the results back into the context.</li>
-<li><strong>Context Window as Working Memory:</strong> Information in the context window (prompt + generation history + tool results) is directly accessible, like human working memory. Information in parameters is vague recollection. Giving the model info in the context (like pasting a chapter to summarize) yields better results than relying on memory.</li>
-</ul></li>
-</ul></li>
-<li><strong>Need Tokens to Think:</strong>
-<ul>
-<li><strong>Cause:</strong> Each token generation step involves a fixed, finite amount of computation (one forward pass through the network). Complex reasoning cannot happen “instantaneously” for a single token.</li>
-<li><strong>Implication:</strong> Models need to “spread out” their reasoning across multiple token generation steps. Intermediate calculations or steps need to be generated as tokens.</li>
-<li><strong>Example:</strong> The math problem (Emily’s apples/oranges). Directly asking for the answer in one token fails for harder numbers. Showing step-by-step reasoning works. This is why chat models often produce verbose, step-by-step solutions – it’s for <em>them</em> as much as for the user.</li>
-<li><strong>Tool Use Benefit:</strong> Offloading computation (like arithmetic to a code interpreter) is more reliable than the model’s “mental arithmetic.”</li>
-</ul></li>
-<li><strong>Other Quirks:</strong>
-<ul>
-<li><strong>Counting/Spelling:</strong> Often poor due to tokenization (model doesn’t “see” characters easily) combined with the “mental arithmetic” difficulty of counting. Asking for code often helps. (Example: Dots counting, strawberry ’R’s, ubiquitous third letters).</li>
-<li><strong>Knowledge of Self:</strong> Models don’t inherently know “who” they are. Answers like “I am ChatGPT by OpenAI” are often hallucinations based on internet prevalence unless explicitly programmed via SFT data (like AllenAI’s Olmo) or system prompts.</li>
-<li><strong>Swiss Cheese Capabilities:</strong> Models can be brilliant at complex tasks (PhD physics) yet fail simple ones (9.11 vs 9.9 comparison, potentially due to interference from unrelated patterns like Bible verses). Requires caution and verification.</li>
-</ul></li>
-</ul></li>
-<li><strong>Reinforcement Learning (RL): The Third Stage</strong>
-<ul>
-<li><strong>Analogy:</strong> Practice problems in a textbook where you know the final answer but have to find the solution method yourself.</li>
-<li><strong>Motivation:</strong> SFT teaches imitation, but humans aren’t always perfect examples, and their reasoning process might not be optimal <em>for the LLM</em>. RL allows the model to <em>discover</em> the most effective problem-solving strategies <em>for itself</em>.</li>
-<li><strong>RL for Verifiable Domains (Math, Code):</strong>
-<ul>
-<li><strong>Process:</strong>
-<ol type="1">
-<li>Give the model a prompt (e.g., a math problem).</li>
-<li>Have the model generate <em>many</em> candidate solutions (rollouts) using sampling.</li>
-<li>Automatically check which solutions reach the correct final answer (e.g., checking the number in a marked box).</li>
-<li>Reinforce (increase the probability of) the token sequences that led to correct answers. Often, train specifically on the “best” correct solution found (e.g., shortest, most efficient).</li>
-</ol></li>
-<li><strong>DeepSeek RL Paper:</strong> A key paper showing this massively improves reasoning. Models learn to “think” - producing longer responses with self-correction, backtracking, exploring multiple angles (“wait let me recheck this”). This is emergent, not explicitly taught.</li>
-<li><strong>Thinking Models:</strong> Models trained this way (DeepSeek R1, GPT-4 O-series, Gemini 2 Thinking). Often show a “Reasoning” step. OpenAI hides the full chain-of-thought, DeepSeek shows it. These models excel at hard reasoning tasks but might be overkill for simple queries.</li>
-<li><strong>Connection to AlphaGo:</strong> Just like AlphaGo RL surpassed human imitation (Supervised Learning) in Go and found novel moves (Move 37), RL for LLMs <em>could</em> potentially discover superhuman reasoning strategies, though this is nascent.</li>
-</ul></li>
-<li><strong>RLHF (RL from Human Feedback) for Unverifiable Domains (Creativity, Style):</strong>
-<ul>
-<li><strong>Problem:</strong> How to score outputs like jokes or poems automatically when there’s no single “correct” answer? Human evaluation is needed but doesn’t scale to billions of examples needed for RL.</li>
-<li><strong>Solution (InstructGPT/Anthropic pioneers):</strong>
-<ol type="1">
-<li>Collect human <em>preference</em> data: Show humans multiple model outputs for a prompt (e.g., 5 jokes) and ask them to <em>rank</em> them best to worst. (Ranking is easier than absolute scoring).</li>
-<li>Train a separate neural network (the <strong>Reward Model</strong>) to predict the human preference score/ranking given a prompt and a completion.</li>
-<li>Use this trained Reward Model as an <em>automatic scorer</em> in the RL loop. The LLM generates outputs, the reward model scores them, and the LLM is trained to maximize the reward model’s score.</li>
-</ol></li>
-<li><strong>Upside:</strong> Allows applying RL principles to subjective domains. Often improves quality because discriminating good outputs is easier for humans than generating perfect ones from scratch (discriminator-generator gap).</li>
-<li><strong>Downside (Crucial):</strong> The reward model is just a <em>simulation</em> of human preference and can be <em>gamed</em>. RL is very good at finding “adversarial examples” - nonsensical outputs (like “the the the the”) that trick the reward model into giving a high score. Therefore, you can’t run RLHF indefinitely; quality improves initially then collapses as the model learns to exploit the reward model. It’s more like a final fine-tuning step than “true” scalable RL. Karpathy: “RLHF is not RL” (in the magical, scalable sense).</li>
-</ul></li>
-</ul></li>
-</ol>
-<p><strong>III. Summary of Training Pipeline &amp; Analogy</strong></p>
-<ul>
-<li><strong>Pre-training:</strong> Reading all the textbook exposition (builds knowledge base -&gt; Base Model).</li>
-<li><strong>SFT:</strong> Studying worked expert solutions (learns style/persona by imitation -&gt; Assistant Model).</li>
-<li><strong>RL:</strong> Doing practice problems (discovers effective problem-solving strategies -&gt; Reasoning/Thinking Model).</li>
-<li><strong>(RLHF):</strong> A limited form of RL for subjective tasks using a human preference simulator (fine-tunes the assistant).</li>
-</ul>
-<p><strong>IV. Future Trends</strong></p>
-<ul>
-<li><strong>Multimodality:</strong> Models handling text, audio (hearing/speaking), images (seeing/painting) natively within one framework (often by tokenizing other modalities).</li>
-<li><strong>Agents:</strong> Models performing longer sequences of tasks autonomously with error correction and supervision (human-to-agent ratios).</li>
-<li><strong>Pervasiveness &amp; Invisibility:</strong> Integration into existing tools, maybe OS-level actions (like OpenAI’s Operator concept).</li>
-<li><strong>Research Frontiers:</strong> E.g., Test-Time Training (models learning continuously after deployment, beyond just in-context learning), handling extremely long contexts beyond current window limits.</li>
-</ul>
-<p><strong>V. Resources &amp; Finding Models</strong></p>
-<ul>
-<li><strong>Staying Updated:</strong> LLM Arena leaderboard (human preferences), AI News newsletter (comprehensive), X/Twitter (community).</li>
-<li><strong>Using Models:</strong>
-<ul>
-<li>Proprietary: Provider websites (ChatGPT, Gemini, Claude).</li>
-<li>Open Weights (Llama, DeepSeek, Mistral): Inference providers (Together.ai, Hugging Face), potentially local running (LM Studio, Ollama) for smaller/quantized versions.</li>
-<li>Base Models: Harder to find hosted, Hyperbolic is one place for Llama 3.1 base.</li>
-</ul></li>
-</ul>
-<p><strong>VI. Conclusion - What is ChatGPT?</strong></p>
-<p>When you type into ChatGPT:</p>
-<ol type="1">
-<li>Your query is tokenized and added to the conversation context using a specific format.</li>
-<li>This token sequence feeds into a massive, pre-trained Transformer network with fixed parameters.</li>
-<li>The network generates the next token by sampling from output probabilities. This repeats.</li>
-<li>The <em>content</em> and <em>style</em> of the response are primarily shaped by the SFT stage - it’s simulating a human labeler following OpenAI’s guidelines, based on millions of examples.</li>
-<li>If using a “Thinking” model (like GPT-4o Advanced Reasoning), the RL stage has further refined its problem-solving approach by letting it practice and discover effective reasoning steps, potentially beyond simple human imitation for verifiable tasks.</li>
-<li>It remains a statistical system with quirks and limitations (hallucinations, “Swiss cheese” capabilities). Use it as a powerful <em>tool</em>, verify its output, and understand it’s fundamentally a sophisticated pattern-matching and sequence-completion machine, not a conscious entity.</li>
-</ol>
+<p><a href="https://www.youtube.com/watch?v=9V6tWC4CdFQ">Sundar Pichai: CEO of Google and Alphabet | Lex Fridman Podcast #471</a></p>
+<p>This video transcript details Google’s evolving search strategy with AI, the origins and impact of Google Chrome, the philosophy behind “moonshot” projects like Waymo, and the broader implications of AI on various fields, including robotics, productivity, and programming.</p>
+<p><strong>AI Mode vs.&nbsp;Google Search Evolution:</strong></p>
+<p>Google is transitioning its iconic minimalist search page with “10 blue links” by integrating AI. This includes a separate “AI mode” tab and “AI overviews” directly within search results. The goal is to provide more context and summary through AI, while still giving users access to web links. AI acts as a layer offering context, summary, and even dialogue, allowing users to learn more effectively. The underlying AI models use “query fan-out,” performing multiple searches to assemble comprehensive knowledge.</p>
+<p><strong>Impact of AI on Language and Accessibility:</strong></p>
+<p>A significant benefit of AI mode, particularly with Gemini’s translation capabilities, is making English-language websites accessible to non-English speakers. This dramatically expands the “web” for a large portion of the world, unlocking cognitive capacity that was previously limited by language barriers.</p>
+<p><strong>Product Metrics and Ads:</strong></p>
+<p>AI Overviews have shown significant product improvement and strong growth, with early metrics for AI mode being very encouraging. While AI Overviews currently include ads, AI mode does not yet. Google views ads as “commercial information” and applies the same quality metrics, aiming for relevance and a non-annoying experience. The company plans to focus on the organic experience in early AI mode but will eventually integrate ads, potentially rethinking their format with AI’s help, and exploring subscription offerings alongside ads (similar to YouTube).</p>
+<p><strong>Future of Search and the Web:</strong></p>
+<p>Google’s current plan is for AI mode to remain a separate, “bleeding edge” tab, with successful features migrating to the main search page and AI Overviews. A core design principle is that AI mode will continue to direct users to the human-created web. The integration of AI is changing how users interact with search, leading them to ask more, longer, and dramatically different types of questions, fueling curiosity and delivering higher-quality referrals.</p>
+<p><strong>Journalism and the Human-Created Web:</strong></p>
+<p>The rise of AI in search has made journalists nervous. However, Google is committed to supporting the news and journalism ecosystem, believing it will play an important future role. While AI can provide objective criticism, the value of high-quality journalism and crowdsourced information is seen as complementary and important. The speaker believes both human-created and AI-generated content will coexist, with AI potentially even designing better websites for human consumption.</p>
+<p><strong>Google Chrome’s Origins and “Moonshot” Philosophy:</strong></p>
+<p>The speaker, a pioneer of Google Chrome, recounts its origins around 2004-2005 when the web was rapidly evolving into dynamic applications (e.g., Gmail, Flickr), but browsers were not equipped for this. The vision for Chrome was to bring “core OS principles” to the browser, creating a secure, sandboxed environment with each tab running independently. The V8 JavaScript VM, developed by a Danish team, was 25 times faster than existing solutions and was open-sourced. The name “Chrome” reflected the desire to minimize the browser’s “clunky” interface. The speaker emphasizes the “moonshot” philosophy: aiming for ambitious projects attracts the best talent, reduces competition, and even partial success leads to significant breakthroughs.</p>
+<p><strong>Waymo and Robotics:</strong></p>
+<p>Waymo, Google’s self-driving car project, is highlighted as a successful “moonshot,” having achieved over 10 million paid robo-taxi rides. The project demonstrated perseverance through the “final 20%” of development, with Google investing more even when others doubted. Waymo is seen as an “AI robot” that prioritizes both ambition and safety. The speaker acknowledges Tesla’s efforts in self-driving but views the transportation space as vast enough for both to succeed. Google is heavily invested in “Gemini robotics,” building underlying models and pushing the frontier of generalized, safe, real-world robot applications, believing AI will drive massive progress in the field.</p>
+<p><strong>AI’s Impact on Productivity and Programming:</strong></p>
+<p>The integration of AI, particularly Gemini, across Google’s services (like Gmail for personalized responses) is seen as a “productivity multiplier.” It aims to free up human time from mundane tasks, allowing individuals to focus on more meaningful activities like parenting, creativity, or deeper personal connections.</p>
+<p>Regarding programming, while some engineers worry about job displacement, Google’s internal data shows a 10% increase in engineering velocity due to AI, yet they still plan to hire more engineers. AI is expected to automate “grunt work,” allowing engineers to focus on more creative, problem-solving, and architectural aspects of their jobs. It will also empower more people to create and improve codebases through features like code awareness, refactoring, and migrations. While coding interviews may adapt, the ability to use AI tools effectively will be an asset. The speaker still recommends a computer science education, emphasizing that it teaches first principles thinking applicable across all fields impacted by AI.</p>
 
 
 
