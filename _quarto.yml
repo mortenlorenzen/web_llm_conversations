@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI Technology
         menu:
+        - text: Sundar Pichai- CEO of Google and Alphabet
+          href: sundar_pichai_ceo_google.qmd
         - text: Sam Altman on future of work
           href: sam_altman_future_of_work.qmd    
         - text: Sam Altman on OpenAI's vision
@@ -42,8 +44,6 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
-        - text: Sundar Pichai- CEO of Google and Alphabet
-          href: sundar_pichai_ceo_google.qmd
         - text: The Top Down Approach of AI for Business
           href: top_down_ai.qmd
         - text: AI Learning Communities- Google Astra Is Disrupting Teaching in 2025
