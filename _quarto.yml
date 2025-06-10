@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI Technology
         menu:
+        - text: Karen Hao- Empire of AI
+          href: karen_hao_empire_of_ai.qmd
         - text: Sundar Pichai- CEO of Google and Alphabet
           href: sundar_pichai_ceo_google.qmd
         - text: Sam Altman on future of work
