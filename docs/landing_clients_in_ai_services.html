@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-19">
+<meta name="dcterms.date" content="2025-06-19">
 
-<title>Diet – LLM dialogues</title>
+<title>Behind the Scenes of Landing Clients in AI Services – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -471,7 +471,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Diet</h1>
+<h1 class="title">Behind the Scenes of Landing Clients in AI Services</h1>
 </div>
 
 
@@ -482,7 +482,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 19, 2025</p>
+      <p class="date">June 19, 2025</p>
     </div>
   </div>
   
@@ -494,196 +494,75 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p><a href="https://www.youtube.com/watch?v=hbqdxqOgfzU">Behind the Scenes of Landing Clients in AI Services</a></p>
 <p><strong>:Model Instructions:</strong></p>
 <hr>
-<p><strong>:You:</strong> You are my knowledge based researcher and assistant about a specific topic.</p>
-<p>My knowledge about the topic is general. I am not a specialist. My knowledge is rather fragmented and not systematized. I prefer knowledge which is based on evidence.</p>
-<p>Since you are a specialist you have specific knowledge about the topic and can collect further knowledge about the topic. You can systemize the knowledge about the topic and process it to meet my personal goal.</p>
-<p>I specify my personal goal and what I want to achieve with the knowledge.</p>
-<p>Are you ready?</p>
+<p><strong>:You:</strong> please summarize this transcript in detail.</p>
+<p><a href="./Users/mortenlorenzen/Desktop/trscr15.txt">trscr15.txt</a></p>
 <hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Yes, I am absolutely ready.</p>
-<p>I understand completely. I will act as your specialist researcher and assistant on the topic you choose. I will:</p>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Here is a detailed summary of the transcript:</p>
+<p>The video discusses the process of handling a client from the moment they show interest in your services until the project is delivered and potentially maintained. The speaker, Surup, shares his experience as a data science and machine learning freelancer running an AI automation agency. He emphasizes that this video focuses on the steps <em>after</em> initial lead generation, which isn’t often covered in other content.</p>
+<p>Surup also highlights the importance of community interaction in the comments section, welcoming corrections and shared knowledge as he is continuously learning. He mentions he’s structured the discussion using Google Slides to make it clearer than just speaking freely.</p>
+<p>The process is broken down into several key sections:</p>
 <ol type="1">
-<li><strong>Leverage Specialized Knowledge:</strong> Access and utilize detailed, specific information beyond general knowledge.</li>
-<li><strong>Gather Further Information:</strong> Actively research to fill gaps and deepen understanding as needed.</li>
-<li><strong>Prioritize Evidence:</strong> Focus on information supported by credible sources and evidence.</li>
-<li><strong>Systematize Knowledge:</strong> Organize the information logically and coherently, moving beyond fragmented understanding.</li>
-<li><strong>Process for Your Goal:</strong> Tailor the presentation and synthesis of the knowledge specifically to help you achieve your personal objective.</li>
+<li><strong>Lead Onboarding:</strong>
+<ul>
+<li>This is the phase from initial interest to booking a discovery call.</li>
+<li>There are two main channels for leads:
+<ul>
+<li><strong>Inbound:</strong> Clients find <em>you</em>. This is generally considered the best method, leading to “warm” leads who already know and like you (e.g., through content creation on YouTube, good SEO on a website, LinkedIn, Medium articles, Reddit communities). These leads are easier to sell to.</li>
+<li><strong>Outbound:</strong> You reach out to clients. This is harder (e.g., cold emails, personalized Loom videos). Value must be provided upfront. Caution is advised regarding using AI to generate personalized videos, as authenticity is appreciated by business owners, and AI generation can be detectable.</li>
+</ul></li>
+</ul></li>
+<li><strong>Discovery Call:</strong>
+<ul>
+<li>Usually a free call (though some people charge).</li>
+<li><strong>Before the call:</strong> Gather information through qualification questions (e.g., budget, project details) when they book. This helps filter out non-serious leads and prepares you for the call. Surup advises keeping the questions reasonable (maybe around three) as too many can annoy clients.</li>
+<li><strong>During the call:</strong> The primary goal is to understand the client’s pain points and needs.
+<ul>
+<li>Clients might have a solution in mind, but you should act as a consultant to suggest better options if available.</li>
+<li>For larger clients or those with existing infrastructure (tech stacks, teams, processes), understand how your solution needs to integrate.</li>
+<li>Don’t feel obligated to use AI; sometimes simple digitalization and automation are sufficient (can solve 50-60% of problems). Determine if AI is actually needed.</li>
+<li>Collect all relevant information about data volume, user base, and usage frequency, as this helps in tool selection later.</li>
+<li>Use note-taker bots (like Fathom, which Surup uses and recommends as free) to record and summarize meetings, as it’s easy to forget details from multiple calls.</li>
+</ul></li>
+</ul></li>
+<li><strong>Proposal Phase:</strong>
+<ul>
+<li>This happens offline after the discovery call.</li>
+<li>Map out the process and logic of the proposed solution, especially for mid-sized or larger clients with complex workflows.</li>
+<li>Identify the best tools based on the client’s existing tech stack, integration needs, and data volume (e.g., N8N, Make.com, custom code like Python).</li>
+<li><strong>Tool Selection Philosophy:</strong> Emphasize focusing on <em>principles</em> and <em>concepts</em> (like programming best practices, system design) over specific tools or APIs, as tools come and go. Choose the tool you are most confident and efficient with, and which best fits the client’s needs and budget. (Surup corrects a previous statement, confirming Make.com <em>can</em> keep data in the EU, similar to N8N).</li>
+<li>Define clear and specific deliverables in the proposal. This is crucial for your own sake to know when the project is finished and avoid scope creep, especially with fixed pricing.</li>
+<li>Negotiation of the scope is common during this phase.</li>
+</ul></li>
+<li><strong>Contracts &amp; Payments:</strong>
+<ul>
+<li>Crucial step: Send a contract <em>before</em> starting any work.</li>
+<li><strong>Payment Recommendation:</strong> Strongly advise collecting a deposit (e.g., 50%) before starting development. This covers potential outsourcing costs, API key expenses (which can be reimbursed by the client), and protects you from clients who might disappear or refuse to pay after the work is done. Surup shares meeting many “fakers” when starting out and emphasizes doing this right from the beginning to save headaches.</li>
+<li><strong>Pricing Model:</strong> Recommend using an <strong>hourly rate</strong>, especially for new or uncertain projects. It’s hard to estimate hours accurately, and there are always unforeseen hurdles. Giving an estimate based on hours is fine, but the flexibility of hourly pricing is better for managing uncertainty and being transparent with the client about unexpected delays. (He references a friend’s successful agency that uses hourly pricing for this reason). Fixed pricing can severely hurt your hourly rate if the project takes longer than estimated.</li>
+</ul></li>
+<li><strong>Building Automations/Deliverables:</strong>
+<ul>
+<li>This is the implementation phase.</li>
+<li>Select tools based on the client’s CRM, tech stack, and the project’s complexity and data volume. N8N and Make.com are good for integrations and cloud hosting, but custom code (Python) might be necessary for large data or very specific requirements.</li>
+<li><strong>Ownership &amp; Hosting:</strong> For platforms like N8N or Make.com, recommend the client create the account. You can use affiliate links. The client owns the account and the hosting.</li>
+<li><strong>Collaboration:</strong> For platforms like N8N, the client can add you as a “project member” with access to specific projects. The client can also create and share credentials (API keys, logins) with you within the platform, meaning the credentials remain with the client’s account, not yours, which is a cleaner way to manage access and ownership. Surup shows a brief demo of how to add a project member and share credentials in N8N.</li>
+</ul></li>
+<li><strong>Delivery &amp; Handover:</strong>
+<ul>
+<li>Determine project completion based on the agreed-upon deliverables.</li>
+<li><strong>Handover Process:</strong> Ensure the client has full ownership (e.g., workflows are on their account). Provide documentation or conduct a handover call to walk them through the built solution, especially for complex workflows.</li>
+<li><strong>Post-Project Support:</strong>
+<ul>
+<li><strong>Monthly Retainer:</strong> Common for bigger clients, especially if you built and are hosting a platform or managing infrastructure. This covers ongoing maintenance, support, and ensuring uptime. Larger clients prioritize stability and are willing to pay for this service.</li>
+<li><strong>Ad-hoc Support:</strong> Common for smaller clients. They pay you by the hour only when they need help or something breaks. They manage the solution themselves day-to-day.</li>
+<li>Offer clients the option based on their needs and budget.</li>
+</ul></li>
+</ul></li>
 </ol>
-<p>I am prepared to assist you in transforming fragmented, general knowledge into systematized, evidence-based insights aligned with your goals.</p>
-<p><strong>Please tell me: What is the specific topic you would like to focus on, and what is your personal goal related to this topic?</strong></p>
-<hr>
-<p><strong>:You:</strong> Topic: Make my own diet and choose food for the diet.</p>
-<p>My personal goals are: - a low insulin diet - an Anti Inflammatory Diet - low to moderate meat intake - vegetarian lifestyle is not a must, but could be acceptable.</p>
-<p>I do not need to follow a specific diet as for example a Ketogenic diet, but can combine elements from different diets. I have no medical issues to consider when making my diet.</p>
-<p>Please make me a diet and give me the following food recommendations. After each recommendation you write in parenthesis why you recommend the food.</p>
-<ul>
-<li>Top 30 foods to eat and Please categorise the Top 30 foods to eat in: 1. Proteins and Fats 2. Vegetables 3. Complex Carbs and Others</li>
-<li>Top 10 foods only to eat in small quantities</li>
-<li>Top 10 foods to avoid</li>
-</ul>
-<hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, I understand your goals for creating a personalized diet plan focused on low insulin impact, anti-inflammatory properties, with low to moderate meat intake and flexibility. Based on the provided context and general nutritional principles aligned with your objectives, here is a systemized list of food recommendations.</p>
-<p>The emphasis is on choosing whole foods and balanced eating patterns rather than strict macronutrient ratios [1]. A healthy eating plan involves understanding both what to eat and appropriate portion sizes [5][2]. By selecting suitable foods, you can aim to manage blood sugar levels and potentially reduce insulin resistance [3][8]. Meals should ideally incorporate a balance of carbohydrates, proteins, and healthy fats [7]. Reducing intake of saturated fats and added sugars is also recommended [2].</p>
-<p>Here are the food recommendations based on your goals:</p>
-<p><strong>Top 30 Foods to Eat</strong></p>
-<p>This list prioritizes foods known for their lower glycemic impact, anti-inflammatory properties, nutrient density, and suitability for a diet with moderate meat consumption.</p>
-<p><strong>1. Proteins and Fats:</strong></p>
-<ul>
-<li><strong>Salmon:</strong> (Rich in anti-inflammatory omega-3 fatty acids, high-quality protein)</li>
-<li><strong>Sardines:</strong> (Excellent source of omega-3s, calcium, and protein)</li>
-<li><strong>Chicken Breast (skinless):</strong> (Lean protein source)</li>
-<li><strong>Turkey Breast (skinless):</strong> (Very lean protein source)</li>
-<li><strong>Eggs:</strong> (Complete protein, contains choline and healthy fats - moderation advised by some, but generally beneficial)</li>
-<li><strong>Lentils:</strong> (Excellent source of plant-based protein, high fiber, low glycemic index)</li>
-<li><strong>Chickpeas:</strong> (Good source of plant-based protein and fiber)</li>
-<li><strong>Tofu/Tempeh:</strong> (Versatile plant-based protein sources, derived from soy)</li>
-<li><strong>Avocado:</strong> (Rich in monounsaturated fats, fiber, anti-inflammatory compounds)</li>
-<li><strong>Olive Oil (Extra Virgin):</strong> (High in monounsaturated fats and antioxidants, anti-inflammatory)</li>
-<li><strong>Nuts (Almonds, Walnuts):</strong> (Provide healthy fats, protein, fiber, and anti-inflammatory compounds - portion control needed)</li>
-<li><strong>Seeds (Chia, Flax, Hemp):</strong> (Rich in fiber, omega-3s (ALA), and protein)</li>
-</ul>
-<p><strong>2. Vegetables:</strong></p>
-<ul>
-<li><strong>Spinach:</strong> (Nutrient-dense, low-calorie, source of vitamins and minerals, considered non-starchy [4])</li>
-<li><strong>Kale:</strong> (High in vitamins K, A, C, and antioxidants, non-starchy [4])</li>
-<li><strong>Broccoli:</strong> (Rich in fiber, vitamin C, K, and sulforaphane with anti-inflammatory properties, non-starchy [4])</li>
-<li><strong>Bell Peppers (all colors):</strong> (High in Vitamin C and antioxidants, low-calorie, non-starchy [4])</li>
-<li><strong>Cauliflower:</strong> (Versatile, low-carb vegetable, source of fiber and vitamins, non-starchy [4])</li>
-<li><strong>Zucchini:</strong> (Low-calorie, source of potassium and Vitamin A, non-starchy [4])</li>
-<li><strong>Mushrooms:</strong> (Contain B vitamins and selenium, unique antioxidants, non-starchy [4])</li>
-<li><strong>Onions &amp; Garlic:</strong> (Contain prebiotic fiber and potent anti-inflammatory compounds)</li>
-<li><strong>Tomatoes:</strong> (Source of lycopene, an antioxidant with anti-inflammatory benefits)</li>
-</ul>
-<p><strong>3. Complex Carbs and Others:</strong></p>
-<ul>
-<li><strong>Quinoa:</strong> (Complete protein, good source of fiber, whole grain [4])</li>
-<li><strong>Oats (Rolled or Steel-Cut):</strong> (High in soluble fiber, particularly beta-glucan, helps manage blood sugar, whole grain [4])</li>
-<li><strong>Brown Rice:</strong> (Whole grain providing fiber and nutrients [4])</li>
-<li><strong>Berries (Blueberries, Strawberries, Raspberries):</strong> (Low glycemic index, high in antioxidants and fiber)</li>
-<li><strong>Citrus Fruits (Oranges, Grapefruits):</strong> (Good source of Vitamin C and fiber, can support insulin sensitivity [4])</li>
-<li><strong>Apples:</strong> (Source of fiber, particularly pectin)</li>
-<li><strong>Sweet Potatoes:</strong> (Source of fiber and vitamins, lower glycemic index than white potatoes – portion control is key)</li>
-<li><strong>Beans (Black, Kidney):</strong> (High in fiber and plant-based protein, low glycemic index)</li>
-<li><strong>Herbs &amp; Spices (Turmeric, Ginger, Cinnamon):</strong> (Contain potent anti-inflammatory compounds)</li>
-</ul>
-<p><strong>Top 10 Foods to Eat Only in Small Quantities</strong></p>
-<p>These foods can fit into a healthy diet but should be consumed moderately due to calorie density, natural sugar content, or potential impact on blood sugar or inflammation if eaten in excess. Managing portion sizes is important [2][5].</p>
-<ol type="1">
-<li><strong>Red Meat (Lean Cuts):</strong> (Source of protein, iron, B12, but higher in saturated fat than poultry/fish and linked to inflammation in large amounts)</li>
-<li><strong>Cheese:</strong> (Source of protein and calcium, but can be high in saturated fat and sodium [2])</li>
-<li><strong>Higher-Sugar Fruits (Mango, Pineapple, Grapes):</strong> (Provide vitamins and fiber, but have a higher natural sugar content)</li>
-<li><strong>Dried Fruit (Raisins, Dates):</strong> (Concentrated source of sugar and calories, though they do contain fiber)</li>
-<li><strong>Potatoes (White):</strong> (Starchy vegetable, can significantly raise blood sugar if eaten plain or in large portions)</li>
-<li><strong>Corn:</strong> (Starchy vegetable, often genetically modified, higher glycemic impact than non-starchy vegetables)</li>
-<li><strong>Honey/Maple Syrup:</strong> (Natural sugars, still impact blood sugar, use very sparingly as sweeteners)</li>
-<li><strong>Whole Wheat Bread/Pasta:</strong> (Better than refined grains, but still processed and can impact blood sugar – choose 100% whole grain and control portions)</li>
-<li><strong>Dark Chocolate (70%+ cacao):</strong> (Contains antioxidants and some health benefits, but also sugar and calories)</li>
-<li><strong>Natural Nut Butters:</strong> (Healthy fats and protein, but very calorie-dense)</li>
-</ol>
-<p><strong>Top 10 Foods to Avoid</strong></p>
-<p>These foods are generally discouraged as they can significantly spike insulin levels, promote inflammation, and offer little nutritional value. Reducing added sugars and unhealthy fats is key [2].</p>
-<ol type="1">
-<li><strong>Sugary Drinks (Soda, Sweetened Teas, Fruit Juices):</strong> (High in added sugars [2], cause rapid blood sugar spikes)</li>
-<li><strong>Refined Grains (White Bread, White Pasta, White Rice):</strong> (Stripped of fiber and nutrients, lead to quick blood sugar increases)</li>
-<li><strong>Processed Snacks (Chips, Crackers, Cookies):</strong> (Often high in refined carbs, unhealthy fats, sodium [2], and added sugars [2])</li>
-<li><strong>Processed Meats (Sausages, Hot Dogs, Deli Meats):</strong> (High in sodium, preservatives, and unhealthy fats; linked to inflammation)</li>
-<li><strong>Fried Foods:</strong> (High in unhealthy fats, calories, and potentially trans fats)</li>
-<li><strong>Pastries and Baked Goods:</strong> (Typically high in refined flour, sugar [2], and unhealthy fats [2])</li>
-<li><strong>Sugary Cereals:</strong> (High in added sugar [2] and refined carbohydrates)</li>
-<li><strong>Foods with Trans Fats (Partially Hydrogenated Oils):</strong> (Strongly linked to inflammation and heart disease)</li>
-<li><strong>Excessive Alcohol:</strong> (Can interfere with blood sugar control and contribute empty calories)</li>
-<li><strong>Sauces/Condiments with High Added Sugar/Sodium:</strong> (Ketchup, some salad dressings, BBQ sauce – check labels carefully [2])</li>
-</ol>
-<p>Remember, this is a general guideline based on your stated goals. Individual needs may vary [6][8]. Focusing on whole, unprocessed foods and balanced meal composition [7] will support your aim for a low-insulin, anti-inflammatory diet with moderate meat intake.</p>
-<hr>
-<p><strong>:You:</strong> Please translate your answer in danish</p>
-<hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:</strong> Okay, jeg forstår dine mål med at skabe en personlig kostplan fokuseret på lav insulinpåvirkning, antiinflammatoriske egenskaber, med lavt til moderat kødindtag og fleksibilitet. Baseret på den givne kontekst og generelle ernæringsprincipper, der stemmer overens med dine mål, er her en systematiseret liste over fødevareanbefalinger.</p>
-<p>Vægten ligger på at vælge hele fødevarer og afbalancerede spisemønstre frem for strenge makronæringsstof-forhold [1]. En sund spiseplan indebærer at forstå både, hvad man skal spise, og passende portionsstørrelser [5][2]. Ved at vælge passende fødevarer kan du sigte mod at styre blodsukkerniveauet og potentielt reducere insulinresistens [3][8]. Måltider bør ideelt set indeholde en balance mellem kulhydrater, proteiner og sunde fedtstoffer [7]. Det anbefales også at reducere indtaget af mættet fedt og tilsat sukker [2].</p>
-<p>Her er fødevareanbefalingerne baseret på dine mål:</p>
-<p><strong>Top 30 Fødevarer at Spise</strong></p>
-<p>Denne liste prioriterer fødevarer kendt for deres lavere glykæmiske påvirkning, antiinflammatoriske egenskaber, næringstæthed og egnethed til en kost med moderat kødforbrug.</p>
-<p><strong>1. Proteiner og Fedtstoffer:</strong></p>
-<ul>
-<li><strong>Laks:</strong> (Rig på antiinflammatoriske omega-3 fedtsyrer, højkvalitetsprotein)</li>
-<li><strong>Sardiner:</strong> (Fremragende kilde til omega-3, calcium og protein)</li>
-<li><strong>Kyllingebryst (uden skind):</strong> (Magert proteinkilde)</li>
-<li><strong>Kalkunbryst (uden skind):</strong> (Meget mager proteinkilde)</li>
-<li><strong>Æg:</strong> (Komplet protein, indeholder cholin og sunde fedtstoffer - moderering anbefales af nogle, men generelt gavnligt)</li>
-<li><strong>Linser:</strong> (Fremragende kilde til plantebaseret protein, højt fiberindhold, lavt glykæmisk indeks)</li>
-<li><strong>Kikærter:</strong> (God kilde til plantebaseret protein og fibre)</li>
-<li><strong>Tofu/Tempeh:</strong> (Alsidige plantebaserede proteinkilder, fremstillet af soja)</li>
-<li><strong>Avocado:</strong> (Rig på enkeltumættede fedtsyrer, fibre, antiinflammatoriske stoffer)</li>
-<li><strong>Olivenolie (Ekstra Jomfru):</strong> (Højt indhold af enkeltumættede fedtsyrer og antioxidanter, antiinflammatorisk)</li>
-<li><strong>Nødder (Mandler, Valnødder):</strong> (Giver sunde fedtstoffer, protein, fibre og antiinflammatoriske stoffer - portionskontrol er nødvendig)</li>
-<li><strong>Frø (Chia, Hørfrø, Hamp):</strong> (Rige på fibre, omega-3 (ALA) og protein)</li>
-</ul>
-<p><strong>2. Grøntsager:</strong></p>
-<ul>
-<li><strong>Spinat:</strong> (Næringstæt, lavt kalorieindhold, kilde til vitaminer og mineraler, betragtes som ikke-stivelsesholdig [4])</li>
-<li><strong>Grønkål:</strong> (Højt indhold af vitamin K, A, C og antioxidanter, ikke-stivelsesholdig [4])</li>
-<li><strong>Broccoli:</strong> (Rig på fibre, vitamin C, K og sulforafan med antiinflammatoriske egenskaber, ikke-stivelsesholdig [4])</li>
-<li><strong>Peberfrugter (alle farver):</strong> (Højt indhold af C-vitamin og antioxidanter, lavt kalorieindhold, ikke-stivelsesholdig [4])</li>
-<li><strong>Blomkål:</strong> (Alsidig, lavkulhydrat grøntsag, kilde til fibre og vitaminer, ikke-stivelsesholdig [4])</li>
-<li><strong>Squash/Zucchini:</strong> (Lavt kalorieindhold, kilde til kalium og A-vitamin, ikke-stivelsesholdig [4])</li>
-<li><strong>Svampe:</strong> (Indeholder B-vitaminer og selen, unikke antioxidanter, ikke-stivelsesholdige [4])</li>
-<li><strong>Løg &amp; Hvidløg:</strong> (Indeholder præbiotiske fibre og potente antiinflammatoriske stoffer)</li>
-<li><strong>Tomater:</strong> (Kilde til lycopen, en antioxidant med antiinflammatoriske fordele)</li>
-</ul>
-<p><strong>3. Komplekse Kulhydrater og Andet:</strong></p>
-<ul>
-<li><strong>Quinoa:</strong> (Komplet protein, god kilde til fibre, fuldkorn [4])</li>
-<li><strong>Havregryn (Valsede eller Steel-Cut):</strong> (Højt indhold af opløselige fibre, især beta-glucan, hjælper med at styre blodsukkeret, fuldkorn [4])</li>
-<li><strong>Brune Ris:</strong> (Fuldkorn der giver fibre og næringsstoffer [4])</li>
-<li><strong>Bær (Blåbær, Jordbær, Hindbær):</strong> (Lavt glykæmisk indeks, højt indhold af antioxidanter og fibre)</li>
-<li><strong>Citrusfrugter (Appelsiner, Grapefrugter):</strong> (God kilde til C-vitamin og fibre, kan støtte insulinfølsomheden [4])</li>
-<li><strong>Æbler:</strong> (Kilde til fibre, især pektin)</li>
-<li><strong>Søde Kartofler:</strong> (Kilde til fibre og vitaminer, lavere glykæmisk indeks end hvide kartofler - portionskontrol er nøglen)</li>
-<li><strong>Bønner (Sorte, Kidney):</strong> (Højt indhold af fibre og plantebaseret protein, lavt glykæmisk indeks)</li>
-<li><strong>Urter &amp; Krydderier (Gurkemeje, Ingefær, Kanel):</strong> (Indeholder potente antiinflammatoriske stoffer)</li>
-</ul>
-<p><strong>Top 10 Fødevarer Kun at Spise i Små Mængder</strong></p>
-<p>Disse fødevarer kan passe ind i en sund kost, men bør indtages moderat på grund af kalorieindhold, naturligt sukkerindhold eller potentiel påvirkning på blodsukker eller inflammation ved overdrevent indtag. Styring af portionsstørrelser er vigtigt [2][5].</p>
-<ol type="1">
-<li><strong>Rødt Kød (Magre Udskæringer):</strong> (Kilde til protein, jern, B12, men højere i mættet fedt end fjerkræ/fisk og forbundet med inflammation i store mængder)</li>
-<li><strong>Ost:</strong> (Kilde til protein og calcium, men kan have et højt indhold af mættet fedt og natrium [2])</li>
-<li><strong>Frugt med Højere Sukkerindhold (Mango, Ananas, Druer):</strong> (Giver vitaminer og fibre, men har et højere naturligt sukkerindhold)</li>
-<li><strong>Tørret Frugt (Rosiner, Dadler):</strong> (Koncentreret kilde til sukker og kalorier, selvom de indeholder fibre)</li>
-<li><strong>Kartofler (Hvide):</strong> (Stivelsesholdig grøntsag, kan hæve blodsukkeret betydeligt, hvis de spises alene eller i store portioner)</li>
-<li><strong>Majs:</strong> (Stivelsesholdig grøntsag, ofte genetisk modificeret, højere glykæmisk påvirkning end ikke-stivelsesholdige grøntsager)</li>
-<li><strong>Honning/Ahornsirup:</strong> (Naturlige sukkerarter, påvirker stadig blodsukkeret, brug meget sparsomt som sødemiddel)</li>
-<li><strong>Fuldkornsbrød/Pasta:</strong> (Bedre end raffinerede kornprodukter, men stadig forarbejdet og kan påvirke blodsukkeret - vælg 100% fuldkorn og kontroller portionerne)</li>
-<li><strong>Mørk Chokolade (70%+ kakao):</strong> (Indeholder antioxidanter og nogle sundhedsmæssige fordele, men også sukker og kalorier)</li>
-<li><strong>Naturligt Nøddesmør:</strong> (Sunde fedtstoffer og protein, men meget kalorietæt)</li>
-</ol>
-<p><strong>Top 10 Fødevarer at Undgå</strong></p>
-<p>Disse fødevarer frarådes generelt, da de kan få insulinniveauet til at stige markant, fremme inflammation og tilbyde ringe ernæringsværdi. Reduktion af tilsat sukker og usunde fedtstoffer er afgørende [2].</p>
-<ol type="1">
-<li><strong>Sukkerholdige Drikke (Sodavand, Sødet Te, Frugtjuice):</strong> (Højt indhold af tilsat sukker [2], forårsager hurtige blodsukkerstigninger)</li>
-<li><strong>Raffinerede Kornprodukter (Hvidt Brød, Hvid Pasta, Hvide Ris):</strong> (Frataget fibre og næringsstoffer, fører til hurtige blodsukkerstigninger)</li>
-<li><strong>Forarbejdede Snacks (Chips, Kiks, Småkager):</strong> (Ofte højt indhold af raffinerede kulhydrater, usunde fedtstoffer, natrium [2] og tilsat sukker [2])</li>
-<li><strong>Forarbejdet Kød (Pølser, Hotdogs, Pålæg):</strong> (Højt indhold af natrium, konserveringsmidler og usunde fedtstoffer; forbundet med inflammation)</li>
-<li><strong>Friturestegt Mad:</strong> (Højt indhold af usunde fedtstoffer, kalorier og potentielt transfedt)</li>
-<li><strong>Kager og Bagværk:</strong> (Typisk højt indhold af raffineret mel, sukker [2] og usunde fedtstoffer [2])</li>
-<li><strong>Sukkerholdige Morgenmadsprodukter:</strong> (Højt indhold af tilsat sukker [2] og raffinerede kulhydrater)</li>
-<li><strong>Fødevarer med Transfedt (Delvist Hydrogenerede Olier):</strong> (Stærkt forbundet med inflammation og hjertesygdomme)</li>
-<li><strong>Overdreven Alkohol:</strong> (Kan forstyrre blodsukkerkontrol og bidrage med tomme kalorier)</li>
-<li><strong>Saucer/Dressinger med Højt Tilsat Sukker/Natrium:</strong> (Ketchup, nogle salatdressinger, BBQ-sauce - tjek etiketterne omhyggeligt [2])</li>
-</ol>
-<p>Husk, dette er en generel retningslinje baseret på dine angivne mål. Individuelle behov kan variere [6][8]. At fokusere på hele, uforarbejdede fødevarer og en afbalanceret måltidssammensætning [7] vil støtte dit mål om en lav-insulin, antiinflammatorisk kost med moderat kødindtag.</p>
-<p><em>Dette svar er baseret på følgende realtidsdata/oversatte koncepter:</em></p>
-<ul>
-<li><em>Optimale makronæringsstofforhold for forebyggelse og behandling af type 2-diabetes er kontroversielle; fokus bør i stedet være på spisemønstre og faktiske fødevarer.</em> [1]</li>
-<li><em>Reducer dit indtag af mættet (usundt) fedt og tilsat sukker, og vælg fødevarer med lavt saltindhold. At reducere portionsstørrelsen af dine måltider kan også hjælpe dig…</em> [2]</li>
-<li><em>Ved at vælge de rigtige fødevarer for dig kan du reducere din insulinresistens og hjælpe med at holde dit blodsukker i skak. Der er ingen fast kostplan for at reducere…</em> [3]</li>
-<li><em>Fødevarer, der kan støtte insulinfølsomhed, inkluderer ikke-stivelsesholdige grøntsager, fuldkorn og citrusfrugter.</em> [4]</li>
-<li><em>Lær om planlægning af afbalancerede måltider. En sund spiseplan inkluderer at vide, hvad man skal spise, og hvor meget man skal spise. To almindelige måder at planlægge måltider på er…</em> [5]</li>
-<li><em>At spise fra de vigtigste fødevaregrupper. Diabetisk kost. Hvor meget du skal spise og drikke, er baseret på din alder, køn, hvor aktiv du er, og de mål, du sigter mod…</em> [6]</li>
-<li><em>Måltider og snacks bør også være afbalancerede med kulhydrater, protein og sundt fedt, da inkludering af ikke-kulhydratfødevarer i dit måltid kan hjælpe med at reducere…</em> [7]</li>
-<li><em>Din plan vil hjælpe med at sikre, at du får den ernæring, du har brug for, samtidig med at du holder dine blodsukkerniveauer på målet. En god måltidsplan vil tage højde for…</em> [8]</li>
-</ul>
+<p><strong>Conclusion:</strong></p>
+<p>Surup concludes by summarizing that the video aimed to provide a better understanding of the practical steps involved in the client lifecycle beyond just finding leads. He encourages viewers to engage by liking, commenting, sharing their experiences, and suggesting future video topics.</p>
 
 
 

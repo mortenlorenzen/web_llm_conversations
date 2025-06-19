@@ -18,6 +18,8 @@ website:
         text: Home
       - text: AI Technology
         menu:
+        - text: Andrej Karpathy- Software Is Changing (Again)
+          href: andrej_karpathy_software_is_changing.qmd
         - text: Karen Hao- Empire of AI
           href: karen_hao_empire_of_ai.qmd
         - text: Sundar Pichai- CEO of Google and Alphabet
@@ -46,6 +48,10 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: State-Of-The-Art Prompting For AI Agents
+          href: prompting_for_ai_gents.qmd
+        - text: Behind the Scenes of Landing Clients in AI Services
+          href: landing_clients_in_ai_services.qmd
         - text: The Truth Behind Selling AI Automations To Small Businesses
           href: selling_ai_automations.qmd
         - text: Make my Own LLM Evals

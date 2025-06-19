@@ -1,0 +1,94 @@
+---
+title: State-Of-The-Art Prompting For AI Agents
+date: 2025-06-19 13:09:43
+---
+
+
+[State-Of-The-Art Prompting For AI Agents](https://www.youtube.com/watch?v=DL82mGde6wo)
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this transcript in detail.
+
+[trscr13.txt](/Users/mortenlorenzen/Desktop/trscr13.txt)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Here is a detailed summary of the transcript:
+
+The transcript discusses current prompt engineering practices in leading AI startups, describing the field as powerful but still in its early stages, feeling like a mix of 1995 coding and managing a person. The discussion draws on insights gathered from surveying over a dozen AI companies.
+
+**Key Concepts and Examples:**
+
+1.  **Parahelp's Prompt Example:**
+    *   Parahelp provides AI customer support for top AI companies like Perplexity, Replit, and Bolt.
+    *   They generously shared a core prompt for their AI agent, which is considered akin to "crown jewels" in the industry.
+    *   The prompt is notably long (described as 6 pages).
+    *   Its structure is detailed:
+        *   **Setting the Role:** Defining the LLM's identity (e.g., a manager of a customer service agent).
+        *   **Defining the Task:** Specifically, approving or rejecting a tool call in an agent orchestration workflow.
+        *   **High-Level Plan:** Breaking down the task into explicit steps (e.g., steps 1-5).
+        *   **Important Considerations:** Providing guardrails and things to avoid (e.g., not calling certain tools).
+        *   **Structuring the Output:** Crucially specifying the required format (e.g., XML tags) for integration with other agents/systems, which aids LLMs trained on XML-like input (like those post-trained with RLHF).
+    *   The prompt's structure using tags makes it look more like programming than traditional English writing.
+    *   A notable point is that while the prompt defines the *process*, customer-specific *examples* or outputs are handled in a later stage of the pipeline, specific to each customer's unique support workflows.
+
+2.  **Different Types of Prompts:**
+    *   A layered architecture is emerging to manage prompt complexity and customer specificity:
+        *   **System Prompt:** Defines the high-level "API" or core operating procedure for the company's AI (e.g., Parahelp's general agent prompt fits here). It's not customer-specific.
+        *   **Developer Prompt:** Adds customer-specific context and nuances (e.g., how to handle RAG questions for Perplexity vs. Bolt). This is not shown in the Parahelp example provided but exists.
+        *   **User Prompt:** The direct input from an end-user (e.g., "Generate me a site that..."). Not applicable for a product like Parahelp consumed by businesses, but relevant for user-facing AI products.
+    *   This layering helps companies avoid becoming consulting shops by separating core logic from customization.
+
+3.  **Metaprompting:**
+    *   A key powerful technique where one prompt is used to dynamically generate or improve another prompt ("prompt folding").
+    *   Example: A classifier prompt that generates a specialized prompt based on the user's query.
+    *   Method: Feed an existing prompt (especially one that failed) and additional context/examples to a powerful LLM (like Claude 3.7 or GPT-4), asking it to suggest improvements or generate a better version. This leverages the LLM's own understanding.
+    *   Metaprompting with larger models can refine prompts for use in smaller, faster models where latency is critical (e.g., voice AI agents needing low latency for a natural feel).
+
+4.  **Using Examples:**
+    *   For highly complex tasks difficult to describe purely in prose, providing examples is very effective.
+    *   Jasberry (AI code bug finding) uses this for hard problems like finding N+1 queries. They feed examples of such errors into a meta-prompt.
+    *   This is analogous to unit testing or test-driven development in programming – providing specific cases helps the LLM reason around complicated logic.
+
+5.  **LLM Escape Hatches:**
+    *   LLMs are sometimes *too* eager to help and may hallucinate or guess when they lack sufficient information.
+    *   It's crucial to build "escape hatches" into prompts, instructing the LLM to *stop and ask* or indicate uncertainty rather than fabricating an answer.
+    *   Tropier uses one method. YC's internal work developed another: reserving a specific parameter in the LLM's *output format* (e.g., `debug_info`) for the LLM to report its confusion or insufficient information. This effectively creates a "to-do list" for the developer based on real-world data issues.
+
+6.  **Tricks for Longer Prompts:**
+    *   Long prompts can become complex documents.
+    *   A practical trick: Use external notes (like a Google Doc) to jot down observations about outputs or ideas for improvement. Then, feed these notes *plus* the prompt to a capable LLM (like Gemini Pro) and ask it to suggest edits to the prompt incorporating the feedback.
+    *   Using models with long context windows like Gemini 2.5 Pro allows for interactive debugging ("REPL-like") by watching the model's "thinking traces" as it processes examples, providing critical insight into *why* it made certain decisions or failed. Access to API thinking traces is highlighted as a recent, crucial development.
+
+7.  **Evaluations (Evals):**
+    *   Despite being discussed for over a year, evals remain the "true crown jewel" data asset for AI companies, more valuable than the prompts themselves.
+    *   Evals explain *why* prompts are written a certain way and are essential for improvement.
+    *   Generating effective evals requires deep understanding of the user's workflow, often gained by sitting "side-by-side" with them in their environment (e.g., a regional tractor sales manager).
+    *   Codifying these real-world observations into specific evaluation cases is where the real value and competitive moat lie, allowing startups to tailor AI to niche knowledge work better than anyone else, countering the fear of being "just wrappers."
+
+8.  **Every Founder as a Forward Deployed Engineer (FDE):**
+    *   The role of a founder in modern AI startups is evolving towards that of an FDE, a term originating from Palantir.
+    *   Palantir's FDEs were engineers embedded with users (e.g., FBI agents) to understand messy real-world processes (Word docs, Excel) and rapidly build software solutions, directly showing value instead of relying on lengthy sales cycles.
+    *   This is now the core competency for founders: deep user empathy, understanding workflows, and quickly iterating on the AI (often via prompt changes) to show immediate, tailored results.
+
+9.  **Vertical AI Agents Closing Deals with the FDE Model:**
+    *   The FDE model, amplified by rapid prompt iteration, is enabling vertical AI companies to close large deals (6-7 figures) quickly with large enterprises.
+    *   Founders (often engineers) act as FDEs, meet potential customers, quickly adjust the AI (prompts), demo the tailored solution soon after, achieve a "wow" reaction by showing something uniquely relevant that incumbents can't match quickly, and close deals.
+    *   Examples: Giger ML (voice support, closed deal with Zeppto partly by being on-site with users), Happy Robot (voice agents for logistics, closed 7-figure deals).
+    *   The ability to execute the "last 5-10%" of the task accurately for a specific domain, enabled by this FDE/prompt iteration approach, is a key differentiator.
+
+10. **LLM Personalities and Rubrics:**
+    *   Different LLMs exhibit distinct "personalities" or behaviors when prompted. Claude is seen as more human-steerable, Llama 4 needs more explicit steering.
+    *   Using rubrics is best practice for structured outputs, especially numerical scores.
+    *   Comparing models with rubrics shows personality differences: GPT-3 felt rigid, strictly adhering to the rubric. Gemini 2.5 Pro felt more flexible, reasoning about exceptions and applying the rubric more like a "high agency employee" would, balancing rules with nuanced context. This influences which model might be best suited for different tasks.
+
+11. **Kaizen and Communication:**
+    *   Managing LLMs is compared to managing people – requiring clear communication of needs and evaluation criteria.
+    *   The Kaizen principle (continuous improvement by those doing the work) is linked to metaprompting, where the LLM itself assists in improving the prompt.
+
+In conclusion, the transcript highlights the rapid evolution of prompt engineering from a basic task to a sophisticated practice involving detailed prompt structures, architectural layering, metaprompting, strategic use of examples, building escape hatches, leveraging debugging tools like thinking traces, prioritizing real-world user evaluations as the core data asset, and adopting the "forward deployed engineer" model where founders deeply understand user needs to quickly tailor and demonstrate value via prompt iteration, leading to significant business outcomes in the vertical AI space. Different models' personalities also play a role in prompt strategy.
+
