@@ -136,4 +136,91 @@ The report argues that despite widespread adoption of Generative AI (Gen AI), mo
 *   Time for exploration is ending; time for transformation is now.
 
 
+----
+
+----
+
+----
+
+Slide presentation
+
+## The Gen AI Paradox
+- **Problem:** Nearly 80% of companies use Gen AI, yet similar percentage report **no significant bottom-line impact.**
+- **Why?** Imbalance:
+    - **Horizontal** (enterprise copilots): Scaled quickly, diffuse productivity gains.
+    - **Vertical** (function-specific): Higher impact potential, but ~90% stuck in pilot.
+
+## Why Vertical Use Cases are Stuck
+- Fragmented, bottom-up initiatives.
+- Lack of mature, off-the-shelf solutions.
+- Limitations of 1st-gen LLMs (passive, workflow struggle, accuracy).
+- Siloed AI teams, poor integration.
+- Data gaps and quality issues.
+- Cultural resistance and inertia.
+
+## Introducing AI Agents: The Catalyst
+- Agents evolve Gen AI from **reactive tools** to **autonomous, goal-driven virtual collaborators.**
+- Combine LLMs with:
+    - Memory
+    - Planning & Orchestration
+    - Integration with systems
+- They understand goals, break tasks, interact, execute actions, and adapt.
+
+## Agents Unlock Value (Beyond Efficiency)
+- **Automate Complex Business Workflows:** Go beyond isolated tasks to manage multi-step processes.
+- **Transform Operations:**
+    - Accelerate execution (parallelism)
+    - Increase adaptability & resilience
+    - Enable deep personalization
+- **Drive Revenue:**
+    - Amplify existing streams (upsell/cross-sell)
+    - Create entirely new models (SaaS, pay-per-use)
+
+## Agent Impact in Practice (Examples)
+- Bank modernization: >50% time/effort reduction.
+- Market Research: >60% productivity potential for insights.
+- Retail Bank processes: 20-60% productivity, 30% faster decisioning.
+- *Value comes from automating processes end-to-end.*
+
+## The Critical Shift: Process Reinvention
+- Simply plugging agents into old workflows yields minimal gains (faster assistant).
+- Value is unlocked by **reimagining the entire process** with agents at the core.
+- Rearchitect task flows, reallocate human/agent roles, design for agent autonomy and strengths.
+- *Contrast:* Agent-optimized process (20-40% gain) vs. Agent-reinvented process (60-90% gain).
+
+## Scaling Agents Requires a New Foundation
+- Agents introduce new complexities: autonomy risks, integration needs, sprawl potential.
+- Requires more than just bolting on components.
+- Needs a **fundamental architectural shift** and addressing the **human/organizational challenge.**
+
+## The Agentic AI Mesh
+- A **dynamic, modular, governed** architecture specifically for agents.
+- Principles: Composability, Distributed intelligence, Layered decoupling, Vendor neutrality, Governed autonomy.
+- Enables multiple agents to reason, collaborate, and act across systems **securely and at scale.**
+- Manages risks (sprawl, drift) while preserving agility.
+
+## The Human Challenge
+- **Human-Agent Cohabitation:** How do humans and agents work side-by-side effectively and build trust?
+- **Autonomy Control:** Managing independent agent action, handling edge cases, ensuring alignment.
+- **Sprawl Containment:** Preventing uncontrolled proliferation of ungoverned agents across the organization.
+- *These are the biggest barriers to scalable impact.*
+
+## The CEO Mandate: Leading the Pivot
+- Agents represent a strategic inflection point requiring **scaled, enterprise-wide transformation.**
+- This shift *must* be initiated and led by the CEO.
+
+## Key Actions for the CEO
+1.  **Conclude Experimentation:** Formally end the exploratory phase, refocus on strategic programs.
+2.  **Redesign Governance & Operating Model:** Set up a Strategic AI Council, coordinate investments, track value (KPIs).
+3.  **Launch Lighthouse Projects & Tech Foundation:** Kick off high-impact agentic transformations *while* building the Agentic AI Mesh and core enablers (data, people, governance).
+
+## Conclusion: Time for Transformation
+- AI agents are here and mature enough to drive transformative change.
+- CEOs must pivot from scattered pilots to **focused, end-to-end process reinvention.**
+- This is not an incremental step – it's building the **next-generation operating model.**
+- Act now to gain an edge and redefine how your organization operates.
+- **The time for experimentation is ending. The time for transformation is now.**
+---
+
+*Based on "Seizing the agentic AI advantage" by Alexander Sukharevsky et al., McKinsey & Company, June 2025.*
 
