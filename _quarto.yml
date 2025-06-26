@@ -48,6 +48,8 @@ website:
           href: empty.qmd
       - text: AI Agents / Business Opportunities
         menu:
+        - text: McKinsey - CEO playbook for AI agents
+          href: mckinsey_ceo_playbook.qmd
         - text: State-Of-The-Art Prompting For AI Agents
           href: prompting_for_ai_gents.qmd
         - text: Behind the Scenes of Landing Clients in AI Services
