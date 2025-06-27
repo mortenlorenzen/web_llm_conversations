@@ -56,7 +56,136 @@ The top-down approach involves the following key steps:
 
 ----
 
+As a presentation:
 
+## The AI Implementation Challenge
+
+::: {.incremental}
+- Most AI projects fail to deliver business value
+- 80-90% failure rate for AI initiatives
+- Common problem: "Solutions looking for problems"
+- Many projects stuck in "pilot purgatory"
+:::
+
+::: {.notes}
+Traditional approaches to AI implementation have struggled with high failure rates and lack of business alignment.
+:::
+
+---
+
+## Bottom-Up vs Top-Down Approach
+
+::: {.columns}
+
+::: {.column width="50%"}
+### Bottom-Up ❌
+- Start with data/technology
+- "We have data, what can AI do?"
+- Technology-driven decisions
+- High failure rate
+- Misaligned with business needs
+:::
+
+::: {.column width="50%"}
+### Top-Down ✅
+- Start with business strategy
+- Problem-driven approach
+- Business-aligned solutions
+- Higher success rate
+- Clear value proposition
+:::
+
+:::
+
+---
+
+## The Top-Down Framework
+
+```{mermaid}
+flowchart TD
+    A[Business Strategy & Goals] --> B[Identify Business Problems]
+    B --> C[Prioritize Problems]
+    C --> D[Identify Data & Tech Needs]
+    D --> E[Develop AI Solution]
+    E --> F[Measure Business Impact]
+    F --> G[Iterate & Improve]
+    G --> C
+```
+
+---
+
+## Step 1: Define Business Strategy & Goals
+
+::: {.incremental}
+- **Start with strategic objectives**
+  - Increase revenue
+  - Reduce operational costs
+  - Improve customer satisfaction
+  - Enhance operational efficiency
+- **AI as a tool, not the goal**
+- **Clear alignment with company vision**
+:::
+
+---
+
+## Step 2: Identify Business Problems
+
+::: {.incremental}
+- Translate strategic goals into specific problems
+- Ask: *"What's preventing us from achieving our goals?"*
+- Focus on:
+  - Bottlenecks in operations
+  - Inefficiencies in processes
+  - Missed growth opportunities
+  - Customer pain points
+:::
+
+---
+
+## Step 3: Prioritize Problems
+
+### Evaluation Criteria
+
+::: {.columns}
+
+::: {.column width="33%"}
+**Impact** 💰
+
+- Financial value
+- Strategic importance
+- Operational benefit
+:::
+
+::: {.column width="33%"}
+**Feasibility** 🔧
+
+- Data availability
+- Technical complexity
+- Resource requirements
+:::
+
+::: {.column width="33%"}
+**Urgency** ⏰
+
+- Business criticality
+- Competitive pressure
+- Timeline constraints
+:::
+
+
+----
+
+----
+
+----
+
+----
+
+----
+
+----
+
+Another Video:
 
 [Do we need Good Data Foundation to Start with AI?](https://www.youtube.com/watch?v=DxxmORoSF94) by Tiago Rodrigues
 
