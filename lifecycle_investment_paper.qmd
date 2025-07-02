@@ -367,4 +367,9 @@ The Block Bootstrap design adopted by the writers helps to provide a greater acc
 :::
 
 
-I was inspired by this YouTube video to do the test: [Gemini 2.0 Just Broke PDFs (30X Cheaper Than OpenAI](https://www.youtube.com/watch?v=tL84VD1rZB4)
+Here are links to 2 relevant YouTube videos:
+
+-  Discusses the paper: [SCHOCK-Studie: DAS stellt ALLES in Frage, was wir über AKTIEN gedacht haben!](https://www.youtube.com/watch?v=BDNtvZsMREA)
+-  Use Gemeni models for PDF's: [Gemini 2.0 Just Broke PDFs (30X Cheaper Than OpenAI](https://www.youtube.com/watch?v=tL84VD1rZB4)
+
+
