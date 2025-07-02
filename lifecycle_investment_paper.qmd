@@ -14,9 +14,10 @@ My interesting paper:
  
 To both models, Gemini 2.5 Flash Preview and Gemini 2.0 Flash, I prompted:
 
--  explain Figure C.1 in details
--  what is the main idea of this paper?
--  explain the chosen Bootstrap design and does that impact the findings? 
+1. explain Figure C.1 in details
+1. what is the main idea of this paper?
+1. how do domestic stocks and  international stocks supplement each other?
+1. explain the chosen Bootstrap design and does that impact the findings? 
 
 
 **Figure C.1 from the paper:**
@@ -135,7 +136,7 @@ In essence, the paper argues that the "status quo" advice and the target-date fu
 
 ---
 
-**:You:** how do domestic stocks and  international stocks supplement each other?
+**:You:** [how do domestic stocks and  international stocks supplement each other?]{bg-colour="brand-color.yellow-200"}
 
 ---
 
@@ -294,7 +295,7 @@ Here's a slightly more detailed breakdown:
 
 ---
 
-**:You:** how do domestic stocks and  international stocks supplement each other?
+**:You:** [how do domestic stocks and  international stocks supplement each other?]{bg-colour="brand-color.yellow-200"}
 
 ---
 
