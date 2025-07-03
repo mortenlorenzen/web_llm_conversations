@@ -5,6 +5,7 @@ description: |
 categories:
   - "AI Technology"
   - "Andrew Ng"
+  - "AI Agents"
 date: 2025-05-28
 image: andrew_ng.png
 ---
