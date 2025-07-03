@@ -4,7 +4,7 @@ description: |
   Cole Medin shares a detailed roadmap for learning AI agent development quickly, covering everything from foundational knowledge to advanced deployment and collaboration.
 categories:
   - "Building Stuff"
-  - "AI in Business"
+  - "n8n"
   - "AI Agents"
 date: 2025-05-26
 image: cole_medin_learn_ai_agents_fast.png
