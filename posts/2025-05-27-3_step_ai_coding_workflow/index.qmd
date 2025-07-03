@@ -6,7 +6,8 @@ categories:
   - "Building Stuff"
   - "Prompts"
   - "Coding"
-date: 2025-05-27 
+date: 2025-05-27
+image: ai_coding_workflow.png
 ---
 
 [A 3-step AI coding workflow for solo founders | Ryan Carson](https://www.youtube.com/watch?v=fD4ktSkNCw4)

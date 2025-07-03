@@ -6,6 +6,7 @@ categories:
   - "AI Technology"
   - "Andrej Karpathy"   
 date: 2025-06-19
+image: software_is_changing.png
 ---
 
 **:Model Instructions:** 

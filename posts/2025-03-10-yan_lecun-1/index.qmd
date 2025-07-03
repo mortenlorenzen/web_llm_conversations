@@ -6,6 +6,7 @@ categories:
   - "AI Technology"
   - "Yann LeCun" 
 date: 2025-03-10
+image: yan_lecun-1.png
 ---
 
 **:Model Instructions:** 

@@ -5,6 +5,7 @@ description: |
 categories:
   - "AI in Business"
 date: 2025-05-26
+image: devin_kearns_agentic_os.png
 ---
 
 **:Model Instructions:** 

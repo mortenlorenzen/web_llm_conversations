@@ -2,9 +2,10 @@
 title: "China trade conflict and stock market by Frank Sieren"
 description: |
   Frank Sieren discussing the US-China trade conflict, the Chinese stock market, and investment opportunities in China, 14. apr. 2025
-date: 2025-04-14
 categories:
   - "Investing & Global politics"
+date: 2025-04-14
+image: china_by_frank_sieren.png
 ---
 
 **:Model Instructions:** 

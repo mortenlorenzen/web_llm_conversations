@@ -8,7 +8,20 @@ categories:
   - "PDF chat"
   - "Slide presentation"
 date: 2025-06-26
+image: exhibit_5.png
 ---
+
+
+Figures from the PDF:
+
+![](exhibit_2.png)
+
+![](exhibit_3.png)
+
+![](exhibit_4.png)
+
+![](exhibit_5.png)
+
 
 **:Model Instructions:** 
 

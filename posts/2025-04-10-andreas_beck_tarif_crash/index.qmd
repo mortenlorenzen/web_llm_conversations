@@ -5,7 +5,9 @@ description: |
 categories:
   - "Investing & Global politics"
 date: 2025-04-10 
+image: andreas_beck_tarif_crash.png
 ---
+
 **:Model Instructions:** 
 
   ---

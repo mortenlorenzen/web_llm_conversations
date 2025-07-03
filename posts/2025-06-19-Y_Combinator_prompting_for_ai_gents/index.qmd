@@ -6,10 +6,13 @@ categories:
   - "Building Stuff"
   - "Prompts"
 date: 2025-06-19 
+image: Combinator_prompting.png
 ---
 
 
 [State-Of-The-Art Prompting For AI Agents](https://www.youtube.com/watch?v=DL82mGde6wo)
+
+Link to the Parahelp's Prompt Example: [AI prompt design at Parahelp](https://parahelp.com/blog/prompt-design)
 
 **:Model Instructions:** 
 

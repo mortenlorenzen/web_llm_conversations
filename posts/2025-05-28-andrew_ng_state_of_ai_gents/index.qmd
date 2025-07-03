@@ -6,7 +6,9 @@ categories:
   - "AI Technology"
   - "Andrew Ng"
 date: 2025-05-28
+image: andrew_ng.png
 ---
+
 **:Model Instructions:** 
 
 

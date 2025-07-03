@@ -7,7 +7,9 @@ categories:
   - "n8n"
   - "AI Agents"
 date: 2025-05-12
+image: cole_medin_7_nodes_n8n.png
 ---
+
 **:Model Instructions:** 
 
   ---

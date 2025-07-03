@@ -6,6 +6,7 @@ categories:
   - "AI Technology"
   - "Sam Altman" 
 date: 2025-05-13
+image: sam_altman_future_of_work.png
 ---
 
 **:Model Instructions:** 

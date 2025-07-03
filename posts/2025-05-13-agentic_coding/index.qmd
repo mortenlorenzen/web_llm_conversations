@@ -5,6 +5,7 @@ description: |
 categories:
   - "AI Technology"
 date: 2025-05-13
+image: agentic_coding.png
 ---
 
 **:Model Instructions:** 

@@ -7,6 +7,7 @@ categories:
   - "MCP"
   - "AI Agents"
 date: 2025-05-04
+image: claude_mcp.png
 ---
 
 **:Model Instructions:** 

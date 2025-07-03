@@ -6,6 +6,7 @@ categories:
   - "Investing & Global politics"
   - "PDF chat"  
 date: 2025-03-13
+image: andreas_beck_anleihen_und_zinsen.png
 ---
 
 **:Model Instructions:** 

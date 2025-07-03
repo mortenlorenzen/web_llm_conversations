@@ -9,6 +9,13 @@ date: 2025-04-20
 image: andrej02.png
 ---
 
+
+Andrej Karpathy Exalidraw from his presentation: 
+
+- [Exalidraw](exali_draw.pdf)
+
+
+
 **:Model Instructions:** 
 
   ---

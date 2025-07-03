@@ -6,7 +6,9 @@ categories:
   - "Diet"
   - "Prompts"
 date: 2025-04-19
+image: diet.png
 ---
+
 **:Model Instructions:** 
 
   ---

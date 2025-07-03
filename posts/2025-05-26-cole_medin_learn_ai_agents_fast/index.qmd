@@ -7,6 +7,7 @@ categories:
   - "AI in Business"
   - "AI Agents"
 date: 2025-05-26
+image: cole_medin_learn_ai_agents_fast.png
 ---
 
 **:Model Instructions:** 

@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-8acf6c1bd89ffb50a5b7758a2a389633.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -306,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">Gemini 2.5 Flash Preview and Gemini 2.0 Flash models are great for dealing with Pdf’s - also in explaining graphs and figures!</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">Gemini 2.5 Flash Preview and Gemini 2.0 Flash models are great for dealing with Pdf’s - also in explaining graphs and figures!</span></p>
+<p><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">Gemini 2.5 Flash Preview and Gemini 2.0 Flash models are great for dealing with Pdf’s - also in explaining graphs and figures!</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">Gemini 2.5 Flash Preview and Gemini 2.0 Flash models are great for dealing with Pdf’s - also in explaining graphs and figures!</span></p>
 <p>I the following I will show how the Gemini models can be used to explain a paper and its figures. The models are great at explaining figures and graphs, which is often a challenge for other LLMs.</p>
 <p>My interesting paper:</p>
 <ul>
@@ -320,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 <li>explain the chosen Bootstrap design and does that impact the findings?</li>
 </ol>
 <p><strong>Figure C.1 from the paper:</strong></p>
-<p><img src="ssrn-4590406_figure_c1.png" class="img-fluid"></p>
+<p><a href="ssrn-4590406_figure_c1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="ssrn-4590406_figure_c1.png" class="img-fluid"></a></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Gemini 2.5 Flash Preview</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Gemini 2.0 Flash</a></li></ul>
 <div class="tab-content">
@@ -330,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <p><strong>:Model Instructions:</strong></p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span></p>
 <p><a href="../../Users/mortenlorenzen/Downloads/LIFECYCLE-INVESTMENT-optimal-fixed-weight strategy/ssrn-4590406.pdf">ssrn-4590406.pdf</a></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, let’s break down Figure C.1 from the paper “BEYOND THE STATUS QUO: A CRITICAL ASSESSMENT OF LIFECYCLE INVESTMENT ADVICE”.</p>
@@ -405,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Overall Conclusion from Figure C.1:</strong></p>
 <p>Figure C.1 provides strong empirical evidence challenging the conventional wisdom that retirees should shift towards bonds for capital preservation. It demonstrates that the Optimal all-equity, internationally diversified strategy, while perhaps perceived as riskier due to potential for large drawdowns (as shown elsewhere in the paper), is significantly more effective at preventing <em>financial ruin</em> in retirement, particularly when faced with long lifespans, poor domestic market performance, or high inflation – scenarios where bond-heavy portfolios fail to preserve real buying power and capital. The figure supports the paper’s central argument that diversifying with international equities is superior to diversifying with bonds for long-term investors concerned about real wealth preservation.</p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Based on the abstract and introduction of the paper, the main idea is:</p>
 <p>The paper <strong>challenges the conventional wisdom of lifecycle investment advice</strong>, specifically the tenets that investors should diversify across stocks and bonds and reduce equity exposure as they age.</p>
@@ -414,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The core reasoning for this finding is that, from a long-horizon perspective captured by their model, <strong>international stocks offer superior diversification benefits and growth potential compared to bonds, which are shown to have lower real returns, higher long-term risk relative to stocks, higher correlation with domestic stocks over time, and poor hedging properties against inflation.</strong></p>
 <p>In essence, the paper argues that the “status quo” advice and the target-date funds based on it are suboptimal and that investors would be better off by simply staying fully invested in a globally diversified stock portfolio across their lives.</p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Based on the paper, domestic stocks and international stocks supplement each other primarily through <strong>diversification</strong>, which is particularly valuable for long-horizon investors like those saving for retirement. Here’s how:</p>
 <ol type="1">
@@ -425,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>In summary, domestic stocks provide core exposure to the home market, while international stocks supplement this by offering crucial, long-lasting diversification benefits that reduce portfolio volatility and risk, provide exposure to global growth, and importantly (in the context of the paper’s findings), act as a superior long-term hedge against inflation compared to bonds. This combination allows the optimal portfolio to remain <em>all-equity</em> while effectively managing the risks faced by long-term savers.</p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, let’s break down the bootstrap design used in the paper and its impact on the findings.</p>
 <p><strong>The Chosen Bootstrap Design: Stationary Block Bootstrap</strong></p>
@@ -473,7 +476,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <p><strong>:Model Instructions:</strong></p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain Figure C.1 in details</span></p>
 <p><a href="../../Users/mortenlorenzen/Downloads/LIFECYCLE-INVESTMENT-optimal-fixed-weight strategy/ssrn-4590406.pdf">ssrn-4590406.pdf</a></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.0-flash:</strong> Okay, let’s break down Figure C.1, which analyzes conditional ruin probabilities in the context of retirement savings strategies.</p>
@@ -542,7 +545,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Let me know if you would like a deeper dive into any particular panel or aspect!</p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">what is the main idea of this paper?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.0-flash:</strong> The main idea of this paper is that <strong>contrary to conventional wisdom and current regulatory practices in retirement investing, an all-equity, internationally diversified portfolio is a superior strategy for most U.S. retirement savers compared to age-based stock/bond allocation strategies (like target-date funds) or balanced portfolios.</strong></p>
 <p>Here’s a slightly more detailed breakdown:</p>
@@ -554,7 +557,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Real-World Implications:</strong> The findings suggest that current investment advice and regulations (which favor stock/bond strategies in QDIAs) may be suboptimal, and could be leading many retirement savers to underperform their potential.</li>
 </ul>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">how do domestic stocks and international stocks supplement each other?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.0-flash:</strong> Domestic and international stocks supplement each other in a retirement portfolio primarily through the following mechanisms:</p>
 <ol type="1">
@@ -584,7 +587,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>In Summary:</strong></p>
 <p>While the U.S. stock market is significant, relying solely on it can limit diversification and expose investors to concentrated risks. International stocks provide a way to broaden market exposure, access potentially higher growth, and reduce overall portfolio risk by mitigating the dangers inherent to single markets. As the authors of the paper highlights, it makes a more compelling diversification partner in their model than bonds for goals associated with retirement savings.</p>
 <hr>
-<p><strong>:You:</strong> <span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span><span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span></p>
+<p><strong>:You:</strong> <span class="dark-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span><span class="light-content" style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #F5CD6F;">explain the chosen Bootstrap design and does that impact the findings?</span></p>
 <hr>
 <p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.0-flash:</strong> Okay, let’s unpack the bootstrap design of this paper and how it likely impacts their findings.</p>
 <p><strong>What is Bootstrapping?</strong></p>
@@ -1046,6 +1049,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
