@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-05-26">
+<meta name="description" content="Devin Kearns shares nine key lessons learned from his experience building an AI company over the past 8-9 months. The video covers practical insights on agentic prompting, model selection, custom tooling and the importance of UI/UX.">
+
+<title>Devin Kearns: 9 Things I Wish I Knew Before Starting an AI Company – LLM dialogues</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3cfefa6877664363d7bdad256e7d352d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-ac82a0e63a2fc59af91a9a81027fc7c3.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3cfefa6877664363d7bdad256e7d352d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8acf6c1bd89ffb50a5b7758a2a389633.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LLM dialogues</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Devin Kearns: 9 Things I Wish I Knew Before Starting an AI Company</h1>
+                  <div>
+        <div class="description">
+          <p>Devin Kearns shares nine key lessons learned from his experience building an AI company over the past 8-9 months. The video covers practical insights on agentic prompting, model selection, custom tooling and the importance of UI/UX.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI in Business</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 26, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<p><strong>:Model Instructions:</strong></p>
+<p><strong>:You:</strong> please summarize this video in detail</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.youtube.com/watch?v=iMzEzLZ9gXw"><img src="https://i.ytimg.com/vi_webp/iMzEzLZ9gXw/maxresdefault.webp" class="img-fluid figure-img"></a></p>
+<figcaption>9 Things I Wish I Knew Before Starting an AI Company</figcaption>
+</figure>
+</div>
+<hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the YouTube video “9 Things I Wish I Knew Before Starting an AI Company” by Devin Kearns from CUSTOM AI STUDIO.</p>
+<p>The video discusses lessons learned over 8-9 months of building an AI company, focusing on practical insights for others in the space or working with AI companies. The nine key takeaways are:</p>
+<ol type="1">
+<li><strong>Agentic Prompting is About Decision Frameworks, Not Step-by-Step Instructions:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Writing massive, overly conditional prompts trying to fit the entire decision tree, edge cases, and explicit tool call parameters into a single prompt. This was like giving step-by-step conditional instructions.</li>
+<li><strong>Result:</strong> Constant hallucinations and endless prompt tweaking.</li>
+<li><strong>New Approach:</strong> Hardcode deterministic logic (using <code>if</code>, <code>switch</code>, <code>filter</code> nodes) outside the LLM where possible. Structure and package input data and necessary context (like CRM records, order history) <em>before</em> it hits the LLM. Give the LLM “thinking space” within defined boundaries or “guardrails” (macro objectives, policies, business context). Prompts define <em>how</em> the LLM should make decisions and plan steps, using available tools (which the LLM discovers and uses via appended schemas, not requiring explicit parameter listing in the main prompt).</li>
+<li><strong>Learned:</strong> Overspecifying leads to underperformance. Providing “guardrails” and the “why” beats lengthy “how-to” instructions most of the time. Prompts are hypotheses needing testing at scale, not code that can be verified by reading. Emotion (like “ALL CAPS DO NOT”) can heighten LLM attention. Causality with prompts is slippery and hard to debug compared to code.</li>
+<li><strong>Example:</strong> A customer success bot saw a 20% improvement in output appropriateness by switching from step-by-step instructions (“if this question, answer this way”) to a framework focusing on the objective (decrease refunds) and providing options/guardrails for the LLM to navigate the conversation and avoid refunds where appropriate.</li>
+<li><strong>Roadmap:</strong> Live KPI monitoring and autotriggering A/B prompt tests to continuously improve performance based on metrics (e.g., reducing refund rate from 8% to 7% to 6%). Prompt optimization is challenging due to the slippery nature of causality and LLMs being less effective with negative instructions (“do not do this”).</li>
+</ul></li>
+<li><strong>Model Selection is Crucial for Production Readiness:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Just use the “best” model (initially GPT-4) for simplicity, assuming it works for everything.</li>
+<li><strong>New Approach:</strong> The model choice significantly impacts whether a system is production-ready or just a cool proof-of-concept. Different models (OpenAI, Anthropic Claude, DeepMind, Grok) have different strengths (context window size, tool calling ability, conversational style, reasoning). The prompt needs to be dialed in for the <em>specific</em> model.</li>
+<li><strong>Learned:</strong> The same prompt can produce a ~20% deviation in output quality depending on the model. Bad outputs don’t always mean a bad prompt or a bad model; it could be the specific combination. Effective prompting techniques differ slightly per model. Long context windows (like Gemini) can sometimes replace Vector DB/RAG for simple data retrieval tasks faster and more accurately. Claude 3.7 Sonnet was good for high-level planning/reasoning (used in a planner/executor/verifier architecture); GPT-4o/5 is good for human-sounding conversational communication.</li>
+<li><strong>Roadmap:</strong> Model testing to identify the best model for a scenario <em>before</em> dialing in the prompt. Fine-tuning models for domain-specific jargon/norms (e.g., legal industry) to improve accuracy and reduce the need for excessive scaffolding/guardrails. Standardizing prompting techniques based on both the scenario and the model (requires constant updates as models evolve).</li>
+</ul></li>
+<li><strong>Custom Tooling is Better Than Off-the-Shelf (Usually):</strong>
+<ul>
+<li><strong>Old Approach:</strong> Spending months “tool hopping,” assuming others had already built the necessary solutions. Constantly seeking a “silver bullet” off-the-shelf tool. Imposter syndrome as non-engineers.</li>
+<li><strong>New Approach:</strong> Build custom tools internally for key functions like data processing, labeling, cleaning, API function calling, data retrieval, and prompt engineering. This provides full control, creates more relevant/effective solutions for clients, speeds up iteration cycles, and builds IP. A key focus is building an “agentic database.”</li>
+<li><strong>Learned:</strong> Many AI/ML teams face similar roadblocks. Off-the-shelf agentic tools are like SAS – helpful but don’t 100% solve specific needs and force you to bend your architecture to their limitations. Nobody has it completely figured out yet; everyone is “hacking.”</li>
+<li><strong>Takeaway:</strong> We are the only ones who know exactly what tools we need for our specific architecture and problems, so we must build them ourselves. It’s also more enjoyable.</li>
+<li><strong>Roadmap:</strong> Dynamic tools (flexible, modular API calling based on API research and schemas), prompt evaluation and optimization frameworks, high-volume testing infrastructure (ingesting and processing live/historical data), API research/reference workflow (automating API doc/schema retrieval), and events data processing workflow (mapping user/agent actions over time).</li>
+</ul></li>
+<li><strong>It’s an Even Playing Field - Skip Traditional Automation:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Assumed most businesses were already using traditional automation (Zapier, Make, RPA) and were ready for AI automation as the next step. Thought AI applications were obvious.</li>
+<li><strong>New Approach:</strong> 70%+ of businesses haven’t touched traditional automation platforms. They often come asking for basic automation. Agentic AI is a completely different paradigm – an “Agentic Operating System” (Agentic OS) that dynamically orchestrates automations and workflows as its tool set. LLMs can build/orchestrate automations themselves.</li>
+<li><strong>Learned:</strong> Traditional automation offers 10-30% productivity gains (or maybe 100% operational efficiency if starting from scratch), but it’s 2015 tech. Agentic AI enables AI-first, AI-native systems focused on <em>performance outcomes</em> (KPIs) rather than just system health or task completion. Focusing on traditional automation takes time/resources away from building Agentic systems. Agentic AI is not just an improvement on traditional automation; it’s a paradigm shift.</li>
+<li><strong>Takeaway:</strong> Businesses who missed the automation wave should skip directly to Agentic AI. Focus on building Agentic OSs.</li>
+<li><strong>Roadmap:</strong> Stop doing traditional automations entirely. Focus only on projects centered around building Agentic systems (e.g., building a Sales Team Agent OS, then a Customer Success Agent OS, aiming for a full business Agentic OS).</li>
+</ul></li>
+<li><strong>Plant Your Flag - Define Your System:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Unsure of their place in the market, novelty of ideas, or common knowledge. Lacked confidence (“imposter syndrome”) and followed market demand, building what clients asked for within their general sandbox. Assumed others had things figured out.</li>
+<li><strong>New Approach:</strong> Gained confidence through experience. Defined their core, long-term winning system: build an “Agentic Database” (centralized, contextual, real-time, easily retrievable single source of truth) first, then build the “Agentic Layer” on top, and integrate “Dynamic Tools.” The primary focus is helping clients define and capture their internal knowledge base and business logic (often trapped in people’s heads or messy spreadsheets) into this database foundation. A business is essentially its data and SOPs (processes).</li>
+<li><strong>Learned:</strong> Most people in the space (98% estimated) are copycats, waiting for a playbook. The space is new, everything is a hypothesis (“smoke and mirrors”). Their initial hypothesis about a master contextual database was validated. Their playbook is based on experience and what they see as inevitable trends. Building is key now, not just gathering information.</li>
+<li><strong>Roadmap:</strong> Offer “AI Development Blueprints” involving a mandatory discovery process to understand client tech stack, data flow, and knowledge. This allows them to design the database schema, data pipelines, identify agent tasks, and build the prompt framework – boiling down the business logic into the LLM instructions, based on the foundation of well-structured data.</li>
+</ul></li>
+<li><strong>Community Building Works Best When Aligned with Your Strengths:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Followed the typical creator playbook (YouTube -&gt; Discord community -&gt; Course). Assumed it would run itself. Found creating tutorials and updating courses felt mandatory, uninspired, and quickly outdated. Set wrong expectations.</li>
+<li><strong>New Approach:</strong> Lean into what is enjoyable and provides value: live interactions (webinars, VIP office hours). Found that learning from community members working on their own projects in different industries significantly accelerated their own understanding. Focus on sharing valuable templates (“super agent templates”) with walkthroughs instead of detailed tutorials. Planning for in-person events.</li>
+<li><strong>Learned:</strong> Should have started a focused community sooner. It’s fun, valuable, and accelerates learning. Must be sustainable (align with preferences).</li>
+<li><strong>Takeaway:</strong> Don’t blindly copy the creator playbook. Design a community around your personal strengths and preferences; the right people will find it. It’s not about scale, but quality interaction.</li>
+<li><strong>Roadmap:</strong> Increase frequency of live hangouts/office hours. Establish a cadence for releasing valuable “super agent templates.” Organize fun events (hackathons, “build of the week” showcases). Integrate embedded agents into their own platform. Move off existing community platforms (like Circle) to build their own platform for more control and a better user experience.</li>
+</ul></li>
+<li><strong>UI/UX is a Massive Bottleneck for Wide Adoption:</strong>
+<ul>
+<li><strong>Old Approach:</strong> Assumed agentic systems would blend seamlessly into existing tools (Slack, Email) without needing a separate UI beyond the workflow builder (n8n).</li>
+<li><strong>New Approach:</strong> UI/UX is the <em>most important</em> factor for widespread adoption. Since agents are performance/KPI-based, they need a dedicated “workspace” or destination. This UI should be seamless, accessible, differentiate the agent system, track its activity, allow human collaboration (monitoring, adjusting, pausing), and clearly display performance KPIs. The relationship should be Human + Agent collaboration, not Master and Tool, enabling siloed accountability (the agent system is responsible for the workflow outcome, not the human for the agent’s specific poor output).</li>
+<li><strong>Learned:</strong> Habit change is difficult; users stick to familiar interfaces (like ChatGPT, which succeeded due to its accessible UI). Agentic systems need a similar “UI chip moment” to become frictionless and drive habit change. Trust is an issue; users abandon agents after one failure, unlike forgiving ChatGPT. Current interactions treat agents as tools triggered by humans, hindering true collaboration and widespread use. Personal agents, while easy to build, aren’t widely used because the UI/UX for daily interaction and habit change is missing.</li>
+<li><strong>Takeaway:</strong> Unless the system owns the process end-to-end (via its UI/UX and accountability structure), it won’t drive habit change or scale. The crucial collaborative UI between human and agentic entity is the missing piece bottlenecking adoption.</li>
+<li><strong>Roadmap:</strong> Actively working on developing this human-agent collaborative UI/UX to unlock wider adoption.</li>
+</ul></li>
+<li><strong>The ROI Creates an Unstoppable Flywheel:</strong>
+<ul>
+<li><strong>Old Thought:</strong> LLMs are just great tools that multiply individual productivity.</li>
+<li><strong>New Approach:</strong> Focus exclusively on the direct ROI impact measured by KPIs. Agentic systems are performance-based and designed to redefine business outcomes. A business is a machine (Input -&gt; Function -&gt; Output). Agentic systems dramatically decrease the cost of the “Function” (OPEX) while increasing the quality/scale of the “Output” (performance, KPIs).</li>
+<li><strong>Learned:</strong> Reducing OPEX <em>and</em> increasing performance (e.g., lower refund rates leading to higher Customer Lifetime Value - LTV) creates a powerful, exponential “flywheel.” Higher LTV means a higher allowable Customer Acquisition Cost (CAC), allowing businesses to spend more on marketing and dominate their market share. This creates a massive, self-reinforcing growth loop. This effect is particularly intense right now before Agentic OS becomes the baseline industry standard. CEOs issuing “AI-first” memos understand this potential.</li>
+<li><strong>Takeaway:</strong> We are not building process automation; we are building entire operating systems that will redefine industry standard margins. These margins will expand for early adopters before competitors catch up and prices/margins eventually shrink again.</li>
+<li><strong>Roadmap:</strong> Implement Agentic OS team-by-team (Sales, CS, Ops) with the long-term vision of building a full business Agentic OS that serves as the foundation for starting or operating a business, providing a massive head start compared to traditional methods.</li>
+</ul></li>
+<li><strong>Know Your Role as an AI Consultant (or Expert):</strong>
+<ul>
+<li><strong>Old Approach:</strong> Assumed clients/companies consulting with them wanted their broad perspective on the future of AI and felt entitled to challenge their core approach.</li>
+<li><strong>New Approach:</strong> Consult only through the lens of their defined approach (Agentic OS, holistic systems). Put yourself in the client’s shoes and understand <em>their</em> objective for consulting. Are they using you as a test bed to validate their existing idea? Do they want a broad playbook (“be the expert”)? Or do they know what they want to build but need help <em>how</em> to build it (“be the builder”)? Tailor your role accordingly. For large companies, they often want validation or help with a specific piece, not a fundamental pivot suggestion, even if you think their core project is misguided. Protect time for internal projects; don’t consult on projects you believe are fundamentally the wrong approach unless it aligns with your own path or is part of a structured engagement like their discovery process.</li>
+<li><strong>Learned:</strong> Clients have different needs and expectations for a consultant. Understanding their objective defines your role (helper, expert, builder). Don’t waste time pushing your full vision on those who aren’t ready or asking for it; focus that energy on those who <em>are</em> interested in your core approach or on building your own products.</li>
+<li><strong>Takeaway:</strong> To be an effective AI consultant, understand the client’s objective and mindset to determine your appropriate role in that scenario.</li>
+<li><strong>Roadmap:</strong> Develop a structured discovery process for clients genuinely interested in implementing Agentic OS (this naturally includes consulting). Accept speaking/consulting engagements specifically about their holistic approach (Agentic OS, paradigm shift) rather than general AI automation. Decline consulting on individual alpha/beta projects that don’t align with their core strategy.</li>
+</ul></li>
+</ol>
+<p>In conclusion, the presenter emphasizes the shift from traditional automation and simple AI tools to building comprehensive, performance-driven Agentic Operating Systems layered on robust, centralized data. This requires a change in mindset regarding prompting, model selection, tool building, and business strategy, leading to a powerful, exponential growth flywheel for early adopters, and necessitates a focused approach to consulting and community building.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2025. This Website is made with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

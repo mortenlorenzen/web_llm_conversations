@@ -1,0 +1,58 @@
+---
+title: "Sam Altman on OpenAI's vision"
+description: |
+  Sam Altman's vision for OpenAI, particularly the concept of a "Core AI Subscription", as discussed in his interview with Sequoia Capital on May 12, 2025.
+categories:
+  - "AI Technology"
+  - "Sam Altman" 
+date: 2025-05-13
+---
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this video in detail
+
+[![OpenAI’s Sam Altman on Building the ‘Core AI Subscription’ for Your Life](https://i.ytimg.com/vi/ctcMA6chfDY/maxresdefault.jpg)](https://www.youtube.com/watch?v=ctcMA6chfDY)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-pro-exp-03-25:** Okay, here is a detailed summary of the key points discussed by Sam Altman in the Sequoia Capital interview regarding OpenAI's vision, particularly the concept of a "Core AI Subscription":
+
+**Overall Vision: Building Foundational AI & AGI**
+
+*   **Long-Term Goal:** Altman reiterates that OpenAI's ultimate mission is to ensure Artificial General Intelligence (AGI) benefits all of humanity. Everything they do, including current products like ChatGPT and the API, are steps towards this larger goal.
+*   **Iterative Deployment:** OpenAI believes in iteratively developing and deploying increasingly powerful AI systems. This allows society to adapt gradually, provides feedback for improving models, identifies risks early, and helps shape the development of AGI safely.
+
+**The "Core AI Subscription" Concept**
+
+*   **Beyond Specific Products:** Altman envisions AI becoming a fundamental utility, deeply integrated into various aspects of life and work, rather than just a collection of disparate tools or apps.
+*   **Personalized & Contextual:** This "core subscription" would power a highly personalized AI agent. This agent would understand the user's context, preferences, history, data (with permission), goals, and communication style.
+*   **Proactive Assistant:** It wouldn't just react to prompts but could potentially anticipate needs, manage information, automate complex workflows, and act as a true assistant or collaborator across different applications and platforms. Think of it as an intelligence layer you subscribe to.
+*   **Value Proposition:** The value would come from immense productivity gains, enhanced creativity, better decision-making, offloading cognitive load, and enabling users to do things they couldn't before. It aims to be an indispensable tool for knowledge work and potentially many other areas.
+*   **Analogy:** While not explicitly stated as a perfect analogy, it's like subscribing to electricity or the internet – a foundational service that enables countless applications, but in this case, the service is personalized intelligence.
+
+**Path Towards the Vision**
+
+*   **Scaling is Key:** Altman emphasizes the "scaling hypothesis" – the idea that making models larger, training them on more data, and using more computation continues to yield significantly better capabilities. They believe this path still has a long way to go before hitting fundamental limits.
+*   **Compute as a Bottleneck:** Access to vast amounts of computation is currently one of the biggest constraints and areas of focus for OpenAI. Building and training state-of-the-art models requires immense resources.
+*   **Model Improvements:** Continuous improvement in model architecture, training techniques, efficiency, and alignment is crucial. GPT-4 is a step, but future models (GPT-5 and beyond) are expected to be dramatically more capable.
+*   **Making AI Cheaper & Faster:** Reducing the cost and increasing the speed of inference (running the models) is vital for widespread adoption and the feasibility of a constantly available personalized AI agent.
+
+**Current State & Near-Term Focus**
+
+*   **GPT-4 and ChatGPT:** These are showcases of current capabilities and platforms for learning about user needs and interaction patterns. They are stepping stones towards the more integrated vision.
+*   **API & Ecosystem:** Providing API access allows developers to build diverse applications on top of OpenAI's models, exploring different use cases and accelerating innovation. This helps inform OpenAI about where the most value lies.
+*   **Plugins/Integrations:** Efforts like ChatGPT Plugins are early attempts to give the AI access to external tools and real-time information, moving towards a more capable agent.
+
+**Challenges and Considerations**
+
+*   **Safety and Alignment:** Ensuring these powerful systems are aligned with human values and intentions is paramount. This is a core research area for OpenAI. Iterative deployment helps manage safety risks gradually.
+*   **Societal Impact:** Altman acknowledges the potential for significant societal disruption, particularly in the labor market. He stresses the need for societal adaptation, discussion about wealth distribution, and ensuring the benefits are widely shared.
+*   **Cost and Accessibility:** Making this powerful AI affordable and accessible to everyone is a challenge intertwined with the immense cost of compute.
+*   **Regulation:** Finding the right regulatory balance that fosters innovation while mitigating risks is crucial.
+
+**In essence, Sam Altman describes a future where AI isn't just a tool you occasionally use, but a foundational, personalized intelligence layer you subscribe to. This "Core AI Subscription" would power an agent that understands you deeply and assists proactively across your digital life, driven by OpenAI's long-term pursuit of AGI through scaling, iteration, and a focus on safety.**
+

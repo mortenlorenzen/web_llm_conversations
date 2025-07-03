@@ -1,5 +1,7 @@
 ---
 title: " "
+author: "Morten Lorenzen"
+date: 2025-07-03
 ---
 
 
@@ -7,8 +9,16 @@ title: " "
 
 This is my repository for noteworthy LLM dialogues, including 
 
-- in-depth topic research and 
-- comprehensive summaries of YouTube videos and documents.
+- in-depth topic research
+- summaries and Q&A with documents and YouTube videos
+
+
+Topics include:
+
+- AI Technology
+- AI in Business
+- Building Stuff (prompts, Agents, Evals, MCP's, ...)
+- Investments, Global Politics
 
 
 
@@ -21,3 +31,6 @@ LLMs excel at rapidly processing and synthesizing extensive information, deliver
 However, true knowledge acquisition requires still a balanced approach — while AI efficiently extracts and presents data, we must still engage in thoughtful reflection, **reread the information** to do measured consideration of complex information. 
 
 We want to transform this accelerated input into effective decision support and deeper understanding.
+
+
+

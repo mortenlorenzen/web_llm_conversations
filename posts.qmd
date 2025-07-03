@@ -1,0 +1,14 @@
+---
+title: "LLM dialogues Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  image-height: 200px
+page-layout: full  # article, full, or custom
+title-block-banner: true
+---
+

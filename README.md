@@ -1,6 +1,9 @@
 # web_llm_conversaations
 
 
-Here are some archived LLM conversations.
+This is my repository for noteworthy LLM dialogues, including 
+
+- in-depth topic research
+- summaries and Q&A with documents and YouTube videos
 
 

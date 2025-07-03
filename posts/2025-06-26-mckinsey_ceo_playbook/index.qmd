@@ -1,0 +1,233 @@
+---
+title: "McKinsey - CEO playbook for AI agents"
+description: |
+  The McKinsey report "Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents."
+categories:
+  - "AI in Business"
+  - "McKinsey"
+  - "PDF chat"
+  - "Slide presentation"
+date: 2025-06-26
+---
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this pdf in detail
+
+[seizing-the-agentic-ai-advantage.pdf](seizing-the-agentic-ai-advantage.pdf)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Okay, here is a detailed summary of the PDF document "Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents."
+
+**Overall Theme:**
+
+The report argues that despite widespread adoption of Generative AI (Gen AI), most companies are seeing minimal impact on their bottom line – a "gen AI paradox." This is largely due to a focus on diffuse "horizontal" applications (like employee copilots) while higher-impact "vertical" (function-specific) use cases remain stuck in pilot phases. AI agents, which can automate complex processes autonomously, offer the key to unlocking scalable impact and moving beyond this paradox, but require a fundamental shift in how companies approach AI transformation, led by the CEO.
+
+**Key Sections and Detailed Points:**
+
+**Foreword (by Arthur Mensch, CEO of Mistral AI):**
+
+*   Highlights that Gen AI is in boardrooms but lacks real impact for many.
+*   Diagnoses the problem: AI is "bolted on" rather than integrated into core processes.
+*   Positions Agentic AI as the catalyst for transformation, but notes it's not plug-and-play; agents need to work across systems, reason, and interact with humans as collaborators.
+*   CEOs must shift thinking from "How do we add AI?" to "How should decisions, work, and human engagement function with software that can act?"
+*   Emphasizes that successful transformation requires alignment (goals, tools, people) built on openness, transparency, and control, fostering trust.
+*   The technology exists; the opportunity is deployment tied to value creation and human work. Requires modular architecture and a human-centric operating model.
+*   ROI comes from strong intent: define outcomes, embed agents deep in workflows, redesign operating models. Discipline in governance and feedback loops turns novelty into value.
+
+**At a glance:**
+
+*   Summarizes the core "gen AI paradox": nearly 80% use Gen AI, nearly 80% report no significant bottom-line impact.
+*   Explains the paradox: imbalance between scaled horizontal (diffuse gains) and stuck vertical (higher impact, 90%+ in pilot) use cases.
+*   Introduces AI agents as the solution: automate complex processes via autonomy, planning, memory, integration, shifting AI from reactive to proactive.
+*   Agent benefits: beyond efficiency, supercharge operational agility, create new revenue opportunities.
+*   Requirement: Reimagine workflows from the ground up with agents at the core, not just plugging them in.
+*   Technical need: Agentic AI mesh architecture to govern and integrate agents, manage debt and risk.
+*   Bigger challenge: Human (trust, adoption, governance for autonomy/sprawl).
+*   Call to action: Reset AI transformation from scattered initiatives to strategic programs, use cases to processes, siloed teams to cross-functional squads, experimentation to industrialized delivery.
+*   Foundation needed: Upskill workforce, adapt tech infra, accelerate data productization, deploy agent-specific governance.
+*   CEO mandate: Bring Gen AI experimentation phase to a close.
+
+**Chapter 1: The gen AI paradox: Widespread deployment, minimal impact**
+
+*   **AI History:** Before Gen AI, AI powered prediction, classification, optimization ($11-18T potential) but was expert-driven, slow adoption (Exhibit 1 shows ~50% companies using AI across functions until Gen AI).
+*   **Gen AI Breakthrough:** Information synthesis, content generation, human language communication ($2.6-4.4T additional value). Democratized access, rapid experimentation (78%+ using Gen AI by 2025).
+*   **The Paradox:** Despite high adoption/experimentation, >80% report no material earnings contribution, only 1% view strategies as mature. Energy/investment hasn't translated to at-scale impact.
+*   **Root Cause: Horizontal vs. Vertical Imbalance (Exhibit 2):**
+    *   *Horizontal (Enterprise-wide):* e.g., Employee copilots (M365 Copilot), internal chatbots. Easy to implement (off-the-shelf, minimal workflow change), driven partly by risk mitigation vs external LLMs. Enhance *individual* productivity (save time, synthesize info). Benefits are diffuse, hard to see on P&L.
+    *   *Vertical (Function-specific):* e.g., R&D (research curator), Procurement (RFP generator), Supply chain (demand forecaster), Marketing/Sales (insights provider, sales assistant), Customer Service (support assistant). Higher direct impact potential, but <10% scale beyond pilot. Often support isolated process steps, reactive (human-prompted), limited impact.
+*   **Factors Limiting Vertical Scale:**
+    *   **Fragmented initiatives:** Bottom-up, granular, disconnected, dispersed investment, low CEO sponsorship (<30% CEO-sponsored).
+    *   **Lack of mature solutions:** Often requires custom build from scratch with fast-evolving tech. Lack of MLOps engineers for industrialization/deployment.
+    *   **Technological limitations of LLMs:** Inaccuracy (hallucinations), passive/reactive (don't act without prompt), struggle with complex, multistep workflows, limited persistent memory.
+    *   **Siloed AI teams:** COEs separate from IT/Data/Business. Useful for prototyping but hinder scale due to poor integration, fragmented data, lack of operational alignment.
+    *   **Data gaps:** Accessibility and quality issues for structured and especially ungoverned unstructured data.
+    *   **Cultural apprehension:** Resistance from business/middle management (fear, job impact, unfamiliarity).
+*   **First Wave Not Wasted:** Enabled experimentation, accelerated familiarity, built capabilities (prompting, evaluation, governance), laid groundwork for phase two: AI agents.
+
+**Chapter 2: From paradox to payoff: How agents can scale AI**
+
+*   **The Breakthrough: Automating Complex Workflows:** Agents evolve Gen AI from reactive content generation to autonomous, goal-driven execution. They combine LLMs with memory, planning, orchestration, integration. Can understand goals, break tasks, interact with humans/systems, adapt, act autonomously.
+*   **Agent Potential Expansion:**
+    *   *Horizontal:* Proactive teammates (monitor, trigger, follow up, insights).
+    *   *Vertical:* Automate complex, multistep workflows previously impossible.
+*   **Agent Benefits Beyond Efficiency:**
+    *   *Operations:*
+        *   **Accelerate execution:** Parallel processing, eliminate handoff delays.
+        *   **Adaptability:** Adjust process flows real-time based on data.
+        *   **Personalization:** Tailor interactions/decisions (e.g., customer profiles).
+        *   **Elasticity:** Capacity expands/contracts with workload instantly.
+        *   **Resilience:** Monitor disruptions, reroute, escalate when needed.
+        *   *Example:* Supply chain agent orchestrating across systems, forecasting, identifying risks, replanning transport/inventory dynamically.
+    *   *Revenue:*
+        *   **Amplifying existing:** Real-time upsell/cross-sell (e-commerce), tailored financial product discovery (finance).
+        *   **Creating new:** Pay-per-use/subscription via embedded agents (industrial), packaging internal expertise as SaaS/APIs (service orgs).
+*   **Agent Case Studies (QuantumBlack Examples):**
+    *   **Bank Modernization:** Hybrid human-agent "digital factory" for legacy code modernization (400 software pieces, $600M budget). Agents document, code, review, integrate. Humans supervise. Impact: >50% time/effort reduction. (Exhibit 3)
+    *   **Research Firm:** Multiagent system for data quality and market insights. Autonomously identifies anomalies, explains sales/share shifts using internal/external data. Humans shift to strategic work. Impact: >60% potential productivity, >$3M annual savings.
+    *   **Retail Bank Credit Memos:** Reinvented process for RMs writing memos (weeks, 10+ sources). Agents extract data, draft sections, generate confidence scores, suggest follow-ups. RM role shifts to oversight/exception handling. Impact: 20-60% productivity, 30% faster decisioning. (Exhibit 4)
+*   **Requirement: Process Reinvention, Not Just Optimization:**
+    *   Inserting agents into legacy workflows yields limited gains (faster assistant). Process remains sequential, human-shaped.
+    *   Reinventing means rearchitecting the *entire* task flow: reorder steps, reallocate human/agent roles, design for agent strengths (parallel, adaptability, personalization, elasticity).
+    *   *Call Center Example (Exhibit 5):*
+        *   Gen AI-enabled (assist): 5-10% resolution time reduction.
+        *   Agent-enabled (optimized): Agents automate discrete tasks in existing flow. 20-40% time reduction, 30-50% backlog reduction.
+        *   Agent-enabled (reinvented): Process redesigned around agent autonomy. Agents proactively detect, diagnose, initiate resolutions (80% resolved autonomously). 60-90% time reduction.
+    *   Process reinvention is key for complex, cross-functional, exception-prone, or performance-linked processes.
+*   **Scaling Agents Requires New AI Architecture: The Agentic AI Mesh:**
+    *   **Challenges:** New risks (autonomy control, fragmentation, observability lack, attack surface, sprawl), blending custom/off-the-shelf agents, staying agile with fast-evolving tech (avoiding lock-in).
+    *   **Solution:** Dynamic, modular, governed architecture built for agents. *Composable, distributed, vendor-agnostic*. Enables multiple agents to reason, collaborate, act across systems/tools/LLMs securely, at scale, evolving.
+    *   **Mesh Principles:**
+        *   **Composability:** Any agent/tool/LLM plugs in without rework.
+        *   **Distributed intelligence:** Tasks solved by cooperating agent networks.
+        *   **Layered decoupling:** Logic, memory, orchestration, interfaces separate.
+        *   **Vendor neutrality:** Components updated/replaced independently (prefer open standards like MCP, A2A).
+        *   **Governed autonomy:** Proactive control via embedded policies, permissions, escalation.
+    *   **Mesh Capabilities (Sidebar):** Agent/workflow discovery, AI asset registry, Observability, Authentication/Authorization, Evaluations, Feedback management, Compliance/risk management.
+    *   **Foundational Models for Agents (Sidebar):** LLMs need to evolve to meet agent requirements: low-latency inference, fine-tuning/controllability, lightweight deployment, scalable multiagent orchestration, sovereignty/auditability/geopolitical resilience. Different models suit different needs.
+    *   **Enterprise Systems Evolution:** Short-term: APIs as interfaces. Long-term: Agent-first architecture (UIs, logic, data access designed for machine interaction, autonomous workflows). Major vendors (Microsoft, Salesforce, SAP) are already moving towards agent integration platforms. The future is agent-native software.
+*   **The Main Challenge: Human & Organizational:** Complexity is mostly organizational (coordination, judgment, trust).
+    *   **Human–agent cohabitation:** How do they interact? When initiate/defer? Maintain human agency/oversight without slowing down? Trust needs transparency, predictability, intuitive integration.
+    *   **Autonomy control:** Managing independent action. Handling edge cases (too aggressive, failed escalation). Make autonomy intelligible, aligned, evolve control mechanisms, address hallucinations.
+    *   **Sprawl containment:** Risk of uncontrolled, redundant, ungoverned agents (like RPA sprawl). Low/no-code increases risk. Need structured governance, design standards, life cycle management.
+
+**Chapter 3: AI transformation at a tipping point: The CEO mandate in the agentic era**
+
+*   **Need for Reset:** Agents require fundamental shifts, deep integration. Build on digital transformation playbooks but reshape specifically for AI agents.
+*   **Reshaping AI Transformation (Four Dimensions):**
+    *   **Strategy:** Scattered tactical initiatives -> Strategic programs aligned with critical priorities. Translate goals into AI domains *and* look forward to reimagine the business, create new revenue, build competitive moats.
+    *   **Unit of transformation:** Use case -> Business processes. Shift from optimizing isolated tasks to transforming *entire* end-to-end processes or persona journeys by embedding agents throughout. Ask: "What would this function look like if agents ran 60% of it?"
+    *   **Delivery model:** Siloed AI teams -> Cross-functional transformation squads. AI COEs limit scale. Need durable squads with business experts, process designers, AI/MLOps, IT architects, software engineers, data engineers.
+    *   **Implementation process:** Experimentation -> Industrialized, scalable delivery. Solutions designed for technical and financial scale *from the outset*. Anticipate system integration, monitoring, release management. Rigorously estimate *future running costs* (can exceed build cost) and design for economic sustainability.
+*   **Four Critical Enablers for Agentic Era Operations:**
+    *   **People:** Equip workforce for human-agent collaboration ("human + agent" mindset). Cultural change, training, champions. Introduce new roles (prompt engineers, agent orchestrators, human-in-the-loop designers).
+    *   **Governance:** Ensure autonomy control, prevent sprawl. Define frameworks for autonomy levels, decision boundaries, monitoring, audit. Formalize policies (dev, deploy, usage). Classify agents (task, domain, virtual collaborator) with appropriate oversight.
+    *   **Technology architecture:** Foundation for interoperability and scale. Short-term: Evolve to Agentic AI mesh. Long-term: Prepare for agent-first enterprise systems.
+    *   **Data:** Accelerate productization, address unstructured quality. Transition from use-case-specific pipelines to reusable data products. Extend governance to unstructured data.
+*   **CEO Leadership: Bringing Experimentation to a Close:** The pivot to scaled, enterprise-wide transformation *must* be CEO-led.
+    *   **Action 1: Conclude experimentation:** Structured review, capture lessons, retire unscalable pilots, formally end exploratory phase. Refocus on strategic, high-impact AI programs.
+    *   **Action 2: Redesign governance and operating model:** Set up Strategic AI Council (business leaders, HR, CDO, CIO). Oversee AI direction, coordinate AI/IT/data investments, rigorous value tracking (KPIs linked to business outcomes).
+    *   **Action 3: Launch a first lighthouse transformation project and initialize the agentic AI tech foundation:** Kick off a few high-impact agentic workflow transformations in core areas. Simultaneously build the foundation: invest in tech infra, data quality, governance frameworks, workforce readiness.
+
+**Conclusion:**
+
+*   AI agents are a disruptive technology that can reshuffle competition. Opportunity for laggards to leapfrog, risk for current leaders who don't act. Strategic divergence moment.
+*   Technology is mature enough for transformative change.
+*   CEOs must rethink AI transformation: not scattered pilots, but focused, end-to-end reinvention. Identify high-potential domains and pull all levers (workflows, task distribution, new operating models).
+*   Some leaders are already rewiring organizations (Moderna merging HR/IT as an example). Agentic AI is not incremental, it's the foundation of the next-generation operating model.
+*   CEOs who act now gain an edge and redefine how their organizations think, decide, and execute.
+*   Time for exploration is ending; time for transformation is now.
+
+
+----
+
+----
+
+----
+
+Slide presentation
+
+## The Gen AI Paradox
+- **Problem:** Nearly 80% of companies use Gen AI, yet similar percentage report **no significant bottom-line impact.**
+- **Why?** Imbalance:
+    - **Horizontal** (enterprise copilots): Scaled quickly, diffuse productivity gains.
+    - **Vertical** (function-specific): Higher impact potential, but ~90% stuck in pilot.
+
+## Why Vertical Use Cases are Stuck
+- Fragmented, bottom-up initiatives.
+- Lack of mature, off-the-shelf solutions.
+- Limitations of 1st-gen LLMs (passive, workflow struggle, accuracy).
+- Siloed AI teams, poor integration.
+- Data gaps and quality issues.
+- Cultural resistance and inertia.
+
+## Introducing AI Agents: The Catalyst
+- Agents evolve Gen AI from **reactive tools** to **autonomous, goal-driven virtual collaborators.**
+- Combine LLMs with:
+    - Memory
+    - Planning & Orchestration
+    - Integration with systems
+- They understand goals, break tasks, interact, execute actions, and adapt.
+
+## Agents Unlock Value (Beyond Efficiency)
+- **Automate Complex Business Workflows:** Go beyond isolated tasks to manage multi-step processes.
+- **Transform Operations:**
+    - Accelerate execution (parallelism)
+    - Increase adaptability & resilience
+    - Enable deep personalization
+- **Drive Revenue:**
+    - Amplify existing streams (upsell/cross-sell)
+    - Create entirely new models (SaaS, pay-per-use)
+
+## Agent Impact in Practice (Examples)
+- Bank modernization: >50% time/effort reduction.
+- Market Research: >60% productivity potential for insights.
+- Retail Bank processes: 20-60% productivity, 30% faster decisioning.
+- *Value comes from automating processes end-to-end.*
+
+## The Critical Shift: Process Reinvention
+- Simply plugging agents into old workflows yields minimal gains (faster assistant).
+- Value is unlocked by **reimagining the entire process** with agents at the core.
+- Rearchitect task flows, reallocate human/agent roles, design for agent autonomy and strengths.
+- *Contrast:* Agent-optimized process (20-40% gain) vs. Agent-reinvented process (60-90% gain).
+
+## Scaling Agents Requires a New Foundation
+- Agents introduce new complexities: autonomy risks, integration needs, sprawl potential.
+- Requires more than just bolting on components.
+- Needs a **fundamental architectural shift** and addressing the **human/organizational challenge.**
+
+## The Agentic AI Mesh
+- A **dynamic, modular, governed** architecture specifically for agents.
+- Principles: Composability, Distributed intelligence, Layered decoupling, Vendor neutrality, Governed autonomy.
+- Enables multiple agents to reason, collaborate, and act across systems **securely and at scale.**
+- Manages risks (sprawl, drift) while preserving agility.
+
+## The Human Challenge
+- **Human-Agent Cohabitation:** How do humans and agents work side-by-side effectively and build trust?
+- **Autonomy Control:** Managing independent agent action, handling edge cases, ensuring alignment.
+- **Sprawl Containment:** Preventing uncontrolled proliferation of ungoverned agents across the organization.
+- *These are the biggest barriers to scalable impact.*
+
+## The CEO Mandate: Leading the Pivot
+- Agents represent a strategic inflection point requiring **scaled, enterprise-wide transformation.**
+- This shift *must* be initiated and led by the CEO.
+
+## Key Actions for the CEO
+1.  **Conclude Experimentation:** Formally end the exploratory phase, refocus on strategic programs.
+2.  **Redesign Governance & Operating Model:** Set up a Strategic AI Council, coordinate investments, track value (KPIs).
+3.  **Launch Lighthouse Projects & Tech Foundation:** Kick off high-impact agentic transformations *while* building the Agentic AI Mesh and core enablers (data, people, governance).
+
+## Conclusion: Time for Transformation
+- AI agents are here and mature enough to drive transformative change.
+- CEOs must pivot from scattered pilots to **focused, end-to-end process reinvention.**
+- This is not an incremental step – it's building the **next-generation operating model.**
+- Act now to gain an edge and redefine how your organization operates.
+- **The time for experimentation is ending. The time for transformation is now.**
+---
+
+*Based on "Seizing the agentic AI advantage" by Alexander Sukharevsky et al., McKinsey & Company, June 2025.*
+

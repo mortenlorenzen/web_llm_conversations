@@ -16,98 +16,100 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - text: AI Technology
-        menu:
-        - text: Andrej Karpathy- Software Is Changing (Again)
-          href: andrej_karpathy_software_is_changing.qmd
-        - text: Karen Hao- Empire of AI
-          href: karen_hao_empire_of_ai.qmd
-        - text: Sundar Pichai- CEO of Google and Alphabet
-          href: sundar_pichai_ceo_google.qmd
-        - text: Andrew Ng- State of AI Agents
-          href: andrew_ng_state_of_ai_gents.qmd          
-        - text: Sam Altman on future of work
-          href: sam_altman_future_of_work.qmd    
-        - text: Sam Altman on OpenAI's vision
-          href: sam_altman_openai_vision.qmd
-        - text: Yan LeCun on AI's impossible Math Problem
-          href: yan_lecun-1.qmd
-        - text: Yann LeCun Says He DONE With LLMS
-          href: yan_lecun-2.qmd 
-        - text: Andrej Karpathy uses LLMs
-          href: andrej_karpathy.qmd
-        - text: Andrej Karpathy's Deep Dive into LLMs
-          href: andrej_karpathy_deep_dive_llms.qmd
-        - text: Matthew Berman Mark Zuckerberg Satya Nadella
-          href: matthew_berman_zuckerberg_nadella.qmd
-        - text: Arseny Shatokhin Developers need to do "agentic coding"
-          href: agentic_coding.qmd
-        - text: 10 Key Breakthrough Technologies of 2025
-          href: breakthrough_technologies_2025.qmd
-      - text: AI in Business
-        menu:
-        - text: McKinsey - CEO playbook for AI agents
-          href: mckinsey_ceo_playbook.qmd
-        - text: Behind the Scenes of Landing Clients in AI Services
-          href: landing_clients_in_ai_services.qmd
-        - text: The Truth Behind Selling AI Automations To Small Businesses
-          href: selling_ai_automations.qmd          
-        - text: The Top Down Approach of AI for Business
-          href: top_down_ai.qmd          
-        - text: AI Learning Communities- Google Astra Is Disrupting Teaching in 2025
-          href: disrupting_teaching.qmd
-        - text: How to Become The Go-To Expert in the AI Content Storm
-          href: ai_content_storm.qmd          
-        - text: Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company
-          href: devin_kearns_9_things_ai_company.qmd
-        - text: Devin Kearns- Agentic Operating Systems' are the FUTURE of AI & Business
-          href: devin_kearns_agentic_os.qmd
-        - text: Become a One Person Business with AI
-          href: one_person_business_with_ai.qmd 
-        - text: AI Automation (2025) in 5 Industries
-          href: ai_automation_in_5_industries_2025.qmd
-        - text: AI use cases and tools
-          href: ai_use_cases-1.qmd
-        - text: n8n Automatiseringseksempler
-          href: n8n_automatiseringseksempler.qmd          
-      - text: Building Stuff (prompts, Evals, MCPs, ..)
-        menu:
-        - text: State-Of-The-Art Prompting For AI Agents
-          href: prompting_for_ai_gents.qmd
-        - text: Make my Own LLM Evals
-          href: make_my_evals.qmd
-        - text: How I AI- A 3-step AI coding workflow for solo founders
-          href: 3_step_ai_coding_workflow.qmd
-        - text: Eduards Ruzga Claude + Bright Data MCP
-          href: claude_brightdata_mcp.qmd
-        - text: Cole Medin- How I'd Learn AI Agents FAST
-          href: cole_medin_learn_ai_agents_fast.qmd
-        - text: Cole Medin- The 7 Node Blueprint for AI Agents in n8n
-          href: 7_nodes_n8n.qmd
-        - text: Voice to Claude Code SPEAK to SHIP Agentic Coding AI Assistant
-          href: voice_to_claude_code.qmd
-        - text: MSTY Studio
-          href: msty.qmd
-        - text: Claude & MCP - Top 10 MCP Use Cases
-          href: claude_mcp.qmd
-        - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf
-          href: eduards_ruzga_claude_mcp.qmd
-      - text: Economics
-        menu:
-        - text: Paper - LIFECYCLE-INVESTMENT optimal-fixed-weight strategy
-          href: lifecycle_investment_paper.qmd
-        - text: China trade conflict and stock market by Frank Sieren
-          href: china_by_frank_sieren.qmd
-        - text: Andreas Beck Tarif Crash bei Lochner
-          href: andreas_beck_tarif_crash.qmd
-        - text: Andreas Beck Anleihen und Zinsen
-          href: andreas_beck_anleihen_und_zinsen.qmd
-      - text: Misc
-        menu:
-        - text: Diet
-          href: diet.qmd
-        - text: empty
-          href: empty.qmd
+      - href: posts.qmd
+        text: Blog        
+  #    - text: AI Technology
+  #      menu:
+  #      - text: Andrej Karpathy- Software Is Changing (Again)
+  #        href: andrej_karpathy_software_is_changing.qmd
+  #      - text: Karen Hao- Empire of AI
+  #        href: karen_hao_empire_of_ai.qmd
+  #      - text: Sundar Pichai- CEO of Google and Alphabet
+  #        href: sundar_pichai_ceo_google.qmd
+  #      - text: Andrew Ng- State of AI Agents
+  #        href: andrew_ng_state_of_ai_gents.qmd          
+  #      - text: Sam Altman on future of work
+  #        href: sam_altman_future_of_work.qmd    
+  #      - text: Sam Altman on OpenAI's vision
+  #        href: sam_altman_openai_vision.qmd
+  #      - text: Yan LeCun on AI's impossible Math Problem
+  #        href: yan_lecun-1.qmd
+  #      - text: Yann LeCun Says He DONE With LLMS
+  #        href: yan_lecun-2.qmd 
+  #      - text: Andrej Karpathy uses LLMs
+  #        href: andrej_karpathy.qmd
+  #      - text: Andrej Karpathy's Deep Dive into LLMs
+  #        href: andrej_karpathy_deep_dive_llms.qmd
+  #      - text: Matthew Berman Mark Zuckerberg Satya Nadella
+  #        href: matthew_berman_zuckerberg_nadella.qmd
+  #      - text: Arseny Shatokhin Developers need to do "agentic coding"
+  #        href: agentic_coding.qmd
+  #      - text: 10 Key Breakthrough Technologies of 2025
+  #        href: breakthrough_technologies_2025.qmd
+  #    - text: AI in Business
+  #      menu:
+ #      - text: McKinsey - CEO playbook for AI agents
+ #        href: mckinsey_ceo_playbook.qmd
+ #      - text: Behind the Scenes of Landing Clients in AI Services
+ #        href: landing_clients_in_ai_services.qmd
+ #      - text: The Truth Behind Selling AI Automations To Small Businesses
+ #        href: selling_ai_automations.qmd          
+ #      - text: The Top Down Approach of AI for Business
+ #        href: top_down_ai.qmd          
+ #      - text: AI Learning Communities- Google Astra Is Disrupting Teaching in 2025
+ #        href: disrupting_teaching.qmd
+ #      - text: How to Become The Go-To Expert in the AI Content Storm
+ #        href: ai_content_storm.qmd          
+ #      - text: Devin Kearns- 9 Things I Wish I Knew Before Starting an AI Company
+ #        href: devin_kearns_9_things_ai_company.qmd
+ #      - text: Devin Kearns- Agentic Operating Systems' are the FUTURE of AI & Business
+ #        href: devin_kearns_agentic_os.qmd
+ #      - text: Become a One Person Business with AI
+ #        href: one_person_business_with_ai.qmd 
+ #      - text: AI Automation (2025) in 5 Industries
+ #        href: ai_automation_in_5_industries_2025.qmd
+ #      - text: AI use cases and tools
+ #        href: ai_use_cases-1.qmd
+ #      - text: n8n Automatiseringseksempler
+ #        href: n8n_automatiseringseksempler.qmd          
+ #   - text: Building Stuff (prompts, Evals, MCPs, ..)
+ #     menu:
+ #     - text: State-Of-The-Art Prompting For AI Agents
+ #       href: prompting_for_ai_gents.qmd
+ #     - text: Make my Own LLM Evals
+ #       href: make_my_evals.qmd
+ #     - text: How I AI- A 3-step AI coding workflow for solo founders
+ #       href: 3_step_ai_coding_workflow.qmd
+ #     - text: Eduards Ruzga Claude + Bright Data MCP
+ #       href: claude_brightdata_mcp.qmd
+ #     - text: Cole Medin- How I'd Learn AI Agents FAST
+ #       href: cole_medin_learn_ai_agents_fast.qmd
+ #     - text: Cole Medin- The 7 Node Blueprint for AI Agents in n8n
+ #       href: 7_nodes_n8n.qmd
+ #     - text: Voice to Claude Code SPEAK to SHIP Agentic Coding AI Assistant
+ #       href: voice_to_claude_code.qmd
+ #     - text: MSTY Studio
+ #       href: msty.qmd
+ #     - text: Claude & MCP - Top 10 MCP Use Cases
+ #       href: claude_mcp.qmd
+ #     - text: Eduards Ruzga Claude with MCPs Replaced Cursor & Windsurf
+ #       href: eduards_ruzga_claude_mcp.qmd
+  #    - text: Economics
+ #       menu:
+#       - text: Paper - LIFECYCLE-INVESTMENT optimal-fixed-weight strategy
+#         href: lifecycle_investment_paper.qmd
+#       - text: China trade conflict and stock market by Frank Sieren
+#         href: china_by_frank_sieren.qmd
+#       - text: Andreas Beck Tarif Crash bei Lochner
+#         href: andreas_beck_tarif_crash.qmd
+#       - text: Andreas Beck Anleihen und Zinsen
+#         href: andreas_beck_anleihen_und_zinsen.qmd
+#     - text: Misc
+#       menu:
+#       - text: Diet
+#         href: diet.qmd
+#       - text: empty
+#         href: empty.qmd
         
   page-footer: 
     center: "© 2025. This Website is made with [Quarto](https://quarto.org/)."

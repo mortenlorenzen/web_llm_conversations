@@ -1,0 +1,57 @@
+---
+title: "Andrew Ng: State of AI Agents"
+description: |
+  Andrew Ng's fireside chat with LangChain, discussing the state of AI agents, agenticness, and practical applications in AI development, 28. maj 2025 
+categories:
+  - "AI Technology"
+  - "Andrew Ng"
+date: 2025-05-28
+---
+**:Model Instructions:** 
+
+
+  
+**:You:** please summarize this video in detail
+
+[![Andrew Ng: State of AI Agents | LangChain Interrupt](https://i.ytimg.com/vi/4pYzYmSdSH4/maxresdefault.jpg)](https://www.youtube.com/watch?v=4pYzYmSdSH4)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Okay, here is a detailed summary of the Andrew Ng fireside chat with LangChain from the provided transcript:
+
+The fireside chat featured Andrew Ng, introduced by a host from LangChain (implied to be Harrison Chase, the founder, given the context and mentions). The host highlighted Ng's significant contributions to AI education through deeplearning.ai, noting that LangChain has collaborated on six short courses with them, which are among deeplearning.ai's most highly-rated. Ng reciprocated the praise, specifically mentioning the recent LangGraph course for its clear explanation of agent concepts.
+
+The conversation covered several key areas:
+
+1.  **Defining "Agenticness":** Ng revisited a concept he introduced about 1.5-2 years ago: the idea of "agenticness" as a spectrum, rather than rigidly defining what is or isn't an "agent." He felt that arguing about the definition of an "agent" (e.g., whether it's truly autonomous) was less productive for the community. Instead, thinking about systems having varying *degrees* of autonomy or "agenticness" allows builders to focus on creating systems with different levels of complexity without getting bogged down in semantic debates. He believes this perspective has helped the community "get on with it."
+
+2.  **Spectrum of Agentic Systems Being Built:** Ng observes a wide range of agentic systems under development:
+    *   **Complex Workflows:** His team routinely uses tools like LangGraph for their "hardest problems," which involve complex flows and loops.
+    *   **Simpler, Linear Workflows:** He sees a vast number of business opportunities involving fairly linear workflows, often with just occasional side branches (usually for failure cases). Examples include tasks like reviewing forms, performing web searches, checking databases for compliance, and copying/pasting information between systems. He notes that many human business processes are currently performed this way.
+
+3.  **Essential Skills for Agent Builders:** Ng identified crucial skills needed to build agentic systems that he feels are still "far too rare":
+    *   **Task Breakdown:** The ability to analyze existing human workflows and break them down into discrete microtasks or sequential steps, managing potential branches.
+    *   **Plumbing & Data Integration:** Setting up the necessary infrastructure (like integrations via LangGraph or potentially MCP) to ingest data and feed it to the LLM/agent process.
+    *   **Prompting & Multi-Step Processing:** Designing the prompts and orchestrating the sequence of steps required for the end-to-end system.
+    *   **Effective Evaluation (Evals):** Implementing frameworks to not only measure overall system performance but also to trace individual steps to quickly pinpoint failures (which prompt is broken, which step failed). He notes teams often rely on slow, manual human evals for too long before setting up systematic ones.
+    *   **Debugging Instincts / "Tactile Knowledge":** Developing the intuition to look at traces, outputs, and errors and quickly decide what needs to be fixed or improved next. This includes knowing when a particular approach or component is unlikely to work and requires a different strategy ("going down blind alleys"). He wishes there were more efficient ways to teach this practical, hands-on decision-making skill.
+
+4.  **AI Tools as "Lego Bricks":** Ng uses the analogy of AI tools being like different colored and shaped Lego bricks. The more diverse tools available (Rag, memory techniques, evals, guardrails, LangGraph, MCP, etc.), the faster developers can assemble powerful applications. Knowing which "brick" (tool/technique) to use for a specific problem is key to efficiency. He also points out that the utility of these tools evolves as LLMs improve (e.g., longer context windows have simplified Rag implementations compared to earlier techniques).
+
+5.  **Underrated Areas:**
+    *   **Evals (Again):** He stressed that while people talk about evals, many don't actually implement them. He believes this is because people perceive writing evals as a massive task. His advice is to start small and imperfectly – throw together a simple eval in 20 minutes with a few examples and an LLM judge to catch specific regressions. These simple evals can then be incrementally improved over time, much like refining code.
+    *   **Voice Stack:** Ng sees huge potential and enterprise interest in voice applications, yet feels developer attention is disproportionately low compared to the opportunity. Advantages include lower user friction ("just tell me what you think") and allowing users to speak more freely without the pressure for perfection felt when typing. Key challenges include latency requirements (ideally sub-second response times). Solutions involve tricks like "pre-responses" ("Hmm, that's interesting...") to fill time or playing background noise. He prefers agentic voice workflows (speech-to-text -> LLM -> text-to-speech) over end-to-end audio models, finding the former more controllable.
+    *   **Coding for Everyone:** Ng believes everyone, including non-software engineers (like receptionists, CFOs, General Counsel), should learn to code. At AI Fund, everyone knows how to code, which allows them to better instruct computers in their specific job functions, driving productivity improvements.
+
+6.  **AI-Assisted Coding ("Vibe Coding"):** Ng acknowledges that coding with AI assistants is a real and beneficial phenomenon that significantly speeds up development. However, he dislikes the term "vibe coding," finding it misleading. He states that using AI assistants is a "deeply intellectual exercise" and is often exhausting; it's not just going with a "vibe." He strongly refutes the idea that AI assistants will eliminate coding jobs. Historically, making programming easier (from punch cards to high-level languages) has always *increased* the number of people who code. He believes AI assistants will enable *more* people to code. He emphasizes that understanding how a computer works (gained by learning a language like Python) is crucial for effective prompting and debugging, even when relying heavily on AI-generated code.
+
+7.  **MCP (Model-centric communication Protocol):** Ng is excited about MCP as a standard for agents/software to interface with data sources and tools/APIs. He sees it filling a market gap (noting OpenAI's adoption) and aiming to reduce the integration effort from N*M (N models * M data sources) to N+M. He announced a new deeplearning.ai/Anthropic course on MCP. He notes that the current state is a bit of a "Wild West" with inconsistent server implementations and clunky authentication. He also believes the protocol needs to evolve, potentially adding hierarchical discovery mechanisms for finding resources, as a simple long list won't scale for complex systems with many tools.
+
+8.  **Agent-to-Agent Communication:** Compared to MCP, Ng sees agent-to-agent communication protocols as much earlier. He finds it difficult enough for *one* team to build a working multi-agent system; getting agents from *different* teams or organizations to successfully interact feels like "a double miracle requirement" at this stage. He hasn't personally seen widespread, successful examples of this yet.
+
+9.  **Startup Advice (from AI Fund):** Based on AI Fund's experience as a venture studio building companies:
+    *   **Number 1 Predictor:** Speed – the ability of a skilled team to execute significantly faster than traditional businesses.
+    *   **Number 2 Predictor:** Technical Knowledge – a deep understanding of how the technology works is a rare and crucial resource in this fast-evolving field. While business knowledge (marketing, sales, pricing) is important, it's more diffused and generally easier to acquire compared to deep technical expertise. AI Fund prefers to work with deeply technical founders who have good instincts.
+
+In summary, Andrew Ng provided insights into the evolving landscape of AI agents, emphasizing a practical, spectrum-based view of "agenticness." He highlighted the opportunities in both complex and simpler workflows, stressing the need for better skills in workflow breakdown, evals, and debugging. He used the "Lego bricks" analogy for AI tools, pointed out the underrated potential of the voice stack and simple evals, defended AI-assisted coding while critiquing its name, discussed the promise and current challenges of MCP, deemed inter-agent communication still very early, and shared key lessons on speed and technical depth for AI startups.
+

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-06-26">
+<meta name="description" content="The McKinsey report “Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents.”">
+
+<title>McKinsey - CEO playbook for AI agents – LLM dialogues</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3cfefa6877664363d7bdad256e7d352d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-ac82a0e63a2fc59af91a9a81027fc7c3.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3cfefa6877664363d7bdad256e7d352d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8acf6c1bd89ffb50a5b7758a2a389633.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cac06cdc250a8a8fe738bfcf80fe8a6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">LLM dialogues</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">McKinsey - CEO playbook for AI agents</h1>
+                  <div>
+        <div class="description">
+          <p>The McKinsey report “Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents.”</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI in Business</div>
+                <div class="quarto-category">McKinsey</div>
+                <div class="quarto-category">PDF chat</div>
+                <div class="quarto-category">Slide presentation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 26, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<p><strong>:Model Instructions:</strong></p>
+<hr>
+<p><strong>:You:</strong> please summarize this pdf in detail</p>
+<p><a href="seizing-the-agentic-ai-advantage.pdf">seizing-the-agentic-ai-advantage.pdf</a></p>
+<hr>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the PDF document “Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents.”</p>
+<p><strong>Overall Theme:</strong></p>
+<p>The report argues that despite widespread adoption of Generative AI (Gen AI), most companies are seeing minimal impact on their bottom line – a “gen AI paradox.” This is largely due to a focus on diffuse “horizontal” applications (like employee copilots) while higher-impact “vertical” (function-specific) use cases remain stuck in pilot phases. AI agents, which can automate complex processes autonomously, offer the key to unlocking scalable impact and moving beyond this paradox, but require a fundamental shift in how companies approach AI transformation, led by the CEO.</p>
+<p><strong>Key Sections and Detailed Points:</strong></p>
+<p><strong>Foreword (by Arthur Mensch, CEO of Mistral AI):</strong></p>
+<ul>
+<li>Highlights that Gen AI is in boardrooms but lacks real impact for many.</li>
+<li>Diagnoses the problem: AI is “bolted on” rather than integrated into core processes.</li>
+<li>Positions Agentic AI as the catalyst for transformation, but notes it’s not plug-and-play; agents need to work across systems, reason, and interact with humans as collaborators.</li>
+<li>CEOs must shift thinking from “How do we add AI?” to “How should decisions, work, and human engagement function with software that can act?”</li>
+<li>Emphasizes that successful transformation requires alignment (goals, tools, people) built on openness, transparency, and control, fostering trust.</li>
+<li>The technology exists; the opportunity is deployment tied to value creation and human work. Requires modular architecture and a human-centric operating model.</li>
+<li>ROI comes from strong intent: define outcomes, embed agents deep in workflows, redesign operating models. Discipline in governance and feedback loops turns novelty into value.</li>
+</ul>
+<p><strong>At a glance:</strong></p>
+<ul>
+<li>Summarizes the core “gen AI paradox”: nearly 80% use Gen AI, nearly 80% report no significant bottom-line impact.</li>
+<li>Explains the paradox: imbalance between scaled horizontal (diffuse gains) and stuck vertical (higher impact, 90%+ in pilot) use cases.</li>
+<li>Introduces AI agents as the solution: automate complex processes via autonomy, planning, memory, integration, shifting AI from reactive to proactive.</li>
+<li>Agent benefits: beyond efficiency, supercharge operational agility, create new revenue opportunities.</li>
+<li>Requirement: Reimagine workflows from the ground up with agents at the core, not just plugging them in.</li>
+<li>Technical need: Agentic AI mesh architecture to govern and integrate agents, manage debt and risk.</li>
+<li>Bigger challenge: Human (trust, adoption, governance for autonomy/sprawl).</li>
+<li>Call to action: Reset AI transformation from scattered initiatives to strategic programs, use cases to processes, siloed teams to cross-functional squads, experimentation to industrialized delivery.</li>
+<li>Foundation needed: Upskill workforce, adapt tech infra, accelerate data productization, deploy agent-specific governance.</li>
+<li>CEO mandate: Bring Gen AI experimentation phase to a close.</li>
+</ul>
+<p><strong>Chapter 1: The gen AI paradox: Widespread deployment, minimal impact</strong></p>
+<ul>
+<li><strong>AI History:</strong> Before Gen AI, AI powered prediction, classification, optimization ($11-18T potential) but was expert-driven, slow adoption (Exhibit 1 shows ~50% companies using AI across functions until Gen AI).</li>
+<li><strong>Gen AI Breakthrough:</strong> Information synthesis, content generation, human language communication ($2.6-4.4T additional value). Democratized access, rapid experimentation (78%+ using Gen AI by 2025).</li>
+<li><strong>The Paradox:</strong> Despite high adoption/experimentation, &gt;80% report no material earnings contribution, only 1% view strategies as mature. Energy/investment hasn’t translated to at-scale impact.</li>
+<li><strong>Root Cause: Horizontal vs.&nbsp;Vertical Imbalance (Exhibit 2):</strong>
+<ul>
+<li><em>Horizontal (Enterprise-wide):</em> e.g., Employee copilots (M365 Copilot), internal chatbots. Easy to implement (off-the-shelf, minimal workflow change), driven partly by risk mitigation vs external LLMs. Enhance <em>individual</em> productivity (save time, synthesize info). Benefits are diffuse, hard to see on P&amp;L.</li>
+<li><em>Vertical (Function-specific):</em> e.g., R&amp;D (research curator), Procurement (RFP generator), Supply chain (demand forecaster), Marketing/Sales (insights provider, sales assistant), Customer Service (support assistant). Higher direct impact potential, but &lt;10% scale beyond pilot. Often support isolated process steps, reactive (human-prompted), limited impact.</li>
+</ul></li>
+<li><strong>Factors Limiting Vertical Scale:</strong>
+<ul>
+<li><strong>Fragmented initiatives:</strong> Bottom-up, granular, disconnected, dispersed investment, low CEO sponsorship (&lt;30% CEO-sponsored).</li>
+<li><strong>Lack of mature solutions:</strong> Often requires custom build from scratch with fast-evolving tech. Lack of MLOps engineers for industrialization/deployment.</li>
+<li><strong>Technological limitations of LLMs:</strong> Inaccuracy (hallucinations), passive/reactive (don’t act without prompt), struggle with complex, multistep workflows, limited persistent memory.</li>
+<li><strong>Siloed AI teams:</strong> COEs separate from IT/Data/Business. Useful for prototyping but hinder scale due to poor integration, fragmented data, lack of operational alignment.</li>
+<li><strong>Data gaps:</strong> Accessibility and quality issues for structured and especially ungoverned unstructured data.</li>
+<li><strong>Cultural apprehension:</strong> Resistance from business/middle management (fear, job impact, unfamiliarity).</li>
+</ul></li>
+<li><strong>First Wave Not Wasted:</strong> Enabled experimentation, accelerated familiarity, built capabilities (prompting, evaluation, governance), laid groundwork for phase two: AI agents.</li>
+</ul>
+<p><strong>Chapter 2: From paradox to payoff: How agents can scale AI</strong></p>
+<ul>
+<li><strong>The Breakthrough: Automating Complex Workflows:</strong> Agents evolve Gen AI from reactive content generation to autonomous, goal-driven execution. They combine LLMs with memory, planning, orchestration, integration. Can understand goals, break tasks, interact with humans/systems, adapt, act autonomously.</li>
+<li><strong>Agent Potential Expansion:</strong>
+<ul>
+<li><em>Horizontal:</em> Proactive teammates (monitor, trigger, follow up, insights).</li>
+<li><em>Vertical:</em> Automate complex, multistep workflows previously impossible.</li>
+</ul></li>
+<li><strong>Agent Benefits Beyond Efficiency:</strong>
+<ul>
+<li><em>Operations:</em>
+<ul>
+<li><strong>Accelerate execution:</strong> Parallel processing, eliminate handoff delays.</li>
+<li><strong>Adaptability:</strong> Adjust process flows real-time based on data.</li>
+<li><strong>Personalization:</strong> Tailor interactions/decisions (e.g., customer profiles).</li>
+<li><strong>Elasticity:</strong> Capacity expands/contracts with workload instantly.</li>
+<li><strong>Resilience:</strong> Monitor disruptions, reroute, escalate when needed.</li>
+<li><em>Example:</em> Supply chain agent orchestrating across systems, forecasting, identifying risks, replanning transport/inventory dynamically.</li>
+</ul></li>
+<li><em>Revenue:</em>
+<ul>
+<li><strong>Amplifying existing:</strong> Real-time upsell/cross-sell (e-commerce), tailored financial product discovery (finance).</li>
+<li><strong>Creating new:</strong> Pay-per-use/subscription via embedded agents (industrial), packaging internal expertise as SaaS/APIs (service orgs).</li>
+</ul></li>
+</ul></li>
+<li><strong>Agent Case Studies (QuantumBlack Examples):</strong>
+<ul>
+<li><strong>Bank Modernization:</strong> Hybrid human-agent “digital factory” for legacy code modernization (400 software pieces, $600M budget). Agents document, code, review, integrate. Humans supervise. Impact: &gt;50% time/effort reduction. (Exhibit 3)</li>
+<li><strong>Research Firm:</strong> Multiagent system for data quality and market insights. Autonomously identifies anomalies, explains sales/share shifts using internal/external data. Humans shift to strategic work. Impact: &gt;60% potential productivity, &gt;$3M annual savings.</li>
+<li><strong>Retail Bank Credit Memos:</strong> Reinvented process for RMs writing memos (weeks, 10+ sources). Agents extract data, draft sections, generate confidence scores, suggest follow-ups. RM role shifts to oversight/exception handling. Impact: 20-60% productivity, 30% faster decisioning. (Exhibit 4)</li>
+</ul></li>
+<li><strong>Requirement: Process Reinvention, Not Just Optimization:</strong>
+<ul>
+<li>Inserting agents into legacy workflows yields limited gains (faster assistant). Process remains sequential, human-shaped.</li>
+<li>Reinventing means rearchitecting the <em>entire</em> task flow: reorder steps, reallocate human/agent roles, design for agent strengths (parallel, adaptability, personalization, elasticity).</li>
+<li><em>Call Center Example (Exhibit 5):</em>
+<ul>
+<li>Gen AI-enabled (assist): 5-10% resolution time reduction.</li>
+<li>Agent-enabled (optimized): Agents automate discrete tasks in existing flow. 20-40% time reduction, 30-50% backlog reduction.</li>
+<li>Agent-enabled (reinvented): Process redesigned around agent autonomy. Agents proactively detect, diagnose, initiate resolutions (80% resolved autonomously). 60-90% time reduction.</li>
+</ul></li>
+<li>Process reinvention is key for complex, cross-functional, exception-prone, or performance-linked processes.</li>
+</ul></li>
+<li><strong>Scaling Agents Requires New AI Architecture: The Agentic AI Mesh:</strong>
+<ul>
+<li><strong>Challenges:</strong> New risks (autonomy control, fragmentation, observability lack, attack surface, sprawl), blending custom/off-the-shelf agents, staying agile with fast-evolving tech (avoiding lock-in).</li>
+<li><strong>Solution:</strong> Dynamic, modular, governed architecture built for agents. <em>Composable, distributed, vendor-agnostic</em>. Enables multiple agents to reason, collaborate, act across systems/tools/LLMs securely, at scale, evolving.</li>
+<li><strong>Mesh Principles:</strong>
+<ul>
+<li><strong>Composability:</strong> Any agent/tool/LLM plugs in without rework.</li>
+<li><strong>Distributed intelligence:</strong> Tasks solved by cooperating agent networks.</li>
+<li><strong>Layered decoupling:</strong> Logic, memory, orchestration, interfaces separate.</li>
+<li><strong>Vendor neutrality:</strong> Components updated/replaced independently (prefer open standards like MCP, A2A).</li>
+<li><strong>Governed autonomy:</strong> Proactive control via embedded policies, permissions, escalation.</li>
+</ul></li>
+<li><strong>Mesh Capabilities (Sidebar):</strong> Agent/workflow discovery, AI asset registry, Observability, Authentication/Authorization, Evaluations, Feedback management, Compliance/risk management.</li>
+<li><strong>Foundational Models for Agents (Sidebar):</strong> LLMs need to evolve to meet agent requirements: low-latency inference, fine-tuning/controllability, lightweight deployment, scalable multiagent orchestration, sovereignty/auditability/geopolitical resilience. Different models suit different needs.</li>
+<li><strong>Enterprise Systems Evolution:</strong> Short-term: APIs as interfaces. Long-term: Agent-first architecture (UIs, logic, data access designed for machine interaction, autonomous workflows). Major vendors (Microsoft, Salesforce, SAP) are already moving towards agent integration platforms. The future is agent-native software.</li>
+</ul></li>
+<li><strong>The Main Challenge: Human &amp; Organizational:</strong> Complexity is mostly organizational (coordination, judgment, trust).
+<ul>
+<li><strong>Human–agent cohabitation:</strong> How do they interact? When initiate/defer? Maintain human agency/oversight without slowing down? Trust needs transparency, predictability, intuitive integration.</li>
+<li><strong>Autonomy control:</strong> Managing independent action. Handling edge cases (too aggressive, failed escalation). Make autonomy intelligible, aligned, evolve control mechanisms, address hallucinations.</li>
+<li><strong>Sprawl containment:</strong> Risk of uncontrolled, redundant, ungoverned agents (like RPA sprawl). Low/no-code increases risk. Need structured governance, design standards, life cycle management.</li>
+</ul></li>
+</ul>
+<p><strong>Chapter 3: AI transformation at a tipping point: The CEO mandate in the agentic era</strong></p>
+<ul>
+<li><strong>Need for Reset:</strong> Agents require fundamental shifts, deep integration. Build on digital transformation playbooks but reshape specifically for AI agents.</li>
+<li><strong>Reshaping AI Transformation (Four Dimensions):</strong>
+<ul>
+<li><strong>Strategy:</strong> Scattered tactical initiatives -&gt; Strategic programs aligned with critical priorities. Translate goals into AI domains <em>and</em> look forward to reimagine the business, create new revenue, build competitive moats.</li>
+<li><strong>Unit of transformation:</strong> Use case -&gt; Business processes. Shift from optimizing isolated tasks to transforming <em>entire</em> end-to-end processes or persona journeys by embedding agents throughout. Ask: “What would this function look like if agents ran 60% of it?”</li>
+<li><strong>Delivery model:</strong> Siloed AI teams -&gt; Cross-functional transformation squads. AI COEs limit scale. Need durable squads with business experts, process designers, AI/MLOps, IT architects, software engineers, data engineers.</li>
+<li><strong>Implementation process:</strong> Experimentation -&gt; Industrialized, scalable delivery. Solutions designed for technical and financial scale <em>from the outset</em>. Anticipate system integration, monitoring, release management. Rigorously estimate <em>future running costs</em> (can exceed build cost) and design for economic sustainability.</li>
+</ul></li>
+<li><strong>Four Critical Enablers for Agentic Era Operations:</strong>
+<ul>
+<li><strong>People:</strong> Equip workforce for human-agent collaboration (“human + agent” mindset). Cultural change, training, champions. Introduce new roles (prompt engineers, agent orchestrators, human-in-the-loop designers).</li>
+<li><strong>Governance:</strong> Ensure autonomy control, prevent sprawl. Define frameworks for autonomy levels, decision boundaries, monitoring, audit. Formalize policies (dev, deploy, usage). Classify agents (task, domain, virtual collaborator) with appropriate oversight.</li>
+<li><strong>Technology architecture:</strong> Foundation for interoperability and scale. Short-term: Evolve to Agentic AI mesh. Long-term: Prepare for agent-first enterprise systems.</li>
+<li><strong>Data:</strong> Accelerate productization, address unstructured quality. Transition from use-case-specific pipelines to reusable data products. Extend governance to unstructured data.</li>
+</ul></li>
+<li><strong>CEO Leadership: Bringing Experimentation to a Close:</strong> The pivot to scaled, enterprise-wide transformation <em>must</em> be CEO-led.
+<ul>
+<li><strong>Action 1: Conclude experimentation:</strong> Structured review, capture lessons, retire unscalable pilots, formally end exploratory phase. Refocus on strategic, high-impact AI programs.</li>
+<li><strong>Action 2: Redesign governance and operating model:</strong> Set up Strategic AI Council (business leaders, HR, CDO, CIO). Oversee AI direction, coordinate AI/IT/data investments, rigorous value tracking (KPIs linked to business outcomes).</li>
+<li><strong>Action 3: Launch a first lighthouse transformation project and initialize the agentic AI tech foundation:</strong> Kick off a few high-impact agentic workflow transformations in core areas. Simultaneously build the foundation: invest in tech infra, data quality, governance frameworks, workforce readiness.</li>
+</ul></li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<ul>
+<li>AI agents are a disruptive technology that can reshuffle competition. Opportunity for laggards to leapfrog, risk for current leaders who don’t act. Strategic divergence moment.</li>
+<li>Technology is mature enough for transformative change.</li>
+<li>CEOs must rethink AI transformation: not scattered pilots, but focused, end-to-end reinvention. Identify high-potential domains and pull all levers (workflows, task distribution, new operating models).</li>
+<li>Some leaders are already rewiring organizations (Moderna merging HR/IT as an example). Agentic AI is not incremental, it’s the foundation of the next-generation operating model.</li>
+<li>CEOs who act now gain an edge and redefine how their organizations think, decide, and execute.</li>
+<li>Time for exploration is ending; time for transformation is now.</li>
+</ul>
+<hr>
+<hr>
+<hr>
+<p>Slide presentation</p>
+<section id="the-gen-ai-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="the-gen-ai-paradox">The Gen AI Paradox</h2>
+<ul>
+<li><strong>Problem:</strong> Nearly 80% of companies use Gen AI, yet similar percentage report <strong>no significant bottom-line impact.</strong></li>
+<li><strong>Why?</strong> Imbalance:
+<ul>
+<li><strong>Horizontal</strong> (enterprise copilots): Scaled quickly, diffuse productivity gains.</li>
+<li><strong>Vertical</strong> (function-specific): Higher impact potential, but ~90% stuck in pilot.</li>
+</ul></li>
+</ul>
+</section>
+<section id="why-vertical-use-cases-are-stuck" class="level2">
+<h2 class="anchored" data-anchor-id="why-vertical-use-cases-are-stuck">Why Vertical Use Cases are Stuck</h2>
+<ul>
+<li>Fragmented, bottom-up initiatives.</li>
+<li>Lack of mature, off-the-shelf solutions.</li>
+<li>Limitations of 1st-gen LLMs (passive, workflow struggle, accuracy).</li>
+<li>Siloed AI teams, poor integration.</li>
+<li>Data gaps and quality issues.</li>
+<li>Cultural resistance and inertia.</li>
+</ul>
+</section>
+<section id="introducing-ai-agents-the-catalyst" class="level2">
+<h2 class="anchored" data-anchor-id="introducing-ai-agents-the-catalyst">Introducing AI Agents: The Catalyst</h2>
+<ul>
+<li>Agents evolve Gen AI from <strong>reactive tools</strong> to <strong>autonomous, goal-driven virtual collaborators.</strong></li>
+<li>Combine LLMs with:
+<ul>
+<li>Memory</li>
+<li>Planning &amp; Orchestration</li>
+<li>Integration with systems</li>
+</ul></li>
+<li>They understand goals, break tasks, interact, execute actions, and adapt.</li>
+</ul>
+</section>
+<section id="agents-unlock-value-beyond-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="agents-unlock-value-beyond-efficiency">Agents Unlock Value (Beyond Efficiency)</h2>
+<ul>
+<li><strong>Automate Complex Business Workflows:</strong> Go beyond isolated tasks to manage multi-step processes.</li>
+<li><strong>Transform Operations:</strong>
+<ul>
+<li>Accelerate execution (parallelism)</li>
+<li>Increase adaptability &amp; resilience</li>
+<li>Enable deep personalization</li>
+</ul></li>
+<li><strong>Drive Revenue:</strong>
+<ul>
+<li>Amplify existing streams (upsell/cross-sell)</li>
+<li>Create entirely new models (SaaS, pay-per-use)</li>
+</ul></li>
+</ul>
+</section>
+<section id="agent-impact-in-practice-examples" class="level2">
+<h2 class="anchored" data-anchor-id="agent-impact-in-practice-examples">Agent Impact in Practice (Examples)</h2>
+<ul>
+<li>Bank modernization: &gt;50% time/effort reduction.</li>
+<li>Market Research: &gt;60% productivity potential for insights.</li>
+<li>Retail Bank processes: 20-60% productivity, 30% faster decisioning.</li>
+<li><em>Value comes from automating processes end-to-end.</em></li>
+</ul>
+</section>
+<section id="the-critical-shift-process-reinvention" class="level2">
+<h2 class="anchored" data-anchor-id="the-critical-shift-process-reinvention">The Critical Shift: Process Reinvention</h2>
+<ul>
+<li>Simply plugging agents into old workflows yields minimal gains (faster assistant).</li>
+<li>Value is unlocked by <strong>reimagining the entire process</strong> with agents at the core.</li>
+<li>Rearchitect task flows, reallocate human/agent roles, design for agent autonomy and strengths.</li>
+<li><em>Contrast:</em> Agent-optimized process (20-40% gain) vs.&nbsp;Agent-reinvented process (60-90% gain).</li>
+</ul>
+</section>
+<section id="scaling-agents-requires-a-new-foundation" class="level2">
+<h2 class="anchored" data-anchor-id="scaling-agents-requires-a-new-foundation">Scaling Agents Requires a New Foundation</h2>
+<ul>
+<li>Agents introduce new complexities: autonomy risks, integration needs, sprawl potential.</li>
+<li>Requires more than just bolting on components.</li>
+<li>Needs a <strong>fundamental architectural shift</strong> and addressing the <strong>human/organizational challenge.</strong></li>
+</ul>
+</section>
+<section id="the-agentic-ai-mesh" class="level2">
+<h2 class="anchored" data-anchor-id="the-agentic-ai-mesh">The Agentic AI Mesh</h2>
+<ul>
+<li>A <strong>dynamic, modular, governed</strong> architecture specifically for agents.</li>
+<li>Principles: Composability, Distributed intelligence, Layered decoupling, Vendor neutrality, Governed autonomy.</li>
+<li>Enables multiple agents to reason, collaborate, and act across systems <strong>securely and at scale.</strong></li>
+<li>Manages risks (sprawl, drift) while preserving agility.</li>
+</ul>
+</section>
+<section id="the-human-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="the-human-challenge">The Human Challenge</h2>
+<ul>
+<li><strong>Human-Agent Cohabitation:</strong> How do humans and agents work side-by-side effectively and build trust?</li>
+<li><strong>Autonomy Control:</strong> Managing independent agent action, handling edge cases, ensuring alignment.</li>
+<li><strong>Sprawl Containment:</strong> Preventing uncontrolled proliferation of ungoverned agents across the organization.</li>
+<li><em>These are the biggest barriers to scalable impact.</em></li>
+</ul>
+</section>
+<section id="the-ceo-mandate-leading-the-pivot" class="level2">
+<h2 class="anchored" data-anchor-id="the-ceo-mandate-leading-the-pivot">The CEO Mandate: Leading the Pivot</h2>
+<ul>
+<li>Agents represent a strategic inflection point requiring <strong>scaled, enterprise-wide transformation.</strong></li>
+<li>This shift <em>must</em> be initiated and led by the CEO.</li>
+</ul>
+</section>
+<section id="key-actions-for-the-ceo" class="level2">
+<h2 class="anchored" data-anchor-id="key-actions-for-the-ceo">Key Actions for the CEO</h2>
+<ol type="1">
+<li><strong>Conclude Experimentation:</strong> Formally end the exploratory phase, refocus on strategic programs.</li>
+<li><strong>Redesign Governance &amp; Operating Model:</strong> Set up a Strategic AI Council, coordinate investments, track value (KPIs).</li>
+<li><strong>Launch Lighthouse Projects &amp; Tech Foundation:</strong> Kick off high-impact agentic transformations <em>while</em> building the Agentic AI Mesh and core enablers (data, people, governance).</li>
+</ol>
+</section>
+<section id="conclusion-time-for-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-time-for-transformation">Conclusion: Time for Transformation</h2>
+<ul>
+<li>AI agents are here and mature enough to drive transformative change.</li>
+<li>CEOs must pivot from scattered pilots to <strong>focused, end-to-end process reinvention.</strong></li>
+<li>This is not an incremental step – it’s building the <strong>next-generation operating model.</strong></li>
+<li>Act now to gain an edge and redefine how your organization operates.</li>
+<li><h2 id="the-time-for-experimentation-is-ending.-the-time-for-transformation-is-now." class="anchored"><strong>The time for experimentation is ending. The time for transformation is now.</strong></h2></li>
+</ul>
+<p><em>Based on “Seizing the agentic AI advantage” by Alexander Sukharevsky et al., McKinsey &amp; Company, June 2025.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2025. This Website is made with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
