@@ -1,5 +1,5 @@
 ---
-title: "McKinsey - CEO playbook for AI agents"
+title: "McKinsey: CEO playbook for AI agents"
 description: |
   The McKinsey report "Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents."
 categories:

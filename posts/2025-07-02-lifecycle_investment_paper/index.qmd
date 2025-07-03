@@ -1,5 +1,5 @@
 ---
-title: "Paper - LIFECYCLE-INVESTMENT optimal-fixed-weight strategy"
+title: "LIFECYCLE-INVESTMENT A optimal-fixed-weight strategy"
 description: |
   Gemini 2.5 Flash Preview and Gemini 2.0 Flash models are great for dealing with Pdf's - also in explaining graphs and figures!
 categories:
