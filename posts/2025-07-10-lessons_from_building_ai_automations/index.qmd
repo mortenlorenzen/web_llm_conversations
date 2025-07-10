@@ -1,0 +1,102 @@
+---
+title: "Lessons learned from building AI automations"
+description: |
+
+categories:
+  - "Building Stuff"
+  - "AI in Business"
+  - "AI Automation"
+date: 2025-06-11
+---
+
+
+D-Squared: [Brutally honest AI automation advice in 10 minutes](https://www.youtube.com/watch?v=i39uF1fXncg)
+
+---
+
+title: Lessons learned from building AI automations
+date: 2025-07-09 21:12:28
+
+---
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this transcript in detail
+
+[trscr30.txt](/Users/mortenlorenzen/Desktop/trscr30.txt)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Okay, here is a detailed summary of the transcript from `trscr30.txt`, outlining the lessons learned from building AI automations:
+
+The speaker begins by stating that over four years, they built over 50 AI automations, encountering numerous mistakes that wasted weeks and thousands of dollars. They want to share "brutally honest advice" based on this experience. The advice is structured into seven key lessons:
+
+1.  **Lesson One: Set Clear Priorities:**
+    *   **Mistake:** In the beginning, the speaker wasted time automating "anything" based purely on interest or curiosity, leading to low ROI (Return on Investment) projects for clients. An example given is spending 3 weeks on an automation only to save the client roughly 30 minutes a week – interesting, but not high impact.
+    *   **Fix:** Shift focus to prioritizing based on impact and business goals.
+    *   **Process Recommended:**
+        *   Identify the business goal and timeline (e.g., next 12-18 months).
+        *   Identify the main bottlenecks preventing achievement of that goal.
+        *   Prioritize those bottlenecks based on their potential *impact* if relieved (e.g., saving 30 hours/week, increasing revenue 3x).
+        *   Map out all the activities associated with the top-priority bottleneck.
+        *   Determine which of these activities are automatable or partially automatable.
+        *   Prioritize *these* automatable activities based on which will have the highest impact in relieving the bottleneck and achieving the goal.
+    *   **Key Takeaway:** Focus on what truly matters and has high impact for the business, not just what's technically interesting.
+
+2.  **Lesson Two: Documentation:**
+    *   **Mistake:** Automating a process *before* it is clearly documented. Often, conversations with clients revealed only a vague understanding of the process details. The speaker, as a consultant, would try to automate without clear documentation to please the client, but ended up hurting them in the long run. This involved reverse-engineering and guessing, often failing or doing more harm than good.
+    *   **Fix:** Always document the process you're trying to automate *before* starting the automation work.
+    *   **Methods for Documentation:**
+        *   Set an expectation that the client provides clear documentation before work begins.
+        *   If the client lacks bandwidth, perform "paired documentation" by working side-by-side with the client to map out the process details.
+    *   **Key Takeaway:** Documentation comes first. It's not "sexy" but essential for successful automation.
+
+    *(Quick pause for promotion of a 30-day AI insight series)*
+
+3.  **Lesson Three: Measure Success:**
+    *   **Quote:** "If you can't measure, you can't improve it." (Peter Drucker)
+    *   **Mistake:** Building automations that were "cool" or expected to help "in some way," but lacking a clear, measurable definition of success. This often led to building the wrong automation or in the wrong direction. Clients would question if it was working, and the definition of "good" was vague.
+    *   **Fix:** After prioritizing and documenting, *define* what success looks like and how it will be measured.
+    *   **Required Metrics:** Success needs to be defined using **quantitative** metrics. These quantitative metrics should ideally be **binary** (good/bad, yes/no).
+    *   **Reason for Binary:** When working with AI, especially in AI-centric automations, evaluating performance is much easier with a binary outcome (did it meet the threshold or not?) rather than a subjective scale (like 1-5, where the difference between 2 and 3 might be unclear).
+    *   **Key Takeaway:** Clear, quantitative, binary metrics are crucial for understanding if the AI is performing as expected and if the automation is successful.
+
+4.  **Lesson Four: Start with a Big Model, Then Go Small:**
+    *   **Mistake:** Starting with open-source, cheaper, or faster models because they were technically interesting ("cool").
+    *   **Consequence:** Wasting significant time building the automation *and* the necessary infrastructure (hosting, data management) only to realize the open-source model's performance was insufficient for the client's ask or quality expectations.
+    *   **Fix:** Always start by proving possibility with the biggest, "baddest," and likely **commercial** model available.
+    *   **Process:**
+        *   Use the large commercial model first to confirm that the automation *is possible*.
+        *   Once possibility is proven, incrementally scale down to smaller models.
+    *   **Preference for Commercial:** The speaker suggests sticking with commercial models (even smaller ones) when scaling down for most small/medium businesses, as the burden, overhead, and headache of deploying and maintaining infrastructure for open-source models is often too high.
+    *   **Meta-Lesson:** Focus on delivering business value first (proving it works) before optimizing for cost or technical interest (model type, open source).
+
+5.  **Lesson Five: Don't Use AI:**
+    *   **Premise:** Sometimes AI is simply not the right answer for a problem.
+    *   **Problem:** Clients, influenced by AI hype, often have a "distorted vision" and think AI can solve everything, leading conversations in non-useful directions.
+    *   **Fix:** Ground clients (and internal teams) in reality about what's currently possible with AI.
+    *   **Recommended Approach:** When having initial discovery conversations, focus *first* on the business itself and its bottlenecks (as per Lesson 1) *without* talking about technology or AI at all.
+    *   **Benefit:** This approach helps identify what truly matters. *Then*, based on the understanding of AI capabilities today, advise on what *is* automatable (which might or might not involve AI).
+    *   **Key Takeaway:** Only use AI when it's absolutely necessary and provides the best solution for the identified business problem.
+
+6.  **Lesson Six: Don't Overcomplicate Things:**
+    *   **Acknowledgement:** The speaker admits this is something they still struggle with.
+    *   **Vivid Example:** Building an automation for a construction company to convert PDFs to structured data in a database.
+    *   **Overcomplicated Solution:** 3 weeks spent, tons of code, multiple AI systems chained together, 1000+ lines of RegEx to handle edge cases, resulting in only 83% accuracy, slow processing, and high cost.
+    *   **Simplified Solution:** Ripped everything out and fixed it in 1 hour using just one model (Gemini 2.0 at the time). This achieved 97% accuracy and covered all edge cases.
+    *   **Moral:** Aim for the simplest version first to see how well it performs. For data extraction use cases, a single AI model is often sufficient without needing complex chaining, extensive RegEx, or multiple systems.
+
+7.  **Lesson Seven: Set Hard Limits:**
+    *   **Risk:** Unexpectedly burning money due to errors or unforeseen edge cases in the code.
+    *   **Example:** An automation for transcribing expenses/meeting notes had a codebase error that caused it to burn $100 in an hour when only $10 was expected.
+    *   **Fix:** Implement hard spending caps on AI usage.
+    *   **Methods:**
+        *   If the AI provider's system allows (e.g., Cloud, some OpenAI tiers), set hard caps directly in their portal (e.g., cut off API calls at $50).
+        *   If provider caps aren't available, enforce limits in your own codebase by tracking token usage and cost. Build tracing to monitor spending, cut off API calls when the limit is hit, and send alerts for debugging.
+    *   **Goal:** Prevent wasting your or the client's money due to runaway costs from automation errors.
+
+In conclusion, the speaker reiterates that these are crucial lessons learned from experience and encourages listeners to share the insights and check out the linked 30-day AI insight series for more guidance.
+

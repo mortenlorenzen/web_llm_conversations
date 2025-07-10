@@ -61,7 +61,26 @@ The top-down approach involves the following key steps:
 
 ----
 
-As a presentation:
+As a `revealjs` presentation:
+
+---
+title: "Top-Down <br> AI Implementation Strategy"
+subtitle: "From Business Strategy to AI Success"
+date: "06.06.2025"
+
+format:
+  revealjs:
+    output-file: test_top_down_ai.html
+    transition: slide
+    footer: "Client XX, 06.06.2025 © Morten Lorenzen"
+    slide-number: true
+    incremental: true
+    df-max-pages-per-slide: 1
+    pdf-separate-fragments: false
+    scrollable: true
+    
+brand: _brand.yml
+---
 
 ## The AI Implementation Challenge
 
@@ -175,6 +194,129 @@ flowchart TD
 - Business criticality
 - Competitive pressure
 - Timeline constraints
+:::
+
+:::
+
+---
+
+## Step 4: Identify Data & Technology Needs
+
+::: {.incremental}
+- **Only after** defining the business problem
+- Determine required data sources:
+  - Internal data systems
+  - External data sources
+  - Data quality requirements
+- Select appropriate AI/ML techniques
+- Assess technical infrastructure needs
+:::
+
+---
+
+## Step 5: Develop & Implement AI Solution
+
+::: {.incremental}
+- **Iterative development approach**
+- Start small to prove value
+- Build, test, and deploy incrementally
+- Cross-functional collaboration essential
+- Technical teams guided by business requirements
+:::
+
+---
+
+## Step 6: Measure & Iterate Business Impact
+
+::: {.incremental}
+- **Continuous measurement against initial goals**
+- Key questions:
+  - Is it solving the defined problem?
+  - Are we achieving expected business value?
+  - What can be improved?
+- Use insights to refine and scale solutions
+:::
+
+---
+
+## Key Success Factors
+
+::: {.incremental}
+- **Business Leadership Drives Strategy**
+  - Not just a technical initiative
+  - Business transformation tool
+- **Cross-Functional Collaboration**
+  - Business + Technical teams working together
+- **Business Acumen for AI Professionals**
+  - Understand business context
+  - Translate between business and technical domains
+:::
+
+---
+
+## Implementation Best Practices
+
+::: {.incremental}
+- **Start Small, Prove Value, Scale**
+  - Don't try to solve everything at once
+  - Demonstrate tangible ROI
+  - Use success to secure further investment
+- **Always Ask "Why"**
+  - What business problem are we solving?
+  - How does this create value?
+  - Is this aligned with our strategy?
+:::
+
+---
+
+## Common Pitfalls to Avoid
+
+::: {.incremental}
+- Starting with available data instead of business problems
+- Lack of clear success metrics
+- Insufficient business stakeholder involvement
+- Over-engineering solutions
+- Ignoring change management
+- Failing to measure business impact
+:::
+
+---
+
+## Action Items
+
+::: {.incremental}
+1. **Audit current AI initiatives** - Are they top-down or bottom-up?
+2. **Identify 3-5 high-impact business problems** that could benefit from AI
+3. **Prioritize using Impact × Feasibility × Urgency**
+4. **Form cross-functional teams** for selected initiatives
+5. **Define clear success metrics** before starting development
+6. **Plan for iterative development and measurement**
+:::
+
+---
+
+## Questions & Discussion
+
+::: {.r-fit-text}
+**How can we apply the top-down approach in your organization?**
+:::
+
+::: {.incremental}
+- What are your key business challenges?
+- Where do you see the biggest opportunities for AI impact?
+- What barriers exist to implementing this approach?
+:::
+
+---
+
+## Thank You
+
+::: {.r-fit-text}
+**Remember: Start with business strategy, not with data**
+:::
+
+::: {.fragment}
+*AI success comes from solving real business problems, not from having cool technology.*
 :::
 
 

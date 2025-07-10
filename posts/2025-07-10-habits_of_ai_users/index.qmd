@@ -1,0 +1,120 @@
+---
+title: "7 habits of top AI users"
+description: |
+   Seven habits, from optimizing input/output speed with dictation, to deeply integrating AI into daily tasks, leveraging conversational modes, building custom projects, strategically using multiple models and staying updated on trends.
+categories:
+  - "Building Stuff"
+  - "Prompts"
+date: 2025-07-10
+---
+
+D-Squared: [7 Habits of Top 1% AI Users](https://www.youtube.com/watch?v=KVfVb2FK7Ps)
+
+
+---
+
+title: 7 habits of top AI users
+date: 2025-07-09 21:06:19
+
+---
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this transcript in detail
+
+[trscr29.txt](/Users/mortenlorenzen/Desktop/trscr29.txt)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Okay, here is a detailed summary of the transcript, outlining the seven habits of top AI users as identified through interviews:
+
+The speaker interviewed approximately 500 people over the past year to understand their AI usage, tactics, workflows, and results. They found a significant gap between how most people use AI and how "AI pros" (top performers) utilize it. This summary details the seven habits that consistently appeared among these top performers.
+
+**Introduction:**
+
+The core idea is that these seven habits are what differentiate okay results from truly good and useful results with AI. The speaker uses an image interpreting the top 1% of AI users at the top of a pyramid.
+
+**The Seven Habits of AI Pros:**
+
+1.  **Talking over Typing (0:52):**
+    *   **Core Idea:** Optimize speed of getting information into and out of the AI.
+    *   **Why:** People talk faster than they type and read faster than they listen, making voice interaction and reading responses more efficient.
+    *   **How:** Primarily through dictation.
+    *   **Tools:** Built-in operating system dictation (Windows, Mac), app-specific dictation (ChatGPT mobile/web/desktop - noted for high accuracy, Claude mobile), or agnostic tools (Super Whisper, Whisper Flow, often with free versions).
+    *   **Benefit:** Enables quicker input and consumption of information, speeding up interaction workflow.
+
+2.  **Context Heavy (2:53):**
+    *   **Core Idea:** Provide the AI with significant context *before* giving it a specific prompt or task.
+    *   **Why:** State-of-the-art models perform better and are more useful in specific scenarios when they fully understand the background and nuances.
+    *   **Structure:** Most of the input is context, with the specific instruction/prompt being a smaller part.
+    *   **Types of Context:** Documents (PDFs, Google Docs), Transcripts (meetings, videos, podcasts), Personal History (negotiations, proposals), Email Threads, Books (some models can handle very large texts).
+    *   **Key Considerations for Context:**
+        *   **When:** More crucial for complex tasks like writing, summarizing, or getting advice; less so for simple searches.
+        *   **Where:** Be mindful of the "Lost in the Middle" concept (AI sometimes loses information in the middle of a long prompt). Place the main prompt at the top, context in the middle, and potentially a reminder of critical information at the bottom.
+        *   **What:** Be selective and provide only the relevant context for the specific task or question.
+    *   **Benefit:** Allows the AI to give more tailored, optimal, and useful responses based on the specific situation and desired tone.
+
+3.  **AI Mindset (6:18):**
+    *   **Core Idea:** Develop an "AI native" perspective, constantly considering how AI can be integrated into daily tasks and workflows.
+    *   **Contrast:** Differentiated from a "Google native" mindset, where AI is primarily seen as a replacement for search. AI natives use it as an "operating system for life."
+    *   **Habits:**
+        *   **Always Think AI First:** When starting any task, ask if AI can assist completely or partially.
+        *   **Replace Google for Most Searches:** Use AI for day-to-day questions and information retrieval, often facilitated by dictation.
+        *   **Automate Repetition:** If a task is done twice or three times, evaluate if AI can automate some or all of it.
+    *   **Benefit:** Deeper integration of AI leads to increased efficiency and leveraging AI across a wider range of activities.
+
+4.  **Convo Buddy (8:22):**
+    *   **Core Idea:** Use AI as a conversational partner or advisor.
+    *   **Recommended Tool:** ChatGPT's Advanced Voice mode is highlighted for its voice and conversational ability (Pro feature, but basic mode is still good).
+    *   **How:** Use the voice mode button in the AI application.
+    *   **Use Cases (Examples):**
+        *   **Therapy:** Feed context about personal issues, ask AI to adopt a specific therapy style (CBT) or persona (e.g., Jordan Peterson) to help dissect problems.
+        *   **Relationships:** Get guidance for navigating and improving friendships or marriages.
+        *   **Sales:** Practice pitches by having the AI role-play different customer personas (aggressive, skeptical, etc.).
+        *   **Negotiation:** Practice salary or other negotiations with specific context.
+        *   **Debate:** Use AI as a partner to prepare for debates or counterarguments, such as for presentations.
+        *   **Interviews:** Practice interview questions and skills.
+        *   **Reading Buddies:** Have AI passively available while reading; ask spontaneous questions about the text for immediate insights.
+        *   **Language Learning:** Practice conversational skills in a new language with the AI.
+    *   **Benefit:** Provides accessible, on-demand practice, guidance, and interactive learning opportunities in various personal and professional domains.
+
+5.  **Project Pros (12:25):**
+    *   **Core Idea:** Create customized AI versions or "projects" tailored to specific, recurring use cases.
+    *   **Analogy:** Like having a "Board of Advisors" with experts in different specialties.
+    *   **Usage:** Pros tend to use these custom projects approximately 80% of the time, reverting to basic chat only 20%.
+    *   **Structure (OpenAI & Claude):** Both platforms offer similar structures:
+        *   A standard chat interface.
+        *   A "Knowledge Base" section to upload files and context (PDFs, transcripts, etc.) relevant to the project's focus.
+        *   An "Instructions" or "System Prompt" section for detailed, tailored directives on how the AI should behave, what tone to use, etc. (Can ask AI to help write effective prompts).
+    *   **Advantages over Custom GPTs (in some cases):** Ability to select the specific model (e.g., GPT-4) and automatically activate specific tools (web search, image generation) optimized for the project's use case.
+    *   **Examples (Projects created):** Corporate Taxes (used to save money), Contract Writing, Proposal Writing (faster, customized), Newsletter Writing (tailored to preferred structure, tone, length based on past samples), YouTube Title Research, Relationship Advice (e.g., embodying Esther Perel's expertise), Nutrition Advice (tailored to dietary constraints like IBS/low FODMAP/high protein), Longevity Fitness Advice (e.g., embodying Peter Attia's expertise). Personas/expertise are encapsulated by feeding the AI relevant materials from that person.
+    *   **Benefit:** Creates highly efficient, knowledgeable, and personalized AI assistants for specialized or repetitive tasks, yielding higher quality outputs with less effort.
+
+6.  **Model Arbitrage (18:18):**
+    *   **Core Idea:** Not being tied to any single AI model or provider. Using different models for different purposes based on their strengths.
+    *   **Approach:** Constantly trying different scenarios with various models.
+    *   **Recommendation:** Use monthly subscriptions rather than annual ones due to the rapid pace of model advancement.
+    *   **Examples of Model Strengths (Author's Use):**
+        *   **ChatGPT:** Image generation, data analysis, broad research.
+        *   **Claude:** Writing, rendering dashboards, deep research (using multi-agent architecture features).
+        *   **Gemini:** Solving "gnarly bugs," handling very long contexts (1M token window) for synthesizing ideas across large documents or books.
+        *   **Grock:** Access to X (Twitter) insights, "unhinged" mode for creative writing.
+        *   **Perplexity:** Access to unique sources for research.
+    *   **Advanced Tactic:** Use *multiple* models for a single important task (e.g., deep research). Give the same prompt to several models, then consolidate and synthesize their outputs (manually or by feeding them into another model like Claude).
+    *   **Benefit:** Optimizes results by leveraging the specific capabilities of different models and can provide more comprehensive insights by synthesizing multiple perspectives. Requires practice to learn which model is best for which purpose.
+
+7.  **Trend Surfing (22:04):**
+    *   **Core Idea:** Stay updated on new AI models, products, and features being released.
+    *   **How:** Regular, brief check-ins (e.g., 20 minutes weekly or bi-weekly) with 1-2 high-signal sources (newsletters, websites, etc.).
+    *   **Crucial Step:** Don't just consume the information; *apply* it.
+    *   **Process:** Read about a new model/feature -> Try it out on your own use cases -> Evaluate if it's better than current tools -> Adjust your workflow and model usage accordingly.
+    *   **Sources:** The speaker mentions using 13 sources (linked in a separate video) and recommends one specific daily newsletter (suggesting reading the summary section weekly).
+    *   **Benefit:** Ensures users are always leveraging the latest and most effective tools, continuously improving their AI workflow and staying at the cutting edge.
+
+**Conclusion:**
+
+These seven habits, from optimizing input/output speed with dictation, to deeply integrating AI into daily tasks, leveraging conversational modes, building custom projects, strategically using multiple models, and staying updated on trends, distinguish the top 1% of AI users and lead to significantly better results. The speaker also offers links to a free AI insight series and other resources.
+

@@ -1,7 +1,7 @@
 ---
 title: "McKinsey: CEO playbook for AI agents"
 description: |
-  The McKinsey report "Seizing the agentic AI advantage: A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents."
+  The McKinsey report: Seizing the agentic AI advantage, A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents
 categories:
   - "AI in Business"
   - "McKinsey"
@@ -162,7 +162,26 @@ The report argues that despite widespread adoption of Generative AI (Gen AI), mo
 
 ----
 
-Slide presentation
+As a `revealjs` presentation:
+
+---
+title: "McKinsey: <br>  CEO playbook for AI agents"
+subtitle: "The McKinsey report: Seizing the agentic AI advantage, A CEO playbook to solve the gen AI paradox and unlock scalable impact with AI agents"
+date: "06.06.2025"
+
+format:
+  revealjs:
+    output-file: mckinsey_ceo_playbook.html
+    transition: slide
+    footer: "Client XX, 06.06.2025 © Morten Lorenzen"
+    slide-number: true
+    incremental: true
+    df-max-pages-per-slide: 1
+    pdf-separate-fragments: false
+    scrollable: true
+    
+brand: _brand.yml
+---
 
 ## The Gen AI Paradox
 - **Problem:** Nearly 80% of companies use Gen AI, yet similar percentage report **no significant bottom-line impact.**
@@ -239,8 +258,6 @@ Slide presentation
 - CEOs must pivot from scattered pilots to **focused, end-to-end process reinvention.**
 - This is not an incremental step – it's building the **next-generation operating model.**
 - Act now to gain an edge and redefine how your organization operates.
-- **The time for experimentation is ending. The time for transformation is now.**
----
+- The time for experimentation is ending. The time for transformation is now.
 
-*Based on "Seizing the agentic AI advantage" by Alexander Sukharevsky et al., McKinsey & Company, June 2025.*
 
