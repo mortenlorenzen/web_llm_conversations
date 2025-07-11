@@ -12,6 +12,7 @@ categories:
   - "AI Agents"
   - "Coding"
 date: 2025-07-11
+image: andrew_ng.png
 ---
 
 
