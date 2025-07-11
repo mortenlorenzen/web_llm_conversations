@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-07-10">
+<meta name="dcterms.date" content="2025-07-11">
+<meta name="description" content="In this talk, he shares what he’s learning now: why execution speed matters more than ever, how agentic workflows are changing what startups can build, and why concreteness beats vagueness when turning ideas into products. He emphasize the importance of technical (and AI) understanding!">
 
-<title>Lessons learned from building AI automations – LLM dialogues</title>
+<title>Andrew Ng: Building Faster with AI – LLM dialogues</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -260,11 +261,20 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Lessons learned from building AI automations</h1>
-                                <div class="quarto-categories">
+      <h1 class="title">Andrew Ng: Building Faster with AI</h1>
+                  <div>
+        <div class="description">
+          <p>In this talk, he shares what he’s learning now: why execution speed matters more than ever, how agentic workflows are changing what startups can build, and why concreteness beats vagueness when turning ideas into products. He emphasize the importance of technical (and AI) understanding!</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Andrew Ng</div>
                 <div class="quarto-category">Building Stuff</div>
                 <div class="quarto-category">AI in Business</div>
-                <div class="quarto-category">AI Automation</div>
+                <div class="quarto-category">AI in Education</div>
+                <div class="quarto-category">AI Technology</div>
+                <div class="quarto-category">AI Agents</div>
+                <div class="quarto-category">Coding</div>
               </div>
                   </div>
   </div>
@@ -276,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 10, 2025</p>
+        <p class="date">July 11, 2025</p>
       </div>
     </div>
     
@@ -301,98 +311,148 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>D-Squared: <a href="https://www.youtube.com/watch?v=i39uF1fXncg">Brutally honest AI automation advice in 10 minutes</a></p>
+<p>YouTube Y Combinator, Andrew Ng: <a href="https://www.youtube.com/watch?v=RNJCfif1dPY">Building Faster with AI</a></p>
+<p>Slides from the presentation: <a href="Andrew-Ng-compressed.pdf">Slides</a></p>
 <hr>
-<p>title: Lessons learned from building AI automations date: 2025-07-09 21:12:28</p>
+<p>title: Andrew Ng: June 17, 2025 at AI Startup School in San Francisco. date: 2025-07-11 09:02:12</p>
 <hr>
 <p><strong>:Model Instructions:</strong></p>
 <hr>
 <p><strong>:You:</strong> please summarize this transcript in detail</p>
-<p><a href="../../Users/mortenlorenzen/Desktop/trscr30.txt">trscr30.txt</a></p>
+<p><a href="../../Users/mortenlorenzen/Desktop/trscr42.txt">trscr42.txt</a></p>
 <hr>
-<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Okay, here is a detailed summary of the transcript from <code>trscr30.txt</code>, outlining the lessons learned from building AI automations:</p>
-<p>The speaker begins by stating that over four years, they built over 50 AI automations, encountering numerous mistakes that wasted weeks and thousands of dollars. They want to share “brutally honest advice” based on this experience. The advice is structured into seven key lessons:</p>
-<ol type="1">
-<li><p><strong>Lesson One: Set Clear Priorities:</strong></p>
+<p><strong>:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:</strong> Here is a detailed summary of the transcript of Andrew Ng’s talk titled “The Importance of Speed in Startups”:</p>
+<p><strong>Introduction:</strong></p>
 <ul>
-<li><strong>Mistake:</strong> In the beginning, the speaker wasted time automating “anything” based purely on interest or curiosity, leading to low ROI (Return on Investment) projects for clients. An example given is spending 3 weeks on an automation only to save the client roughly 30 minutes a week – interesting, but not high impact.</li>
-<li><strong>Fix:</strong> Shift focus to prioritizing based on impact and business goals.</li>
-<li><strong>Process Recommended:</strong>
-<ul>
-<li>Identify the business goal and timeline (e.g., next 12-18 months).</li>
-<li>Identify the main bottlenecks preventing achievement of that goal.</li>
-<li>Prioritize those bottlenecks based on their potential <em>impact</em> if relieved (e.g., saving 30 hours/week, increasing revenue 3x).</li>
-<li>Map out all the activities associated with the top-priority bottleneck.</li>
-<li>Determine which of these activities are automatable or partially automatable.</li>
-<li>Prioritize <em>these</em> automatable activities based on which will have the highest impact in relieving the bottleneck and achieving the goal.</li>
-</ul></li>
-<li><strong>Key Takeaway:</strong> Focus on what truly matters and has high impact for the business, not just what’s technically interesting.</li>
-</ul></li>
-<li><p><strong>Lesson Two: Documentation:</strong></p>
-<ul>
-<li><strong>Mistake:</strong> Automating a process <em>before</em> it is clearly documented. Often, conversations with clients revealed only a vague understanding of the process details. The speaker, as a consultant, would try to automate without clear documentation to please the client, but ended up hurting them in the long run. This involved reverse-engineering and guessing, often failing or doing more harm than good.</li>
-<li><strong>Fix:</strong> Always document the process you’re trying to automate <em>before</em> starting the automation work.</li>
-<li><strong>Methods for Documentation:</strong>
-<ul>
-<li>Set an expectation that the client provides clear documentation before work begins.</li>
-<li>If the client lacks bandwidth, perform “paired documentation” by working side-by-side with the client to map out the process details.</li>
-</ul></li>
-<li><strong>Key Takeaway:</strong> Documentation comes first. It’s not “sexy” but essential for successful automation.</li>
+<li>Andrew Ng is speaking at Startup School, sharing lessons learned from building startups at AI Fund, a venture studio that builds about one startup per month.</li>
+<li>AI Fund co-founds startups, involving themselves in coding, customer interactions, design, and pricing, gaining deep experience in the “weeds” of startup building.</li>
+<li>The talk focuses on lessons related to building startups in the changing AI landscape, particularly on the theme of <strong>speed</strong>.</li>
 </ul>
-<p><em>(Quick pause for promotion of a 30-day AI insight series)</em></p></li>
-<li><p><strong>Lesson Three: Measure Success:</strong></p>
+<p><strong>The Importance of Speed in Startups:</strong></p>
 <ul>
-<li><strong>Quote:</strong> “If you can’t measure, you can’t improve it.” (Peter Drucker)</li>
-<li><strong>Mistake:</strong> Building automations that were “cool” or expected to help “in some way,” but lacking a clear, measurable definition of success. This often led to building the wrong automation or in the wrong direction. Clients would question if it was working, and the definition of “good” was vague.</li>
-<li><strong>Fix:</strong> After prioritizing and documenting, <em>define</em> what success looks like and how it will be measured.</li>
-<li><strong>Required Metrics:</strong> Success needs to be defined using <strong>quantitative</strong> metrics. These quantitative metrics should ideally be <strong>binary</strong> (good/bad, yes/no).</li>
-<li><strong>Reason for Binary:</strong> When working with AI, especially in AI-centric automations, evaluating performance is much easier with a binary outcome (did it meet the threshold or not?) rather than a subjective scale (like 1-5, where the difference between 2 and 3 might be unclear).</li>
-<li><strong>Key Takeaway:</strong> Clear, quantitative, binary metrics are crucial for understanding if the AI is performing as expected and if the automation is successful.</li>
-</ul></li>
-<li><p><strong>Lesson Four: Start with a Big Model, Then Go Small:</strong></p>
+<li>Ng believes that <strong>execution speed</strong> is a strong predictor of a startup’s odds of success.</li>
+<li>New AI technology is enabling startups to move much faster than before.</li>
+<li>The goal is to share best practices, which are rapidly changing (every 2-3 months), to help startups achieve speed and increase their chances of success.</li>
+</ul>
+<p><strong>Opportunities in the AI Stack:</strong></p>
 <ul>
-<li><strong>Mistake:</strong> Starting with open-source, cheaper, or faster models because they were technically interesting (“cool”).</li>
-<li><strong>Consequence:</strong> Wasting significant time building the automation <em>and</em> the necessary infrastructure (hosting, data management) only to realize the open-source model’s performance was insufficient for the client’s ask or quality expectations.</li>
-<li><strong>Fix:</strong> Always start by proving possibility with the biggest, “baddest,” and likely <strong>commercial</strong> model available.</li>
-<li><strong>Process:</strong>
+<li>Ng views the AI stack from lowest to highest level: Semiconductor companies, Cloud/Hyperscalers, Foundation Models, and Applications.</li>
+<li>While media hype is often on the lower layers (semis, cloud, models), Ng argues that the <strong>biggest opportunities are at the application layer</strong>.</li>
+<li>Applications generate the revenue needed to pay for the underlying technology layers. Therefore, by definition, the application layer must generate more revenue than the sum of the lower layers.</li>
+<li>Opportunities exist at all layers, but the application layer holds the greatest potential for startups.</li>
+</ul>
+<p><strong>The Rise of Agentic AI:</strong></p>
 <ul>
-<li>Use the large commercial model first to confirm that the automation <em>is possible</em>.</li>
-<li>Once possibility is proven, incrementally scale down to smaller models.</li>
-</ul></li>
-<li><strong>Preference for Commercial:</strong> The speaker suggests sticking with commercial models (even smaller ones) when scaling down for most small/medium businesses, as the burden, overhead, and headache of deploying and maintaining infrastructure for open-source models is often too high.</li>
-<li><strong>Meta-Lesson:</strong> Focus on delivering business value first (proving it works) before optimizing for cost or technical interest (model type, open source).</li>
-</ul></li>
-<li><p><strong>Lesson Five: Don’t Use AI:</strong></p>
+<li>Ng identifies the rise of <strong>agentic AI</strong> as the most important AI tech trend in the last year.</li>
+<li>Initially a technical concept, the term was later adopted by marketers, somewhat diluting its meaning.</li>
+<li>Technically, agentic workflows differ from traditional single-pass LM prompts (like writing an essay from start to finish without revisions).</li>
+<li>Agentic workflows are <strong>iterative</strong>: The AI system might first create an outline, then do web research, write a draft, critique and revise it, and so on.</li>
+<li>This loop-based process is slower per step but delivers a <strong>much better work product</strong>.</li>
+<li>AI Fund has found agentic workflows crucial for complex tasks like processing compliance documents, medical diagnosis, and legal document reasoning.</li>
+<li>Many valuable businesses can be built by implementing existing or new workflows using agentic approaches.</li>
+<li>This trend has led to the emergence of an <strong>agentic orchestration layer</strong> that helps builders coordinate calls to underlying tech layers.</li>
+<li>This orchestration layer makes building applications easier, reinforcing the conclusion that the application layer remains the most valuable.</li>
+</ul>
+<p><strong>Concrete Ideas for Faster Execution:</strong></p>
 <ul>
-<li><strong>Premise:</strong> Sometimes AI is simply not the right answer for a problem.</li>
-<li><strong>Problem:</strong> Clients, influenced by AI hype, often have a “distorted vision” and think AI can solve everything, leading conversations in non-useful directions.</li>
-<li><strong>Fix:</strong> Ground clients (and internal teams) in reality about what’s currently possible with AI.</li>
-<li><strong>Recommended Approach:</strong> When having initial discovery conversations, focus <em>first</em> on the business itself and its bottlenecks (as per Lesson 1) <em>without</em> talking about technology or AI at all.</li>
-<li><strong>Benefit:</strong> This approach helps identify what truly matters. <em>Then</em>, based on the understanding of AI capabilities today, advise on what <em>is</em> automatable (which might or might not involve AI).</li>
-<li><strong>Key Takeaway:</strong> Only use AI when it’s absolutely necessary and provides the best solution for the identified business problem.</li>
-</ul></li>
-<li><p><strong>Lesson Six: Don’t Overcomplicate Things:</strong></p>
+<li>AI Fund focuses only on <strong>concrete ideas</strong>.</li>
+<li>A concrete idea is specified in enough detail that an engineer can build it.</li>
+<li><em>Vague Idea:</em> “Use AI to optimize healthcare assets.” (Too vague, engineers would do different things, no speed).</li>
+<li><em>Concrete Idea:</em> “Software for hospitals to let patients book MRI machine slots online to optimize usage.” (Specific, engineers can build it quickly, allows rapid testing/learning).</li>
+<li><em>Vague Idea:</em> “Use AI for email personal productivity.” (Too many interpretations).</li>
+<li><em>Concrete Idea:</em> “Gmail integration using automation with specific prompts/filters to triage emails.” (Builds could start this afternoon).</li>
+<li>Vague ideas often receive praise (“That’s a great idea!”), but are often right only because they are vague.</li>
+<li>Concrete ideas allow for <strong>rapid validation (proving it works) or falsification (proving it doesn’t work)</strong>. Either way is good because it happens quickly.</li>
+<li>Finding good concrete ideas often requires <strong>subject matter expertise</strong> and thinking about a problem for a long time (the “idea maze”).</li>
+<li>After deep thought, an expert’s <strong>“gut”</strong> can be a surprisingly good and fast mechanism for making decisions, often faster than waiting for data in the early stages.</li>
+<li>Successful startups typically pursue <strong>one very clear hypothesis</strong> at a time, focusing resources and effort on it doggedly.</li>
+<li>Startups don’t have resources to hedge and try many things simultaneously.</li>
+<li>If data proves the hypothesis wrong, <strong>pivot quickly</strong> to a totally different concrete idea, pursuing it with equal determination.</li>
+<li>If every piece of new data causes a pivot, it suggests a weak initial knowledge base about the sector; deeper subject matter expertise might be needed.</li>
+</ul>
+<p><strong>Rapid Prototyping and Engineering:</strong></p>
 <ul>
-<li><strong>Acknowledgement:</strong> The speaker admits this is something they still struggle with.</li>
-<li><strong>Vivid Example:</strong> Building an automation for a construction company to convert PDFs to structured data in a database.</li>
-<li><strong>Overcomplicated Solution:</strong> 3 weeks spent, tons of code, multiple AI systems chained together, 1000+ lines of RegEx to handle edge cases, resulting in only 83% accuracy, slow processing, and high cost.</li>
-<li><strong>Simplified Solution:</strong> Ripped everything out and fixed it in 1 hour using just one model (Gemini 2.0 at the time). This achieved 97% accuracy and covered all edge cases.</li>
-<li><strong>Moral:</strong> Aim for the simplest version first to see how well it performs. For data extraction use cases, a single AI model is often sufficient without needing complex chaining, extensive RegEx, or multiple systems.</li>
-</ul></li>
-<li><p><strong>Lesson Seven: Set Hard Limits:</strong></p>
+<li>The <strong>build-feedback loop</strong> is crucial for application startups: Engineering -&gt; User Feedback -&gt; Product Management Adjustment -&gt; Engineering…</li>
+<li>AI coding assistants (GitHub Copilot, AI-enabled IDEs, agentic assistants like Claude Code) have made <strong>rapid engineering much more feasible</strong>.</li>
+<li><strong>Engineering speed is increasing rapidly; engineering cost is decreasing rapidly.</strong></li>
+<li>Ng distinguishes two types of software:
 <ul>
-<li><strong>Risk:</strong> Unexpectedly burning money due to errors or unforeseen edge cases in the code.</li>
-<li><strong>Example:</strong> An automation for transcribing expenses/meeting notes had a codebase error that caused it to burn $100 in an hour when only $10 was expected.</li>
-<li><strong>Fix:</strong> Implement hard spending caps on AI usage.</li>
-<li><strong>Methods:</strong>
+<li><strong>Quick and dirty prototypes:</strong> To test an idea (e.g., chatbot, legal doc processor). AI makes this <strong>easily 10 times faster, maybe much more</strong>. Reasons: Less integration with legacy systems, lower requirements for reliability, scalability, and <strong>security</strong>. Ng advises teams to “Go ahead, write insecure code” <em>for internal prototypes</em> running only on their machine, ensuring security only <em>before</em> shipping to others.</li>
+<li><strong>Maintain production software:</strong> Writing/maintaining large codebases. AI makes this maybe <strong>30-50% faster</strong> (harder to get rigorous data).</li>
+</ul></li>
+<li>Startups can now systematically pursue innovations by <strong>building 20 prototypes</strong> to see what works because the cost of a Proof of Concept is so low. It’s okay if many don’t reach production.</li>
+<li>The mantra should be “Move fast and <strong>be responsible</strong>,” not “Move fast and break things.” Responsibility is still possible at high speed.</li>
+<li>The coding tool landscape is evolving rapidly (autocomplete, IDEs, agentic assistants). Staying on top of the latest tools provides a significant speed advantage.</li>
+<li>Code itself is becoming <strong>less of a valuable artifact</strong> because the cost of creating it is lower. Codebases can be completely rebuilt quickly (e.g., 3 times in a month).</li>
+<li>Jeff Bezos’s concept of <strong>one-way vs.&nbsp;two-way doors</strong> is changing. Choosing a tech stack/database schema used to be a one-way door (costly to reverse). Now, it’s becoming closer to a two-way door; teams are more willing to throw away codebases and rebuild on a different stack a week later due to lower engineering costs.</li>
+</ul>
+<p><strong>Empower Everyone to Build with AI:</strong></p>
 <ul>
-<li>If the AI provider’s system allows (e.g., Cloud, some OpenAI tiers), set hard caps directly in their portal (e.g., cut off API calls at $50).</li>
-<li>If provider caps aren’t available, enforce limits in your own codebase by tracking token usage and cost. Build tracing to monitor spending, cut off API calls when the limit is hit, and send alerts for debugging.</li>
+<li>Ng believes it’s a good time to empower everyone, across all job roles, to build with AI.</li>
+<li>He thinks advice <em>not</em> to learn to code because AI will automate it is some of the “worst career advice ever.” As coding becomes easier, <em>more</em> people should do it (analogy to punch cards/assembly to higher-level languages).</li>
+<li>Ng holds the controversial opinion that <strong>everyone of every job role should learn to code</strong>. His team members (CFO, head of talent, recruiters, front desk) know how to code and perform better because of it.</li>
+<li>A crucial future skill is the ability to <strong>tell a computer exactly what you want it to do</strong>.</li>
+<li>Learning to code (or steering AI to code for you) remains the best way to acquire this skill.</li>
+</ul>
+<p><strong>The Role of Product Management:</strong></p>
+<ul>
+<li>With engineering becoming so much faster, the <strong>bottleneck is increasingly shifting to product management work</strong>: getting user feedback and deciding what features to build.</li>
+<li>Traditional PM:Engineer ratios (1:4 or 1:7) are changing.</li>
+<li>Ng mentions a recent proposal on his team for a 1 PM to 0.5 Engineer ratio (twice as many PMs as engineers), highlighting this shift, though he’s unsure if that specific ratio is optimal yet.</li>
+<li>PMs who can code or engineers with product instincts often perform better in this new dynamic.</li>
+<li>Startup leaders need <strong>good tactics for getting rapid feedback</strong> to quickly shape their product decisions.</li>
+</ul>
+<p><strong>Portfolio of Tactics for Rapid Product Feedback:</strong></p>
+<ul>
+<li>Ordered from Faster/Less Accurate to Slower/More Accurate:
+<ol type="1">
+<li><strong>Look at the product yourself / Go by your gut:</strong> Fastest, surprisingly good if you are a subject matter expert.</li>
+<li><strong>Ask 3 friends/teammates:</strong> Play with the product and get feedback.</li>
+<li><strong>Ask 3-10 strangers:</strong> Ng emphasizes learning to find places with high foot traffic (coffee shops, hotel lobbies) and respectfully asking strangers for feedback – a valuable skill for entrepreneurs.</li>
+<li><strong>Send prototypes to 100 testers:</strong> If you have access to a larger user group.</li>
+<li><strong>Send prototypes to more users.</strong></li>
+<li><strong>AB testing:</strong> Contrary to common perception, Ng finds AB testing one of the <strong>slowest tactics</strong> in this menu because of the time required to set up and run the experiment and gather significant data.</li>
+</ol></li>
+<li>Beyond just using data to pick between options (like A/B testing results), it’s crucial to <strong>look carefully at the data to hone your instincts</strong> and improve your mental model of users. This allows you to make higher-quality decisions using faster methods (like your gut) in the future.</li>
+</ul>
+<p><strong>The Value of Understanding AI:</strong></p>
+<ul>
+<li>Understanding AI makes startups go faster.</li>
+<li>AI is an emerging technology, and knowledge of how to use it well is <strong>not yet widespread</strong>. Teams that “get it” have a significant advantage.</li>
+<li>This contrasts with mature technologies (mobile) or job roles (sales, marketing, HR, legal) where knowledge is more diffused.</li>
+<li>Making the <strong>right technical decisions</strong> in AI (e.g., required accuracy for a chatbot, prompting vs.&nbsp;fine-tuning, voice latency) can solve a problem in days; making the wrong one can lead to chasing a blind alley for three months.</li>
+<li>In practice, a critical piece of technical judgment (one “bit” of information) can result in a <strong>10x speed difference</strong> by avoiding months of wasted effort.</li>
+</ul>
+<p><strong>Leveraging Gen AI Tools and Building Blocks:</strong></p>
+<ul>
+<li>The last two years have brought a wealth of Gen AI tools and building blocks (prompting, workflows, evals, guardrails, RAG, voice, async, ETL, embeddings, fine-tuning, graph DBs, model integrations).</li>
+<li>These blocks can be combined quickly to build software previously impossible a year or two ago.</li>
+<li>Ng uses a <strong>Lego brick analogy</strong>: Knowing one block (prompting) lets you build cool stuff. Knowing more blocks (prompting + chatbots, + RAG, + evals, etc.) allows you to combine them in <strong>combinatorially or exponentially richer combinations</strong>, leading to more innovative applications.</li>
+<li>Learning these building blocks (e.g., through deep learning courses) expands the possibilities of what can be built.</li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<ul>
+<li>Many factors matter for startup success, but Ng finds the management team’s ability to <strong>execute at speed</strong> highly correlated with success at AI Fund.</li>
+<li>Achieving speed involves:
+<ul>
+<li>Working on <strong>concrete ideas</strong>.</li>
+<li>Achieving <strong>rapid engineering</strong> using AI coding assistants.</li>
+<li>Getting <strong>rapid product feedback</strong> (using a portfolio of tactics, including talking to strangers).</li>
+<li>Staying on top of the <strong>technology</strong> to understand what’s possible and make correct technical judgments.</li>
 </ul></li>
-<li><strong>Goal:</strong> Prevent wasting your or the client’s money due to runaway costs from automation errors.</li>
-</ul></li>
-</ol>
-<p>In conclusion, the speaker reiterates that these are crucial lessons learned from experience and encourages listeners to share the insights and check out the linked 30-day AI insight series for more guidance.</p>
+<li>Speed and the quality of decisions both matter for executives.</li>
+</ul>
+<p><strong>Q&amp;A Highlights:</strong></p>
+<ul>
+<li><strong>Humans vs.&nbsp;AI (Building Tools vs.&nbsp;Using Tools):</strong> AGI is overhyped. Humans will still have unique abilities. The most powerful people will be those who can command computers (often via AI tools) to do exactly what they want. Staying on top of using tools is key.</li>
+<li><strong>Future of Compute (GPUs, Nuclear Power):</strong> Many hype narratives (extinction, job loss, wiping out startups, extreme energy needs) are amplified for promotional/fundraising purposes. They distort reality. There is plenty of room for terrestrial GPU development before needing things like GPUs in space or relying solely on nuclear power.</li>
+<li><strong>Dangerous Biases/Overhyped Narratives:</strong> The “dangerous AI” narrative is overhyped. AI safety is not inherent to the technology but a function of <strong>how it is applied (responsible AI)</strong> (like an electric motor used beneficially vs.&nbsp;harmfully). Sensationalized corner cases are disproportionately amplified. This hype is sometimes used to weaponize against open source software.</li>
+<li><strong>Disruption and Moats:</strong> Don’t prioritize worrying about disruption or moats initially. The <strong>number one thing is building a product users love</strong>. If you solve that, other factors (channels, pricing, moats) become relevant later. Moats often evolve; brand and momentum can be defensible. There’s currently a lot of white space for new application layer products.</li>
+<li><strong>Agentic Accumulation and Building Blocks (Technical Nuance):</strong> Acknowledge token costs, but it’s often not the main problem until a product is highly successful, and then technical solutions exist. Agentic workflows <em>do</em> integrate multiple steps (prompting, evals, RAG, etc.). Architecting software for easy switching between different building block <em>providers</em> (especially foundation models) helps preserve flexibility and speed.</li>
+<li><strong>AI in Education:</strong> Edtech is undergoing change, but disruption isn’t fully here yet. Experimentation (AI tutors, grading assistants, language learning apps) is widespread. The exact end-state isn’t clear, but hyper-personalization is likely. Mapping complex educational workflows to agentic workflows is ongoing.</li>
+<li><strong>Balancing Innovation and Ethics:</strong> Look within yourself; if you don’t believe a product will make people better off, don’t build it (AI Fund has killed projects on ethical grounds). Empowering everyone across job roles with AI skills helps bring people along and address potential inequality.</li>
+<li><strong>Educating the Public and Protecting Open Source:</strong> Educating the public about AI is important for diffusion of knowledge. A major danger is that hype about AI dangers is used by businesses who want to be gatekeepers to push for burdensome regulations (like proposed CA law SP 1047) that stifle open source/open weight models. Protecting open source is crucial for innovation and diffusion; the fight against regulatory attacks is ongoing.</li>
+</ul>
 
 
 

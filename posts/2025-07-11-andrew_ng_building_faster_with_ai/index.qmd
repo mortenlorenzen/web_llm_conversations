@@ -1,0 +1,168 @@
+---
+title: "Andrew Ng: Building Faster with AI"
+description: |
+  In this talk, he shares what he’s learning now: why execution speed matters more than ever, how agentic workflows are changing what startups can build, and why concreteness beats vagueness when turning ideas into products. He emphasize the importance of technical (and AI) understanding!
+
+categories:
+  - "Andrew Ng"
+  - "Building Stuff"
+  - "AI in Business"
+  - "AI in Education"
+  - "AI Technology"
+  - "AI Agents"
+  - "Coding"
+date: 2025-07-11
+---
+
+
+YouTube Y Combinator, Andrew Ng: [Building Faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY)
+
+
+Slides from the presentation: [Slides](Andrew-Ng-compressed.pdf) 
+
+
+---
+
+title: Andrew Ng: June 17, 2025 at AI Startup School in San Francisco.
+date: 2025-07-11 09:02:12
+
+---
+
+**:Model Instructions:** 
+
+  ---
+
+  
+**:You:** please summarize this transcript in detail
+
+[trscr42.txt](/Users/mortenlorenzen/Desktop/trscr42.txt)
+
+---
+
+**:01JR0E39PYK7YKH4FBR4W00CMV::gemini-2.5-flash-preview-04-17:** Here is a detailed summary of the transcript of Andrew Ng's talk titled "The Importance of Speed in Startups":
+
+**Introduction:**
+
+*   Andrew Ng is speaking at Startup School, sharing lessons learned from building startups at AI Fund, a venture studio that builds about one startup per month.
+*   AI Fund co-founds startups, involving themselves in coding, customer interactions, design, and pricing, gaining deep experience in the "weeds" of startup building.
+*   The talk focuses on lessons related to building startups in the changing AI landscape, particularly on the theme of **speed**.
+
+**The Importance of Speed in Startups:**
+
+*   Ng believes that **execution speed** is a strong predictor of a startup's odds of success.
+*   New AI technology is enabling startups to move much faster than before.
+*   The goal is to share best practices, which are rapidly changing (every 2-3 months), to help startups achieve speed and increase their chances of success.
+
+**Opportunities in the AI Stack:**
+
+*   Ng views the AI stack from lowest to highest level: Semiconductor companies, Cloud/Hyperscalers, Foundation Models, and Applications.
+*   While media hype is often on the lower layers (semis, cloud, models), Ng argues that the **biggest opportunities are at the application layer**.
+*   Applications generate the revenue needed to pay for the underlying technology layers. Therefore, by definition, the application layer must generate more revenue than the sum of the lower layers.
+*   Opportunities exist at all layers, but the application layer holds the greatest potential for startups.
+
+**The Rise of Agentic AI:**
+
+*   Ng identifies the rise of **agentic AI** as the most important AI tech trend in the last year.
+*   Initially a technical concept, the term was later adopted by marketers, somewhat diluting its meaning.
+*   Technically, agentic workflows differ from traditional single-pass LM prompts (like writing an essay from start to finish without revisions).
+*   Agentic workflows are **iterative**: The AI system might first create an outline, then do web research, write a draft, critique and revise it, and so on.
+*   This loop-based process is slower per step but delivers a **much better work product**.
+*   AI Fund has found agentic workflows crucial for complex tasks like processing compliance documents, medical diagnosis, and legal document reasoning.
+*   Many valuable businesses can be built by implementing existing or new workflows using agentic approaches.
+*   This trend has led to the emergence of an **agentic orchestration layer** that helps builders coordinate calls to underlying tech layers.
+*   This orchestration layer makes building applications easier, reinforcing the conclusion that the application layer remains the most valuable.
+
+**Concrete Ideas for Faster Execution:**
+
+*   AI Fund focuses only on **concrete ideas**.
+*   A concrete idea is specified in enough detail that an engineer can build it.
+*   *Vague Idea:* "Use AI to optimize healthcare assets." (Too vague, engineers would do different things, no speed).
+*   *Concrete Idea:* "Software for hospitals to let patients book MRI machine slots online to optimize usage." (Specific, engineers can build it quickly, allows rapid testing/learning).
+*   *Vague Idea:* "Use AI for email personal productivity." (Too many interpretations).
+*   *Concrete Idea:* "Gmail integration using automation with specific prompts/filters to triage emails." (Builds could start this afternoon).
+*   Vague ideas often receive praise ("That's a great idea!"), but are often right only because they are vague.
+*   Concrete ideas allow for **rapid validation (proving it works) or falsification (proving it doesn't work)**. Either way is good because it happens quickly.
+*   Finding good concrete ideas often requires **subject matter expertise** and thinking about a problem for a long time (the "idea maze").
+*   After deep thought, an expert's **"gut"** can be a surprisingly good and fast mechanism for making decisions, often faster than waiting for data in the early stages.
+*   Successful startups typically pursue **one very clear hypothesis** at a time, focusing resources and effort on it doggedly.
+*   Startups don't have resources to hedge and try many things simultaneously.
+*   If data proves the hypothesis wrong, **pivot quickly** to a totally different concrete idea, pursuing it with equal determination.
+*   If every piece of new data causes a pivot, it suggests a weak initial knowledge base about the sector; deeper subject matter expertise might be needed.
+
+**Rapid Prototyping and Engineering:**
+
+*   The **build-feedback loop** is crucial for application startups: Engineering -> User Feedback -> Product Management Adjustment -> Engineering...
+*   AI coding assistants (GitHub Copilot, AI-enabled IDEs, agentic assistants like Claude Code) have made **rapid engineering much more feasible**.
+*   **Engineering speed is increasing rapidly; engineering cost is decreasing rapidly.**
+*   Ng distinguishes two types of software:
+    *   **Quick and dirty prototypes:** To test an idea (e.g., chatbot, legal doc processor). AI makes this **easily 10 times faster, maybe much more**. Reasons: Less integration with legacy systems, lower requirements for reliability, scalability, and **security**. Ng advises teams to "Go ahead, write insecure code" *for internal prototypes* running only on their machine, ensuring security only *before* shipping to others.
+    *   **Maintain production software:** Writing/maintaining large codebases. AI makes this maybe **30-50% faster** (harder to get rigorous data).
+*   Startups can now systematically pursue innovations by **building 20 prototypes** to see what works because the cost of a Proof of Concept is so low. It's okay if many don't reach production.
+*   The mantra should be "Move fast and **be responsible**," not "Move fast and break things." Responsibility is still possible at high speed.
+*   The coding tool landscape is evolving rapidly (autocomplete, IDEs, agentic assistants). Staying on top of the latest tools provides a significant speed advantage.
+*   Code itself is becoming **less of a valuable artifact** because the cost of creating it is lower. Codebases can be completely rebuilt quickly (e.g., 3 times in a month).
+*   Jeff Bezos's concept of **one-way vs. two-way doors** is changing. Choosing a tech stack/database schema used to be a one-way door (costly to reverse). Now, it's becoming closer to a two-way door; teams are more willing to throw away codebases and rebuild on a different stack a week later due to lower engineering costs.
+
+**Empower Everyone to Build with AI:**
+
+*   Ng believes it's a good time to empower everyone, across all job roles, to build with AI.
+*   He thinks advice *not* to learn to code because AI will automate it is some of the "worst career advice ever." As coding becomes easier, *more* people should do it (analogy to punch cards/assembly to higher-level languages).
+*   Ng holds the controversial opinion that **everyone of every job role should learn to code**. His team members (CFO, head of talent, recruiters, front desk) know how to code and perform better because of it.
+*   A crucial future skill is the ability to **tell a computer exactly what you want it to do**.
+*   Learning to code (or steering AI to code for you) remains the best way to acquire this skill.
+
+**The Role of Product Management:**
+
+*   With engineering becoming so much faster, the **bottleneck is increasingly shifting to product management work**: getting user feedback and deciding what features to build.
+*   Traditional PM:Engineer ratios (1:4 or 1:7) are changing.
+*   Ng mentions a recent proposal on his team for a 1 PM to 0.5 Engineer ratio (twice as many PMs as engineers), highlighting this shift, though he's unsure if that specific ratio is optimal yet.
+*   PMs who can code or engineers with product instincts often perform better in this new dynamic.
+*   Startup leaders need **good tactics for getting rapid feedback** to quickly shape their product decisions.
+
+**Portfolio of Tactics for Rapid Product Feedback:**
+
+*   Ordered from Faster/Less Accurate to Slower/More Accurate:
+    1.  **Look at the product yourself / Go by your gut:** Fastest, surprisingly good if you are a subject matter expert.
+    2.  **Ask 3 friends/teammates:** Play with the product and get feedback.
+    3.  **Ask 3-10 strangers:** Ng emphasizes learning to find places with high foot traffic (coffee shops, hotel lobbies) and respectfully asking strangers for feedback – a valuable skill for entrepreneurs.
+    4.  **Send prototypes to 100 testers:** If you have access to a larger user group.
+    5.  **Send prototypes to more users.**
+    6.  **AB testing:** Contrary to common perception, Ng finds AB testing one of the **slowest tactics** in this menu because of the time required to set up and run the experiment and gather significant data.
+*   Beyond just using data to pick between options (like A/B testing results), it's crucial to **look carefully at the data to hone your instincts** and improve your mental model of users. This allows you to make higher-quality decisions using faster methods (like your gut) in the future.
+
+**The Value of Understanding AI:**
+
+*   Understanding AI makes startups go faster.
+*   AI is an emerging technology, and knowledge of how to use it well is **not yet widespread**. Teams that "get it" have a significant advantage.
+*   This contrasts with mature technologies (mobile) or job roles (sales, marketing, HR, legal) where knowledge is more diffused.
+*   Making the **right technical decisions** in AI (e.g., required accuracy for a chatbot, prompting vs. fine-tuning, voice latency) can solve a problem in days; making the wrong one can lead to chasing a blind alley for three months.
+*   In practice, a critical piece of technical judgment (one "bit" of information) can result in a **10x speed difference** by avoiding months of wasted effort.
+
+**Leveraging Gen AI Tools and Building Blocks:**
+
+*   The last two years have brought a wealth of Gen AI tools and building blocks (prompting, workflows, evals, guardrails, RAG, voice, async, ETL, embeddings, fine-tuning, graph DBs, model integrations).
+*   These blocks can be combined quickly to build software previously impossible a year or two ago.
+*   Ng uses a **Lego brick analogy**: Knowing one block (prompting) lets you build cool stuff. Knowing more blocks (prompting + chatbots, + RAG, + evals, etc.) allows you to combine them in **combinatorially or exponentially richer combinations**, leading to more innovative applications.
+*   Learning these building blocks (e.g., through deep learning courses) expands the possibilities of what can be built.
+
+**Conclusion:**
+
+*   Many factors matter for startup success, but Ng finds the management team's ability to **execute at speed** highly correlated with success at AI Fund.
+*   Achieving speed involves:
+    *   Working on **concrete ideas**.
+    *   Achieving **rapid engineering** using AI coding assistants.
+    *   Getting **rapid product feedback** (using a portfolio of tactics, including talking to strangers).
+    *   Staying on top of the **technology** to understand what's possible and make correct technical judgments.
+*   Speed and the quality of decisions both matter for executives.
+
+**Q&A Highlights:**
+
+*   **Humans vs. AI (Building Tools vs. Using Tools):** AGI is overhyped. Humans will still have unique abilities. The most powerful people will be those who can command computers (often via AI tools) to do exactly what they want. Staying on top of using tools is key.
+*   **Future of Compute (GPUs, Nuclear Power):** Many hype narratives (extinction, job loss, wiping out startups, extreme energy needs) are amplified for promotional/fundraising purposes. They distort reality. There is plenty of room for terrestrial GPU development before needing things like GPUs in space or relying solely on nuclear power.
+*   **Dangerous Biases/Overhyped Narratives:** The "dangerous AI" narrative is overhyped. AI safety is not inherent to the technology but a function of **how it is applied (responsible AI)** (like an electric motor used beneficially vs. harmfully). Sensationalized corner cases are disproportionately amplified. This hype is sometimes used to weaponize against open source software.
+*   **Disruption and Moats:** Don't prioritize worrying about disruption or moats initially. The **number one thing is building a product users love**. If you solve that, other factors (channels, pricing, moats) become relevant later. Moats often evolve; brand and momentum can be defensible. There's currently a lot of white space for new application layer products.
+*   **Agentic Accumulation and Building Blocks (Technical Nuance):** Acknowledge token costs, but it's often not the main problem until a product is highly successful, and then technical solutions exist. Agentic workflows *do* integrate multiple steps (prompting, evals, RAG, etc.). Architecting software for easy switching between different building block *providers* (especially foundation models) helps preserve flexibility and speed.
+*   **AI in Education:** Edtech is undergoing change, but disruption isn't fully here yet. Experimentation (AI tutors, grading assistants, language learning apps) is widespread. The exact end-state isn't clear, but hyper-personalization is likely. Mapping complex educational workflows to agentic workflows is ongoing.
+*   **Balancing Innovation and Ethics:** Look within yourself; if you don't believe a product will make people better off, don't build it (AI Fund has killed projects on ethical grounds). Empowering everyone across job roles with AI skills helps bring people along and address potential inequality.
+*   **Educating the Public and Protecting Open Source:** Educating the public about AI is important for diffusion of knowledge. A major danger is that hype about AI dangers is used by businesses who want to be gatekeepers to push for burdensome regulations (like proposed CA law SP 1047) that stifle open source/open weight models. Protecting open source is crucial for innovation and diffusion; the fight against regulatory attacks is ongoing.
+
